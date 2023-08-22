@@ -16,9 +16,14 @@ calculate it!
    ages.
 -----------------------------------------------------------------------------*/
 
-function calculateDogAge(/* TODO parameter(s) go here */) {
-  // TODO complete this function
-}
+//   dogYearsOldInput = dYOI 
+function calculateDogAge (dYOI) {
+  
+  const ratio = 7;
+ 
+ let dogYearsInHumanYears = dYOI * ratio;
+ return `Your doggie is ${dogYearsInHumanYears} years old in dog years!`;
+};
 
 function main() {
   console.log(calculateDogAge(1)); // -> "Your doggie is 7 years old in dog years!"
