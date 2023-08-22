@@ -28,7 +28,7 @@ function giveCompliment(name) {
 // function randomSelect(compliment){
 
  // Equation of random in JS is passed in array index: Math.floor(Math.random() * array.length)
-  const complimentRandom = [Math.floor(Math.random() * compliments.length)];
+  const complimentRandom = Math.floor(Math.random() * compliments.length);
   const complimentSelected = compliments[complimentRandom];
 
   console.log(`You are ${complimentSelected}, ${name} !` );
