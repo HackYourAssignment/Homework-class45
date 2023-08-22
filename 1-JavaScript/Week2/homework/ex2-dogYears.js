@@ -22,6 +22,7 @@ function calculateDogAge (dYOI) {
   const ratio = 7;
  
  let dogYearsInHumanYears = dYOI * ratio;
+ // this common term `dog years` had me me confused. 
  return `Your doggie is ${dogYearsInHumanYears} years old in dog years!`;
 };
 
@@ -31,7 +32,7 @@ function main() {
   console.log(calculateDogAge(3)); // -> "Your doggie is 21 years old in dog years!"
 }
 
-// ! Do not change or remove the code below
+//  ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
