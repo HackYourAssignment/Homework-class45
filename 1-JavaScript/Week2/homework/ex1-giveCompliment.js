@@ -33,11 +33,11 @@ function giveCompliment(name) {
 
   console.log(`You are ${complimentSelected}, ${name} !` );
 //  }
-}  giveCompliment('Kumait');
+}  //giveCompliment('Kumait');
 
 function main() {
   // TODO substitute your own name for "HackYourFuture"
-  const myName = 'HackYourFuture';
+  const myName = 'Kumait';
 
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));
