@@ -38,20 +38,21 @@ function selectRandomly(takesArray) {
   return takesArray[random];
   };
 
-  const feMale = prompt("Partners Guess: \n  👧 enter: 'g'  \n   enter: 'any'   \n enter 'b'  👦. ");
-  const partnerAny = selectRandomly(partnerNames.m, partnerNames.f);
  
+  const feMale = prompt("Partners Guess: \n  👧 enter: 'g'  \n   enter: 'any'   \n enter 'b'  👦. ");
+
 function partner(feMale, partnerNames) {
-  if( feMale === 'b'|| feMale === 'B' ){
-   return selectRandomly(partnerNames.m);
-  } else if ( feMale === 'g' || feMale === 'G') {
-   return selectRandomly(partnerNames.f);
-  } else if ( feMale === 'any' || feMale ==='Any') {
-   return selectRandomly(partnerAny);
+  if (feMale === 'b' || feMale === 'B') {
+    return selectRandomly(partnerNames.m);
+  } else if (feMale === 'g' || feMale === 'G') {
+    return selectRandomly(partnerNames.f);
+  } else if (feMale === 'any' || feMale === 'Any') {
+    const partnerAny = partnerNames.m.concat(partnerNames.f);
+    return selectRandomly(partnerAny);
   } else {
-    return "🔣🔣-Input: \n  Valid-Not 🥜" ;
-  };
-};
+    return "🔣🔣-Partner: \n  Valid-Not 🥜";
+  }
+}
 
 
 
