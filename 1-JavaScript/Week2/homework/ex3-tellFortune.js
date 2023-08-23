@@ -36,10 +36,11 @@ body, this code is now written once only in a separated function.
 function selectRandomly(takesArray) {
   const random = Math.floor(Math.random() * takesArray.length);
   return takesArray[random];
-  };
+}
 
- 
-  const feMale = prompt("Partners Guess: \n  👧 enter: 'g'  \n   enter: 'any'   \n enter 'b'  👦. ");
+const feMale = prompt(
+  "Partners Guess: \n  👧 enter: 'g'  \n   enter: 'any'   \n enter 'b'  👦. "
+);
 
 function partner(feMale, partnerNames) {
   if (feMale === 'b' || feMale === 'B') {
@@ -50,43 +51,35 @@ function partner(feMale, partnerNames) {
     const partnerAny = partnerNames.m.concat(partnerNames.f);
     return selectRandomly(partnerAny);
   } else {
-    return "🔣🔣-Partner: \n  Valid-Not 🥜";
+    return '🔣🔣-Partner: \n  Valid-Not 🥜';
   }
 }
 
-
-
 function tellFortune(numKids, partnerNames, locations, jobTitles) {
- 
   const jobTitle = selectRandomly(jobTitles);
   const location = selectRandomly(locations);
   const partnerName = partner(feMale, partnerNames);
   const numKid = selectRandomly(numKids);
-  
+
   return `You will be a ${jobTitle} in ${location}, married to ${partnerName} with ${numKid} kids.`;
 }
 
 function main() {
-  const numKids = [
-    'only son', 2, 'twins' , 3, 4
-  ];
+  const numKids = ['only son', 2, 'twins', 3, 4];
 
   const partnerNames = {
-      f: [
-        'Ka', 'Kyra', 'Kim', 'Kaat', 'Salma Hayek'
-      ],
-      m: [
-        'Kees','Ken', 'Koen', 'Kai', 'Kris' 
-      ]
-      
+    f: ['Ka', 'Kyra', 'Kim', 'Kaat', 'Salma Hayek'],
+    m: ['Kees', 'Ken', 'Koen', 'Kai', 'Kris'],
   };
 
-  const locations = [
-    'Amsterdam', 'LA', 'London', 'Tokyo', 'Paris'
-  ];
+  const locations = ['Amsterdam', 'LA', 'London', 'Tokyo', 'Paris'];
 
   const jobTitles = [
-    'web developer', 'IT Engineer', 'Coder', 'Programmer', 'Software Developer'
+    'web developer',
+    'IT Engineer',
+    'Coder',
+    'Programmer',
+    'Software Developer',
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
@@ -95,6 +88,17 @@ function main() {
 }
 main();
 
+/**
+ * > homework@1.0.0 it
+> node ./test-runner/run-it
+
+? Rerun last test (1-JavaScript, Week2, ex5-shoppingCartPure)? No
+? Which module? 1-JavaScript
+? Which week? Week2
+? Which exercise? ex3-tellFortune
+Running exercise, please wait...
+Something went wrong: prompt is not defined
+ */
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
