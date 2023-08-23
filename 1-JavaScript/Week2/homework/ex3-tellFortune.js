@@ -39,16 +39,17 @@ function selectRandomly(takesArray) {
   };
 
   const feMale = prompt("Partners Guess: \n  👧 enter: 'g'  \n   enter: 'any'   \n enter 'b'  👦. ");
+  const partnerAny = selectRandomly(partnerNames.m, partnerNames.f);
  
 function partner(feMale, partnerNames) {
   if( feMale === 'b'|| feMale === 'B' ){
    return selectRandomly(partnerNames.m);
-  } else if ( feMale === 'g' || feMale === 'G' ){
+  } else if ( feMale === 'g' || feMale === 'G') {
    return selectRandomly(partnerNames.f);
-  } else if ( feMale === 'any' || feMale ==='Any' ){
-   return selectRandomly(partnerNames);
-  }else {
-    return "Input: Valid-Not" ;
+  } else if ( feMale === 'any' || feMale ==='Any') {
+   return selectRandomly(partnerAny);
+  } else {
+    return "🔣🔣-Input: \n  Valid-Not 🥜" ;
   };
 };
 
