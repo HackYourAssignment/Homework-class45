@@ -5,13 +5,17 @@ const cartForParty = {
   chips: 0.99,
   soda: 1.25,
   snacks: 2.5,
-  pizza: 8.99
+  pizza: 8.99,
 };
 
 function calculateTotalPrice(cart) {
   let total = 0;
-  for(const item in cart){
-    total+=cart[item];
+  const cartKeys = Object.keys(cart);
+
+  console.log(cartKeys);
+
+  for (const key of cartKeys) {
+    total += cart[key];
   }
 
   return `Total: €${total}`;
@@ -19,8 +23,7 @@ function calculateTotalPrice(cart) {
 
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  console.assert(calculateTotalPrice.length===1);
-  
+  console.assert(calculateTotalPrice.length === 1);
 }
 
 function test2() {
