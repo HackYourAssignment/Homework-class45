@@ -1,0 +1,135 @@
+2023-08-28 06:45:36 info: ----------------------------------------------
+2023-08-28 06:45:36 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 06:45:36 info: ----------------------------------------------
+2023-08-28 06:45:36 info: Exercise has not yet been modified
+2023-08-28 06:45:47 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should take a single parameter
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/fatih/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 06:47:00 info: ----------------------------------------------
+2023-08-28 06:47:00 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 06:47:00 info: ----------------------------------------------
+2023-08-28 06:47:00 info: Exercise has not yet been modified
+2023-08-28 06:47:02 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should take a single parameter
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/fatih/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 06:47:23 info: ----------------------------------------
+2023-08-28 06:47:23 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-28 06:47:23 info: ----------------------------------------
+2023-08-28 06:47:23 info: Exercise has not yet been modified
+2023-08-28 06:47:25 error: *** Unit Test Error Report ***
+
+✕ calculateDogAge should have all TODO comments removed
+✕ calculateDogAge should take a single parameter
+✕ calculateDogAge should give 7 dog years for 1 human year
+  Expected: Your doggie is 7 years old in dog years!
+  Received: undefined
+✕ calculateDogAge should give 14 dog years for 2 human years
+  Expected: Your doggie is 14 years old in dog years!
+  Received: undefined
+✕ calculateDogAge give 21 dog years for 3 human years
+  Expected: Your doggie is 21 years old in dog years!
+  Received: undefined
+
+
+Command failed: npx jest ex2-dogYears.test.js --colors --reporters="/Users/fatih/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 06:52:08 info: ----------------------------------------------
+2023-08-28 06:52:08 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 06:52:08 info: ----------------------------------------------
+2023-08-28 06:52:11 info: All unit tests passed.
+2023-08-28 06:52:14 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:10:19 - Unknown word (Kadir)
+
+2023-08-28 06:52:33 info: ----------------------------------------
+2023-08-28 06:52:33 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-28 06:52:33 info: ----------------------------------------
+2023-08-28 06:52:34 info: All unit tests passed.
+2023-08-28 06:52:37 info: All steps were completed successfully
+2023-08-28 06:52:52 info: -------------------------------------------
+2023-08-28 06:52:52 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 06:52:52 info: -------------------------------------------
+2023-08-28 06:52:54 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Engineer in New York, married to Alice with 2 kids.
+  Received: You will be a Engineer in New York, 
+  married to Alice with 2 kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/fatih/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 06:53:14 info: Disclaimer turned off
+2023-08-28 06:53:21 info: -------------------------------------------
+2023-08-28 06:53:21 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 06:53:21 info: -------------------------------------------
+2023-08-28 06:53:23 info: All unit tests passed.
+2023-08-28 06:53:26 info: All steps were completed successfully
+2023-08-28 06:53:36 info: --------------------------------------------
+2023-08-28 06:53:36 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-28 06:53:36 info: --------------------------------------------
+2023-08-28 06:53:36 warn: A unit test file was not provided.
+2023-08-28 06:53:38 info: All steps were completed successfully
+2023-08-28 06:53:57 info: ------------------------------------------------
+2023-08-28 06:53:57 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-28 06:53:57 info: ------------------------------------------------
+2023-08-28 06:53:57 warn: A unit test file was not provided.
+2023-08-28 06:53:59 info: All steps were completed successfully
+2023-08-28 06:54:15 info: -----------------------------------------
+2023-08-28 06:54:15 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-28 06:54:15 info: -----------------------------------------
+2023-08-28 06:54:15 warn: A unit test file was not provided.
+2023-08-28 06:54:16 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  13:3  warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-08-28 06:57:00 info: -----------------------------------------
+2023-08-28 06:57:00 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-28 06:57:00 info: -----------------------------------------
+2023-08-28 06:57:00 warn: A unit test file was not provided.
+2023-08-28 06:57:02 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  15:3  warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-08-28 07:22:38 info: -----------------------------------------
+2023-08-28 07:22:38 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-28 07:22:38 info: -----------------------------------------
+2023-08-28 07:22:38 warn: A unit test file was not provided.
+2023-08-28 07:22:41 info: All steps were completed successfully
+2023-08-28 07:22:54 info: -------------------------------------------
+2023-08-28 07:22:54 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-08-28 07:22:54 info: -------------------------------------------
+2023-08-28 07:22:54 warn: A unit test file was not provided.
+2023-08-28 07:22:57 info: All steps were completed successfully
