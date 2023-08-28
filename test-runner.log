@@ -1,0 +1,118 @@
+2023-08-26 01:48:20 info: ----------------------------------------------
+2023-08-26 01:48:20 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-26 01:48:20 info: ----------------------------------------------
+2023-08-26 01:48:22 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should take a single parameter
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\Mohammed\B\Hack your Future\After acceptance\Homework-class45\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-26 01:48:24 error: *** Spell Checker Report ***
+
+
+2023-08-26 01:49:18 info: ----------------------------------------------
+2023-08-26 01:49:18 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-26 01:49:18 info: ----------------------------------------------
+2023-08-26 01:49:20 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should take a single parameter
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\Mohammed\B\Hack your Future\After acceptance\Homework-class45\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-26 01:49:23 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:23:29 info: ----------------------------------------------
+2023-08-28 05:23:29 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 05:23:29 info: ----------------------------------------------
+2023-08-28 05:23:32 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\Mohammed\B\Hack your Future\After acceptance\Homework-class45\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 05:23:35 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:24:01 info: Disclaimer turned off
+2023-08-28 05:24:25 info: ----------------------------------------
+2023-08-28 05:24:25 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-28 05:24:25 info: ----------------------------------------
+2023-08-28 05:24:27 info: All unit tests passed.
+2023-08-28 05:24:29 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:25:10 info: -------------------------------------------
+2023-08-28 05:25:10 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 05:25:10 info: -------------------------------------------
+2023-08-28 05:25:12 info: All unit tests passed.
+2023-08-28 05:25:15 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:25:28 info: --------------------------------------------
+2023-08-28 05:25:28 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-28 05:25:28 info: --------------------------------------------
+2023-08-28 05:25:28 warn: A unit test file was not provided.
+2023-08-28 05:25:31 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:25:53 info: ------------------------------------------------
+2023-08-28 05:25:53 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-28 05:25:53 info: ------------------------------------------------
+2023-08-28 05:25:53 warn: A unit test file was not provided.
+2023-08-28 05:25:56 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:26:14 info: -----------------------------------------
+2023-08-28 05:26:14 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-28 05:26:14 info: -----------------------------------------
+2023-08-28 05:26:14 warn: A unit test file was not provided.
+2023-08-28 05:26:17 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:26:30 info: -------------------------------------------
+2023-08-28 05:26:30 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-08-28 05:26:30 info: -------------------------------------------
+2023-08-28 05:26:30 warn: A unit test file was not provided.
+2023-08-28 05:26:32 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:26:43 info: ----------------------------------------------
+2023-08-28 05:26:43 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 05:26:43 info: ----------------------------------------------
+2023-08-28 05:26:45 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\Mohammed\B\Hack your Future\After acceptance\Homework-class45\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 05:26:48 error: *** Spell Checker Report ***
+
+
+2023-08-28 05:27:29 info: ----------------------------------------------
+2023-08-28 05:27:29 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 05:27:29 info: ----------------------------------------------
+2023-08-28 05:27:31 info: All unit tests passed.
+2023-08-28 05:27:34 error: *** Spell Checker Report ***
+
+
