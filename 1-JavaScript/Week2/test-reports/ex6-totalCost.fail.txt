@@ -1,0 +1,12 @@
+
+*** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  32:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  32:12  warning  'i' is never reassigned. Use 'const' instead          no-autofix/prefer-const
+  32:12  error    'i' is assigned a value but never used                no-unused-vars
+
+✖ 5 problems (3 errors, 2 warnings)
+
