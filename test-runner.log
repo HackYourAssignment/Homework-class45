@@ -1,0 +1,421 @@
+2023-08-27 08:57:37 info: ----------------------------------------------
+2023-08-27 08:57:37 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-27 08:57:37 info: ----------------------------------------------
+2023-08-27 08:57:46 info: All unit tests passed.
+2023-08-27 08:57:55 info: All steps were completed successfully
+2023-08-27 09:00:23 info: ----------------------------------------------
+2023-08-27 09:00:23 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-27 09:00:23 info: ----------------------------------------------
+2023-08-27 09:00:29 info: All unit tests passed.
+2023-08-27 09:00:37 info: All steps were completed successfully
+2023-08-28 03:28:39 info: ----------------------------------------------
+2023-08-28 03:28:39 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 03:28:39 info: ----------------------------------------------
+2023-08-28 03:28:46 info: All unit tests passed.
+2023-08-28 03:28:54 info: All steps were completed successfully
+2023-08-28 03:29:17 info: ----------------------------------------------
+2023-08-28 03:29:17 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 03:29:17 info: ----------------------------------------------
+2023-08-28 03:29:23 info: All unit tests passed.
+2023-08-28 03:29:31 info: All steps were completed successfully
+2023-08-28 08:35:37 info: ----------------------------------------------
+2023-08-28 08:35:37 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 08:35:37 info: ----------------------------------------------
+2023-08-28 08:35:44 info: All unit tests passed.
+2023-08-28 08:35:53 info: All steps were completed successfully
+2023-08-28 08:45:25 info: ----------------------------------------------
+2023-08-28 08:45:25 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 08:45:25 info: ----------------------------------------------
+2023-08-28 08:45:31 info: All unit tests passed.
+2023-08-28 08:45:39 info: All steps were completed successfully
+2023-08-29 12:25:26 info: ------------------------------------------------
+2023-08-29 12:25:26 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 12:25:26 info: ------------------------------------------------
+2023-08-29 12:25:26 warn: A unit test file was not provided.
+2023-08-29 12:25:30 error: *** ESLint Report ***
+
+ex5-shoppingCartPure.js
+  2:9  error  'initial' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-08-29 12:26:52 info: ------------------------------------------------
+2023-08-29 12:26:52 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 12:26:52 info: ------------------------------------------------
+2023-08-29 12:26:52 warn: A unit test file was not provided.
+2023-08-29 12:26:57 info: All steps were completed successfully
+2023-08-29 02:38:22 info: ------------------------------------------------
+2023-08-29 02:38:22 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 02:38:22 info: ------------------------------------------------
+2023-08-29 02:38:22 warn: A unit test file was not provided.
+2023-08-29 02:38:27 error: *** ESLint Report ***
+
+ex5-shoppingCartPure.js
+  3:9  error  'update' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-08-29 02:53:16 info: ------------------------------------------------
+2023-08-29 02:53:16 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 02:53:16 info: ------------------------------------------------
+2023-08-29 02:53:16 warn: A unit test file was not provided.
+2023-08-29 02:53:24 info: All steps were completed successfully
+2023-08-29 02:54:39 info: ------------------------------------------------
+2023-08-29 02:54:39 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 02:54:39 info: ------------------------------------------------
+2023-08-29 02:54:39 warn: A unit test file was not provided.
+2023-08-29 02:54:46 info: All steps were completed successfully
+2023-08-29 03:01:23 info: ------------------------------------------------
+2023-08-29 03:01:23 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 03:01:23 info: ------------------------------------------------
+2023-08-29 03:01:23 warn: A unit test file was not provided.
+2023-08-29 03:01:27 info: All steps were completed successfully
+2023-08-29 03:02:11 info: ------------------------------------------------
+2023-08-29 03:02:11 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 03:02:11 info: ------------------------------------------------
+2023-08-29 03:02:11 warn: A unit test file was not provided.
+2023-08-29 03:02:14 info: All steps were completed successfully
+2023-08-29 03:51:13 info: ------------------------------------------------
+2023-08-29 03:51:13 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 03:51:13 info: ------------------------------------------------
+2023-08-29 03:51:13 warn: A unit test file was not provided.
+2023-08-29 03:51:22 info: All steps were completed successfully
+2023-08-29 03:51:39 info: -----------------------------------------
+2023-08-29 03:51:39 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 03:51:39 info: -----------------------------------------
+2023-08-29 03:51:39 warn: A unit test file was not provided.
+2023-08-29 03:51:42 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  33:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  35:7   error    'total' is assigned a value but never used            no-unused-vars
+
+✖ 4 problems (3 errors, 1 warning)
+
+
+2023-08-29 03:52:23 info: Disclaimer turned off
+2023-08-29 03:56:14 info: -----------------------------------------
+2023-08-29 03:56:14 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 03:56:14 info: -----------------------------------------
+2023-08-29 03:56:14 warn: A unit test file was not provided.
+2023-08-29 03:56:15 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  33:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  35:7   error    'total' is assigned a value but never used            no-unused-vars
+  39:21  error    'amount' is not defined                               no-undef
+
+✖ 5 problems (4 errors, 1 warning)
+
+
+2023-08-29 03:56:55 info: -----------------------------------------
+2023-08-29 03:56:55 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 03:56:55 info: -----------------------------------------
+2023-08-29 03:56:55 warn: A unit test file was not provided.
+2023-08-29 03:56:57 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  33:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  35:7   error    'total' is assigned a value but never used            no-unused-vars
+  39:21  error    'amount' is not defined                               no-undef
+
+✖ 5 problems (4 errors, 1 warning)
+
+
+2023-08-29 03:59:06 info: -----------------------------------------
+2023-08-29 03:59:06 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 03:59:06 info: -----------------------------------------
+2023-08-29 03:59:06 warn: A unit test file was not provided.
+2023-08-29 03:59:08 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  33:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  35:7   error    'total' is assigned a value but never used            no-unused-vars
+  39:21  error    'amount' is not defined                               no-undef
+
+✖ 5 problems (4 errors, 1 warning)
+
+
+2023-08-29 04:00:10 info: -----------------------------------------
+2023-08-29 04:00:10 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 04:00:10 info: -----------------------------------------
+2023-08-29 04:00:10 warn: A unit test file was not provided.
+2023-08-29 04:00:11 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  33:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 3 problems (2 errors, 1 warning)
+
+
+2023-08-29 04:02:49 info: -----------------------------------------
+2023-08-29 04:02:49 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 04:02:49 info: -----------------------------------------
+2023-08-29 04:02:49 warn: A unit test file was not provided.
+2023-08-29 04:02:50 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  34:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 3 problems (2 errors, 1 warning)
+
+
+2023-08-29 04:11:58 info: -----------------------------------------
+2023-08-29 04:11:58 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 04:11:58 info: -----------------------------------------
+2023-08-29 04:11:58 warn: A unit test file was not provided.
+2023-08-29 04:12:05 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  34:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 3 problems (2 errors, 1 warning)
+
+
+2023-08-29 04:30:26 info: -----------------------------------------
+2023-08-29 04:30:26 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 04:30:26 info: -----------------------------------------
+2023-08-29 04:30:26 warn: A unit test file was not provided.
+2023-08-29 04:30:32 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used     no-unused-vars
+  31:10  error    'calculateTotalPrice' is defined but never used       no-unused-vars
+  34:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 3 problems (2 errors, 1 warning)
+
+
+2023-08-29 04:48:45 info: -----------------------------------------
+2023-08-29 04:48:45 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 04:48:45 info: -----------------------------------------
+2023-08-29 04:48:45 warn: A unit test file was not provided.
+2023-08-29 04:48:48 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  34:3  warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-08-29 04:49:32 info: -----------------------------------------
+2023-08-29 04:49:32 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 04:49:32 info: -----------------------------------------
+2023-08-29 04:49:32 warn: A unit test file was not provided.
+2023-08-29 04:49:35 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  34:3  warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-08-29 07:27:37 info: -----------------------------------------
+2023-08-29 07:27:37 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 07:27:37 info: -----------------------------------------
+2023-08-29 07:27:37 warn: A unit test file was not provided.
+2023-08-29 07:27:40 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  23:7   error    'cartForParty' is assigned a value but never used  no-unused-vars
+  31:30  error    'cartForParty' is defined but never used           no-unused-vars
+  32:7   warning  'total' is never reassigned. Use 'const' instead   no-autofix/prefer-const
+  34:15  error    'cost' is not defined                              no-undef
+  35:5   error    'totalCost' is not defined                         no-undef
+  35:18  error    'costo' is not defined                             no-undef
+
+✖ 6 problems (5 errors, 1 warning)
+
+
+2023-08-29 07:27:43 error: *** Spell Checker Report ***
+
+ex6-totalCost.js:35:18 - Unknown word (costo)
+
+2023-08-29 07:31:46 info: -----------------------------------------
+2023-08-29 07:31:46 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 07:31:46 info: -----------------------------------------
+2023-08-29 07:31:46 warn: A unit test file was not provided.
+2023-08-29 07:31:48 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  32:7  warning  'total' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  35:5  error    'totalCost' is not defined                        no-undef
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2023-08-29 07:32:25 info: -----------------------------------------
+2023-08-29 07:32:25 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 07:32:25 info: -----------------------------------------
+2023-08-29 07:32:25 warn: A unit test file was not provided.
+2023-08-29 07:32:26 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  35:5  error  'totalCost' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-08-29 07:34:14 info: -----------------------------------------
+2023-08-29 07:34:14 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 07:34:14 info: -----------------------------------------
+2023-08-29 07:34:14 warn: A unit test file was not provided.
+2023-08-29 07:34:16 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  35:5  error  'total' is constant  no-const-assign
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-08-29 07:35:44 info: -----------------------------------------
+2023-08-29 07:35:44 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 07:35:44 info: -----------------------------------------
+2023-08-29 07:35:44 warn: A unit test file was not provided.
+2023-08-29 07:35:46 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  35:5  error  'total' is constant  no-const-assign
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-08-29 07:37:00 info: -----------------------------------------
+2023-08-29 07:37:00 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 07:37:00 info: -----------------------------------------
+2023-08-29 07:37:00 warn: A unit test file was not provided.
+2023-08-29 07:37:04 info: All steps were completed successfully
+2023-08-29 07:43:05 info: -----------------------------------------
+2023-08-29 07:43:05 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 07:43:05 info: -----------------------------------------
+2023-08-29 07:43:06 warn: A unit test file was not provided.
+2023-08-29 07:43:11 info: All steps were completed successfully
+2023-08-29 08:15:21 info: -------------------------------------------
+2023-08-29 08:15:21 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-08-29 08:15:21 info: -------------------------------------------
+2023-08-29 08:15:21 warn: A unit test file was not provided.
+2023-08-29 08:15:33 info: All steps were completed successfully
+2023-08-29 08:18:23 info: -------------------------------------------
+2023-08-29 08:18:23 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-08-29 08:18:23 info: -------------------------------------------
+2023-08-29 08:18:23 warn: A unit test file was not provided.
+2023-08-29 08:18:37 info: All steps were completed successfully
+2023-08-29 08:24:42 info: --------------------------------------------
+2023-08-29 08:24:42 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-29 08:24:42 info: --------------------------------------------
+2023-08-29 08:24:42 warn: A unit test file was not provided.
+2023-08-29 08:24:50 info: All steps were completed successfully
+2023-08-29 08:25:07 info: ----------------------------------------
+2023-08-29 08:25:07 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-29 08:25:07 info: ----------------------------------------
+2023-08-29 08:25:13 info: All unit tests passed.
+2023-08-29 08:25:21 info: All steps were completed successfully
+2023-08-29 08:25:38 info: -------------------------------------------
+2023-08-29 08:25:38 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 08:25:38 info: -------------------------------------------
+2023-08-29 08:25:42 error: *** Unit Test Error Report ***
+
+✕ tellFortune `numKids` should be an array initialized with 5 elements
+✕ tellFortune `locations` should be an array initialized with 5 elements
+✕ tellFortune `partnerNames` should be an array initialized with 5 elements
+✕ tellFortune `jobTitles` should be an array initialized with 5 elements
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Engineer in United States, married to Emily with one kids.
+  Received: You will be a one in Emily, married to United States with Engineer Kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-29 08:27:21 info: -------------------------------------------
+2023-08-29 08:27:21 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 08:27:21 info: -------------------------------------------
+2023-08-29 08:27:24 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Engineer in United States, married to Emily with one kids.
+  Received: You will be a one in Emily, married to United States with Engineer Kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-29 08:29:43 info: -------------------------------------------
+2023-08-29 08:29:43 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 08:29:43 info: -------------------------------------------
+2023-08-29 08:29:47 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Engineer in United States, married to Emily with one kids.
+  Received: You will be a one in Emily, married to United States with Engineer Kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-29 08:31:54 info: -------------------------------------------
+2023-08-29 08:31:54 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 08:31:54 info: -------------------------------------------
+2023-08-29 08:31:58 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Engineer in United States, married to Emily with one kids.
+  Received: You will be a one in Emily, married to United States with Engineer Kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-29 08:36:04 info: -------------------------------------------
+2023-08-29 08:36:04 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 08:36:04 info: -------------------------------------------
+2023-08-29 08:36:08 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Engineer in United States, married to Emily with one kids.
+  Received: You will be a Engineer in United States, married to Emily with one Kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-29 08:41:53 info: -------------------------------------------
+2023-08-29 08:41:53 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 08:41:53 info: -------------------------------------------
+2023-08-29 08:41:57 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Engineer in United States, married to Emily with one kids.
+  Received: You will be a Engineer in United States, married to Emily with one Kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-29 08:42:32 info: -------------------------------------------
+2023-08-29 08:42:32 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 08:42:32 info: -------------------------------------------
+2023-08-29 08:42:36 info: All unit tests passed.
+2023-08-29 08:42:42 info: All steps were completed successfully
