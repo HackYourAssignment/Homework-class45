@@ -1,0 +1,180 @@
+2023-08-28 03:11:10 info: ----------------------------------------------
+2023-08-28 03:11:10 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 03:11:10 info: ----------------------------------------------
+2023-08-28 03:11:18 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are amazing, HackYourFuture!
+  Received: Your are amazing, HackYourFuture!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/hackyourfuture/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 03:14:05 info: ----------------------------------------------
+2023-08-28 03:14:05 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 03:14:05 info: ----------------------------------------------
+2023-08-28 03:14:09 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are amazing, HackYourFuture!
+  Received: Your are amazing, HackYourFuture!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/hackyourfuture/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 03:15:02 info: ----------------------------------------------
+2023-08-28 03:15:02 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 03:15:02 info: ----------------------------------------------
+2023-08-28 03:15:04 info: All unit tests passed.
+2023-08-28 03:15:08 info: All steps were completed successfully
+2023-08-28 03:29:14 info: ----------------------------------------
+2023-08-28 03:29:14 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-28 03:29:14 info: ----------------------------------------
+2023-08-28 03:29:21 info: All unit tests passed.
+2023-08-28 03:29:33 info: All steps were completed successfully
+2023-08-28 03:34:07 info: ----------------------------------------
+2023-08-28 03:34:07 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-28 03:34:07 info: ----------------------------------------
+2023-08-28 03:34:13 info: All unit tests passed.
+2023-08-28 03:34:22 info: All steps were completed successfully
+2023-08-28 03:39:05 info: ----------------------------------------
+2023-08-28 03:39:05 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-28 03:39:05 info: ----------------------------------------
+2023-08-28 03:39:09 info: All unit tests passed.
+2023-08-28 03:39:18 info: All steps were completed successfully
+2023-08-28 03:39:33 info: ----------------------------------------
+2023-08-28 03:39:33 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-28 03:39:33 info: ----------------------------------------
+2023-08-28 03:39:38 info: All unit tests passed.
+2023-08-28 03:39:48 info: All steps were completed successfully
+2023-08-28 03:40:09 info: ----------------------------------------------
+2023-08-28 03:40:09 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 03:40:09 info: ----------------------------------------------
+2023-08-28 03:40:13 info: All unit tests passed.
+2023-08-28 03:40:21 info: All steps were completed successfully
+2023-08-28 06:26:57 info: -------------------------------------------
+2023-08-28 06:26:57 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 06:26:57 info: -------------------------------------------
+2023-08-28 06:27:02 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Software Engineer/Developer in Nicaragua, married to Jorge Luis Borges with no kids.
+  Received: You will be a Software Engineer/Developer in Nicaragua,
+  married to Jorge Luis Borges with no kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/hackyourfuture/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-08-28 06:27:11 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:58:6 - Unknown word (Rubén)
+ex3-tellFortune.js:58:12 - Unknown word (Darío)
+
+2023-08-28 06:29:52 info: -------------------------------------------
+2023-08-28 06:29:52 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 06:29:52 info: -------------------------------------------
+2023-08-28 06:29:56 info: All unit tests passed.
+2023-08-28 06:30:04 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:57:6 - Unknown word (Rubén)
+ex3-tellFortune.js:57:12 - Unknown word (Darío)
+
+2023-08-28 07:34:35 info: -------------------------------------------
+2023-08-28 07:34:35 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 07:34:35 info: -------------------------------------------
+2023-08-28 07:34:39 info: All unit tests passed.
+2023-08-28 07:34:47 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:57:6 - Unknown word (Rubén)
+ex3-tellFortune.js:57:12 - Unknown word (Darío)
+
+2023-08-28 07:44:03 info: -------------------------------------------
+2023-08-28 07:44:03 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 07:44:03 info: -------------------------------------------
+2023-08-28 07:44:10 info: All unit tests passed.
+2023-08-28 07:44:19 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:57:6 - Unknown word (Rubén)
+ex3-tellFortune.js:57:12 - Unknown word (Darío)
+
+2023-08-28 07:46:46 info: -------------------------------------------
+2023-08-28 07:46:46 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-28 07:46:46 info: -------------------------------------------
+2023-08-28 07:46:51 info: All unit tests passed.
+2023-08-28 07:46:58 info: All steps were completed successfully
+2023-08-28 07:47:56 info: ----------------------------------------------
+2023-08-28 07:47:56 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-28 07:47:56 info: ----------------------------------------------
+2023-08-28 07:48:00 info: All unit tests passed.
+2023-08-28 07:48:09 info: All steps were completed successfully
+2023-08-29 10:17:10 info: --------------------------------------------
+2023-08-29 10:17:10 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-29 10:17:10 info: --------------------------------------------
+2023-08-29 10:17:10 warn: A unit test file was not provided.
+2023-08-29 10:17:18 info: All steps were completed successfully
+2023-08-29 10:24:02 info: --------------------------------------------
+2023-08-29 10:24:02 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-29 10:24:02 info: --------------------------------------------
+2023-08-29 10:24:02 warn: A unit test file was not provided.
+2023-08-29 10:24:13 info: All steps were completed successfully
+2023-08-29 10:43:03 info: --------------------------------------------
+2023-08-29 10:43:03 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-29 10:43:03 info: --------------------------------------------
+2023-08-29 10:43:03 warn: A unit test file was not provided.
+2023-08-29 10:43:15 info: All steps were completed successfully
+2023-08-29 11:00:45 info: --------------------------------------------
+2023-08-29 11:00:45 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-29 11:00:45 info: --------------------------------------------
+2023-08-29 11:00:45 warn: A unit test file was not provided.
+2023-08-29 11:00:53 info: All steps were completed successfully
+2023-08-29 11:21:31 info: --------------------------------------------
+2023-08-29 11:21:31 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-29 11:21:31 info: --------------------------------------------
+2023-08-29 11:21:31 warn: A unit test file was not provided.
+2023-08-29 11:21:44 info: All steps were completed successfully
+2023-08-29 02:35:05 info: ------------------------------------------------
+2023-08-29 02:35:05 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 02:35:05 info: ------------------------------------------------
+2023-08-29 02:35:05 warn: A unit test file was not provided.
+2023-08-29 02:35:15 info: All steps were completed successfully
+2023-08-29 02:35:34 info: ----------------------------------------------
+2023-08-29 02:35:34 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-29 02:35:34 info: ----------------------------------------------
+2023-08-29 02:35:42 info: All unit tests passed.
+2023-08-29 02:35:51 info: All steps were completed successfully
+2023-08-29 02:36:09 info: ----------------------------------------
+2023-08-29 02:36:09 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-29 02:36:09 info: ----------------------------------------
+2023-08-29 02:36:13 info: All unit tests passed.
+2023-08-29 02:36:19 info: All steps were completed successfully
+2023-08-29 02:36:35 info: -------------------------------------------
+2023-08-29 02:36:35 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-29 02:36:35 info: -------------------------------------------
+2023-08-29 02:36:38 info: All unit tests passed.
+2023-08-29 02:36:45 info: All steps were completed successfully
+2023-08-29 02:36:57 info: --------------------------------------------
+2023-08-29 02:36:57 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-29 02:36:57 info: --------------------------------------------
+2023-08-29 02:36:57 warn: A unit test file was not provided.
+2023-08-29 02:37:04 info: All steps were completed successfully
+2023-08-29 02:37:15 info: ------------------------------------------------
+2023-08-29 02:37:15 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-29 02:37:15 info: ------------------------------------------------
+2023-08-29 02:37:15 warn: A unit test file was not provided.
+2023-08-29 02:37:22 info: All steps were completed successfully
+2023-08-29 04:02:28 info: -----------------------------------------
+2023-08-29 04:02:28 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-29 04:02:28 info: -----------------------------------------
+2023-08-29 04:02:28 warn: A unit test file was not provided.
+2023-08-29 04:02:36 info: All steps were completed successfully
+2023-08-29 07:07:33 info: -------------------------------------------
+2023-08-29 07:07:33 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-08-29 07:07:33 info: -------------------------------------------
+2023-08-29 07:07:33 warn: A unit test file was not provided.
+2023-08-29 07:07:40 info: All steps were completed successfully
