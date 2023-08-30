@@ -1,12 +1,12 @@
-const feMale = prompt(
+const feMale = window.prompt(
   "Partners Guess: \n  👧 enter: 'g'  \n   enter: 'any'   \n enter 'b'  👦. "
 );
 
-const numKids = ['only son', 2, 'twins', 3, 4];
+const numKids = ["only son", 2, "twins", 3, 4];
 
 const partnerNames = {
-  f: ['Ka', 'Kyra', 'Kim', 'Kaat', 'Salma Hayek'],
-  m: ['Kees', 'Ken', 'Koen', 'Kai', 'Kris'],
+  f: ["Ka", "Kyra", "Kim", "Kaat", "Salma Hayek"],
+  m: ["Kees", "Ken", "Koen", "Kai", "Kris"],
 };
 
 // ... The spread operator :
@@ -15,17 +15,24 @@ const string = ['fruit', 'vegetable'];
 const combined = [...numbers, ...string];
 console.log(combined) // Will be [1, 2, 3, 'fruit', 'vegetable'] */ //HYF-book:
 
+<<<<<<< HEAD
+// //const partnerAny = partnerNames.m.concat(partnerNames.f);
+const partnerAny = [...partnerNames.m, ...partnerNames.f];
+=======
 // //const partnerAny = partnerNames.m.concat(partnerNames.f);
 const partnerAny = [...partnerNames.m, ...partnerNames.f];
 
 const locations = ['Amsterdam', 'LA', 'London', 'Tokyo', 'Paris'];
+>>>>>>> db2a6db47275596003f312e93405a412a2eb1940
+
+const locations = ["Amsterdam", "LA", "London", "Tokyo", "Paris"];
 
 const jobTitles = [
-  'web developer',
-  'IT Engineer',
-  'Coder',
-  'Programmer',
-  'Software Developer',
+  "web developer",
+  "IT Engineer",
+  "Coder",
+  "Programmer",
+  "Software Developer",
 ];
 // IN IN Arrow Function:
 // //function selectRandomly(takesArray) {
@@ -39,15 +46,23 @@ const selectRandomly = (takesArray) => {
 
 // Destructure the partnerNames object:
 function partner(feMale, partnerNames) {
+<<<<<<< HEAD
+  if (feMale === "b") {
+    return selectRandomly(partnerNames.m);
+  } else if (feMale === "g") {
+    return selectRandomly(partnerNames.f);
+  } else if (feMale === "any") {
+=======
   const { m, f } = partnerNames; // Do this
   if (feMale === 'b') {
     return selectRandomly(m); // instead of: `partnerNames.m`
   } else if (feMale === 'g') {
     return selectRandomly(f);
   } else if (feMale === 'any') {
+>>>>>>> db2a6db47275596003f312e93405a412a2eb1940
     return selectRandomly(partnerAny);
   } else {
-    return '🔣🔣-Partner: \n  Valid-Not 🥜';
+    return "🔣🔣-Partner: \n  Valid-Not 🥜";
   }
 }
 
