@@ -8,6 +8,7 @@ calculate it!
 1. Complete the function named `calculateDogAge`.
 
   - It takes one parameter: your (fictional) puppy's age (number).
+
   - Calculate your dog's age based on the conversion rate of 1 human year to
     7 dog years.
   - Return a string: "Your doggie is `age` years old in dog years!"
@@ -16,8 +17,10 @@ calculate it!
    ages.
 -----------------------------------------------------------------------------*/
 
-function calculateDogAge(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function calculateDogAge(number) {
+  const dogAgeHumanYear = number * 7
+  return `Your doggie is ${dogAgeHumanYear} years old in dog years!`
+ 
 }
 
 function main() {

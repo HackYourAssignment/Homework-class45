@@ -1,4 +1,6 @@
 'use strict';
+
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-6-total-cost-is
 
@@ -20,23 +22,35 @@ instead!
 
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
-const cartForParty = {
+const cartForParty = { beer:10.50,chips:4.99,cheese:8.25,chocolat:2.49,nuts:5.15
   // TODO complete this object
 };
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
+function calculateTotalPrice(cart) {
+ let total = 0;
+
+ for (const item in cart) {
+  if (cart.hasOwnProperty(item)) {
+    total += cart[item];
+  }
+}
+
+  return `Total: €${total.toFixed(2)}`;
 }
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  const expected = 1;
+  const actual = calculateTotalPrice.length;
+  console.assert(actual === expected);
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  const result = calculateTotalPrice(cartForParty)
+  console.assert(result === 'Total: €31.38');
+
 }
 
 function test() {
