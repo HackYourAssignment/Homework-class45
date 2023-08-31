@@ -30,13 +30,10 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(employeeRecords) {
-  employeeRecords.forEach((element) => {
-    Object.keys(element)
-      .filter((key) => !key.includes('gender') || !key.includes('salary'))
-      .reduce((result, key) => {
-        return Object.assign(result, { [key]: element[key] });
-      }, {});
+function filterPrivateData(data) {
+  return data.map((element) => {
+    const { name, occupation, email } = element;
+    return { name, occupation, email };
   });
 }
 
@@ -63,6 +60,7 @@ function test2() {
   const result = filterPrivateData(employeeRecords);
   console.assert(JSON.stringify(result) === JSON.stringify(expected));
 }
+console.log(filterPrivateData(employeeRecords));
 
 function test() {
   test1();

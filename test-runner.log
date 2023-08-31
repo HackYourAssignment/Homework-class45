@@ -543,3 +543,41 @@ ex7-mindPrivacy.js
 2023-08-29 09:54:02 info: --------------------------------------------
 2023-08-29 09:54:02 warn: A unit test file was not provided.
 2023-08-29 09:54:04 info: All steps were completed successfully
+2023-08-31 08:35:14 info: ----------------------------------------------
+2023-08-31 08:35:14 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-08-31 08:35:14 info: ----------------------------------------------
+2023-08-31 08:35:16 info: All unit tests passed.
+2023-08-31 08:35:20 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:41:19 - Unknown word (Zehra)
+
+2023-08-31 08:38:57 info: ----------------------------------------
+2023-08-31 08:38:57 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-08-31 08:38:57 info: ----------------------------------------
+2023-08-31 08:38:59 info: All unit tests passed.
+2023-08-31 08:39:03 info: All steps were completed successfully
+2023-08-31 08:43:48 info: ------------------------------------------------
+2023-08-31 08:43:48 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-08-31 08:43:48 info: ------------------------------------------------
+2023-08-31 08:43:48 warn: A unit test file was not provided.
+2023-08-31 08:43:52 info: All steps were completed successfully
+2023-08-31 08:45:43 info: -------------------------------------------
+2023-08-31 08:45:43 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-08-31 08:45:43 info: -------------------------------------------
+2023-08-31 08:45:46 info: All unit tests passed.
+2023-08-31 08:45:49 info: All steps were completed successfully
+2023-08-31 11:46:09 info: --------------------------------------------
+2023-08-31 11:46:09 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-08-31 11:46:09 info: --------------------------------------------
+2023-08-31 11:46:09 warn: A unit test file was not provided.
+2023-08-31 11:46:12 info: All steps were completed successfully
+2023-08-31 12:13:30 info: -----------------------------------------
+2023-08-31 12:13:30 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-08-31 12:13:30 info: -----------------------------------------
+2023-08-31 12:13:30 warn: A unit test file was not provided.
+2023-08-31 12:13:33 info: All steps were completed successfully
+2023-08-31 03:25:18 info: -------------------------------------------
+2023-08-31 03:25:18 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-08-31 03:25:18 info: -------------------------------------------
+2023-08-31 03:25:18 warn: A unit test file was not provided.
+2023-08-31 03:25:22 info: All steps were completed successfully

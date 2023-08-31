@@ -27,14 +27,10 @@ function addToShoppingCart(item) {
   if (item) {
     shoppingCart.push(item);
   }
-  if (shoppingCart.length === 2) {
-    return 'You bought bananas, milk!';
-  } else if (shoppingCart.length === 3) {
-    return `You bought ${shoppingCart[0]}, ${shoppingCart[1]}, ${shoppingCart[2]}!`;
-  } else if (shoppingCart.length > 3) {
+  if (shoppingCart.length > 3) {
     shoppingCart.shift();
-    return `You bought ${shoppingCart[0]}, ${shoppingCart[1]}, ${shoppingCart[2]}!`;
   }
+  return `You bought ${shoppingCart.join()}!`;
 }
 
 // ! Test functions (plain vanilla JavaScript)
