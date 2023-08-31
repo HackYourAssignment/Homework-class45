@@ -30,8 +30,11 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function filterPrivateData(data) {
+  return data.map((element) => {
+    const { name, occupation, email } = element;
+    return { name, occupation, email };
+  });
 }
 
 // ! Test functions (plain vanilla JavaScript)
@@ -57,6 +60,7 @@ function test2() {
   const result = filterPrivateData(employeeRecords);
   console.assert(JSON.stringify(result) === JSON.stringify(expected));
 }
+console.log(filterPrivateData(employeeRecords));
 
 function test() {
   test1();
