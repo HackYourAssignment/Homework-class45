@@ -3,7 +3,6 @@ function addToShoppingCart( shoppingCartNew, groceryItem) {
  const shoppingCart= [...shoppingCartNew]
   if(groceryItem !== undefined){
     shoppingCart.push(groceryItem)
-
   }
   if(shoppingCart.length > 3 ){
   shoppingCart.shift()

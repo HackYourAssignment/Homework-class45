@@ -14,13 +14,13 @@ function giveCompliment(name) {
     "fantastoc",
   ];
   let randomCompliment = Math.floor(Math.random() * compliments.length);
-  //   it is only possible to return 2 or more values using array using [] or as object in {}
-  //   return [compliments[randomCompliment], name];
   return  `You are ${compliments[randomCompliment]} ${name}!`;
 
 }
 
 function main() {
+
+
   const myName = "Robel";
 
   console.log(giveCompliment(myName));
@@ -34,5 +34,7 @@ function main() {
   console.log(giveCompliment(yourName));
 }
 if (process.env.NODE_ENV !== "test") {
+
   main();
+
 }

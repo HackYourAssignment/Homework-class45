@@ -2,12 +2,11 @@
 const shoppingCart = ['bananas', 'milk'];
 
 function addToShoppingCart(groceryItem) {
-if(groceryItem !== undefined){shoppingCart.push(groceryItem)}
-if(shoppingCart.length > 3 ){shoppingCart.shift()}
+if(groceryItem !== undefined) { shoppingCart.push(groceryItem) }
+if( shoppingCart.length > 3 ){ shoppingCart.shift() }
   return `You bought ${shoppingCart.join(", ")}!`
 }
 function test1() {
-  console.log("====================================================")
   console.log(
     'Test 1: addShoppingCart() called without an argument should leave the shopping cart unchanged'
   );
@@ -17,7 +16,6 @@ function test1() {
 }
 
 function test2() {
-  console.log("====================================================")
   console.log('Test 2: addShoppingCart() should take one parameter');
   const expected = 1;
   const actual = addToShoppingCart.length;
@@ -25,7 +23,6 @@ function test2() {
 }
 
 function test3() {
-  console.log("====================================================")
   console.log('Test 3: `chocolate` should be added');
   const expected = 'You bought bananas, milk, chocolate!';
   const actual = addToShoppingCart('chocolate');
@@ -33,7 +30,6 @@ function test3() {
 }
 
 function test4() {
-  console.log("====================================================")
   console.log('Test 4: `waffles` should be added and `bananas` removed');
   const expected = 'You bought milk, chocolate, waffles!';
   const actual = addToShoppingCart('waffles');

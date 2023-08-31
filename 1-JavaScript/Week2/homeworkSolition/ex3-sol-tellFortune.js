@@ -2,15 +2,12 @@
 
 
 function selectRandomly(arr) {
-  // TODO complete this function
-
   let randomGuess = arr[Math.floor(Math.random() * arr.length)];
-
   return randomGuess;
 }
 
 function tellFortune(numKids, partnerNames, locations, jobTitles) {
-  // TODO complete this function
+ 
   let numKid = selectRandomly(numKids);
   let partnerName = selectRandomly(partnerNames);
   let location = selectRandomly(locations);

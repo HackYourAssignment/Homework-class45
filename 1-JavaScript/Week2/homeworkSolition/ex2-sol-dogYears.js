@@ -1,7 +1,7 @@
 "use strict";
 
-const dogYears = 7
 function calculateDogAge(years) {
+  const dogYears = 7
   let calculatedDogYears = years * dogYears;
   return `Your doggie is ${calculatedDogYears} years old in dog years!`;
 
