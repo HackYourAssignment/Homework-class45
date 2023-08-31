@@ -31,9 +31,21 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(masks, hourlyRate) {
+  const earningsPerTask = mondayTasks.map(
+    (task) => (task.duration / 60) * hourlyRate
+  );
+
+  let sum = 0;
+  earningsPerTask.forEach((earnings) => (sum += earnings));
+  return `€${sum.toFixed(2)}`; /// toFixed(2) doesn't work also toHaveLength(2)
+
+  // or:
+  /// const totalEarnings = earningsPerTask.reduce((acc, earnings) => acc + earnings, 0);
+  //  /   return `€${totalEarnings.toFixed(2)}`;
 }
+
+computeEarnings(mondayTasks, hourlyRate);
 
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {
@@ -49,3 +61,12 @@ describe('computeEarnings', () => {
     expect(result).toBe(expected);
   });
 });
+
+/* ** 😵‍💫 
+ *     Expected: "€187.50"
+    *  Received: " € 187.50 "  
+
+      59 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      60 |     const expected = '€187.50';
+ * 
+ */
