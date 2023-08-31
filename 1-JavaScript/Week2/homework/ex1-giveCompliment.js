@@ -11,8 +11,8 @@ const compliments = [
   "splendid",
   "extraordinary",
  "magnificent"];
-const randomSelection= Math.floor(Math.random()*10);
-const compliment=compliments[randomSelection];
+const randomSelection = Math.floor(Math.random() * compliments.length);
+const compliment = compliments[randomSelection];
 return `You Are ${compliment}, ${name} !`
 }
 

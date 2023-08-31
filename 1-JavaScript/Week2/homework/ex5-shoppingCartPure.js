@@ -17,7 +17,7 @@ it pure. Do the following:
 ------------------------------------------------------------------------------*/
 // ! Function under test
 function addToShoppingCart(shoppingItems,item) {
-if(item===undefined||shoppingItems===undefined){
+if(item===undefined){
     return shoppingItems;
   }
   else{
@@ -35,8 +35,6 @@ function test1() {
 
 function test2() {
   console.log('Test 2: addToShoppingCart should be a pure function');
-  // A pure function should return the same result when called with
-  // identical arguments. It should also have no side effects (not tested here).
   const initialCart = ['bananas', 'milk'];
   const result1 = addToShoppingCart(initialCart, 'chocolate');
   const result2 = addToShoppingCart(initialCart, 'chocolate');

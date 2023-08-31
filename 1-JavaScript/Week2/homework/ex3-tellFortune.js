@@ -1,6 +1,6 @@
 'use strict';
 function selectRandomly(values) {
-const randomIndex=Math.floor(Math.random()* values.length);
+const randomIndex = Math.floor(Math.random() * values.length);
 return values[randomIndex];
 }
 
@@ -10,7 +10,7 @@ return`You will be a ${selectRandomly(jobTitle)} in ${selectRandomly(location)} 
     married to ${selectRandomly(partnerName)} with ${selectRandomly(numKids)} kids.`
 }
 function main() {
-  const numKids = [1,"no",2,3,4];
+  const numKids = [1,0,2,3,4];
   const partnerNames = [
   "Ella",
   "Jackson",
