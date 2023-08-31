@@ -1,27 +1,18 @@
 'use strict';
-function addToShoppingCart( shoppingCart, groceryItem) {
-  // const shoppingCart = [...shoppingCartNew]
- 
-  console.log("The lentgth of the array is=>", shoppingCart.length)
-  if(shoppingCart.length<3 && groceryItem !== undefined){
-    console.log(shoppingCart)
+function addToShoppingCart( shoppingCartNew, groceryItem) {
+ const shoppingCart= [...shoppingCartNew]
+  if(groceryItem !== undefined){
     shoppingCart.push(groceryItem)
-    console.log(shoppingCart)
+
   }
-  else if(shoppingCart.length >= 3 ){
-  console.log("first item will be deleted")
-  console.log(shoppingCart)
+  if(shoppingCart.length > 3 ){
   shoppingCart.shift()
-  console.log(shoppingCart)
-  shoppingCart.push(groceryItem)
-  console.log(shoppingCart)
    
   }
-  // when it returns it aint updeting
+  console.log(`   the items bought are ${shoppingCart.join(", ")}!`)
   return shoppingCart
 }
 
-// ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('Test 1: addToShoppingCart should take two parameters');
   console.assert(addToShoppingCart.length === 2);
@@ -31,7 +22,7 @@ function test2() {
   console.log('Test 2: addToShoppingCart should be a pure function');
   const initialCart = ['bananas', 'milk'];
   const result1 = addToShoppingCart(initialCart, 'chocolate');
-  const result2 = addToShoppingCart(initialCart, 'chocolater');
+  const result2 = addToShoppingCart(initialCart, 'chocolate');
   console.assert(JSON.stringify(result1) === JSON.stringify(result2));
   console.assert(
     JSON.stringify(initialCart) === JSON.stringify(['bananas', 'milk'])

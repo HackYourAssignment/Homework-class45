@@ -1,10 +1,10 @@
 "use strict";
 
-
+const dogYears = 7
 function calculateDogAge(years) {
-  let dogYears = years * 7;
-  let telldogYears = `your dog is ${dogYears} years old in dog years!`;
-  return telldogYears;
+  let calculatedDogYears = years * dogYears;
+  return `Your doggie is ${calculatedDogYears} years old in dog years!`;
+
 }
 
 function main() {
@@ -13,7 +13,6 @@ function main() {
   console.log(calculateDogAge(3));
 }
 
-// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== "test") {
   main();
 }

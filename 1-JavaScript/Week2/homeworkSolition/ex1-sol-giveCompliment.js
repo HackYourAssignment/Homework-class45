@@ -1,7 +1,6 @@
 "use strict";
 
 function giveCompliment(name) {
-  // TODO complete this function
   let compliments = [
     "bravo",
     "great",
@@ -17,8 +16,8 @@ function giveCompliment(name) {
   let randomCompliment = Math.floor(Math.random() * compliments.length);
   //   it is only possible to return 2 or more values using array using [] or as object in {}
   //   return [compliments[randomCompliment], name];
-  let displayComplimetn = `You are ${compliments[randomCompliment]} ${name} !`;
-  return displayComplimetn;
+  return  `You are ${compliments[randomCompliment]} ${name}!`;
+
 }
 
 function main() {
@@ -34,8 +33,6 @@ function main() {
   console.log(giveCompliment(yourName));
   console.log(giveCompliment(yourName));
 }
-// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== "test") {
   main();
 }
-// module.exports = giveCompliment;
