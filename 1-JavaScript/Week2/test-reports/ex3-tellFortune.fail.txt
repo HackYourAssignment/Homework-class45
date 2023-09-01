@@ -1,0 +1,7 @@
+
+*** Spell Checker Report ***
+
+ex3-tellFortune.js:40:35 - Unknown word (partener)
+ex3-tellFortune.js:43:35 - Unknown word (partener)
+ex3-tellFortune.js:51:26 - Unknown word (Saleh)
+ex3-tellFortune.js:53:53 - Unknown word (Haag)
