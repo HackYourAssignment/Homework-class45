@@ -29,7 +29,8 @@ function giveCompliment(name) {
     'Clever',
     'Intelligent',
   ];
-  const randomCompliment = compliments[Math.floor(Math.random() * 10)];
+  const randomCompliment =
+    compliments[Math.floor(Math.random() * compliments.length)];
   return `You are ${randomCompliment}, ${name}!`;
 }
 function main() {

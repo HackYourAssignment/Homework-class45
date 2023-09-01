@@ -29,11 +29,11 @@ const cartForParty = {
 };
 
 function calculateTotalPrice(grocery) {
-  let item = 0;
-  for (const key in grocery) {
-    item += grocery[key];
-  }
-  return `Total: €${item}`;
+  const totalPrice = Object.values(grocery).reduce(
+    (total, currentTotal) => total + currentTotal
+  );
+
+  return `Total: €${totalPrice}`;
 }
 
 // ! Test functions (plain vanilla JavaScript)
