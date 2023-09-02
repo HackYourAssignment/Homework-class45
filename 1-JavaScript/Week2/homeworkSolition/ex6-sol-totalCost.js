@@ -7,9 +7,11 @@ const cartForParty = {
   bread: 1.5,
 };
 
-function calculateTotalPrice(price) {
-  const sum = price.reduce((acc,val)=> acc+val)
-  return `Total: € ${sum.toFixed(2)}`
+function calculateTotalPrice(cart) {
+  cart  = Object.values(cart)
+  const totalCartPrice = String(cart.reduce((acc,val)=>{return acc + val},0).toFixed(2))
+
+  return `Total: € ${totalCartPrice}`
 }
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
@@ -18,13 +20,10 @@ function test1() {
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  const cart = []
-  for(let item in cartForParty){
-    cart.push(cartForParty[item])
-  } 
-
-  const total = calculateTotalPrice(cart)
-  console.log(total)
+  const expected = "Total: € 8.67"
+  const actual = calculateTotalPrice(cartForParty)
+  console.assert(expected === actual)
+  console.log(actual)
 
 }
 
