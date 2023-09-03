@@ -37,7 +37,6 @@ function test4() {
 }
 
 function test5() {
-  console.log("====================================================")
   console.log('Test 5: `tea` should be added and `milk` removed');
   const expected = 'You bought chocolate, waffles, tea!';
   const actual = addToShoppingCart('tea');

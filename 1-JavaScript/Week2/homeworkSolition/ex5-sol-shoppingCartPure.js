@@ -5,10 +5,8 @@ function addToShoppingCart( shoppingCartNew, groceryItem) {
     shoppingCart.push(groceryItem)
   }
   if(shoppingCart.length > 3 ){
-  shoppingCart.shift()
-   
+    shoppingCart.shift()
   }
-  console.log(`   the items bought are ${shoppingCart.join(", ")}!`)
   return shoppingCart
 }
 
