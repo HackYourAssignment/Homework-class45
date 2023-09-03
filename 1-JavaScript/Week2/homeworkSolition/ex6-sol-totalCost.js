@@ -9,7 +9,7 @@ const cartForParty = {
 
 function calculateTotalPrice(cart) {
   cart  = Object.values(cart)
-  const totalCartPrice = String(cart.reduce((acc,val)=>{return acc + val},0).toFixed(2))
+  const totalCartPrice = cart.reduce((acc,val)=>{return acc + val},0).toFixed(2)
 
   return `Total: € ${totalCartPrice}`
 }
