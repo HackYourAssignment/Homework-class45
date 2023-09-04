@@ -1,0 +1,5 @@
+
+*** Spell Checker Report ***
+
+ex3-lemonAllergy.test.js:30:9 - Unknown word (sanatized)
+ex3-lemonAllergy.test.js:37:10 - Unknown word (sanatized)
