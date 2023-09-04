@@ -1,0 +1,127 @@
+2023-09-04 03:09:16 info: -------------------------------------------
+2023-09-04 03:09:16 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-09-04 03:09:16 info: -------------------------------------------
+2023-09-04 03:09:16 info: Exercise has not yet been modified
+2023-09-04 03:09:25 error: *** Unit Test Error Report ***
+
+✕ tellFortune should have all TODO comments removed
+✕ tellFortune should take four parameters
+✕ tellFortune should call function `selectRandomly` for each of its arguments
+✕ tellFortune `numKids` should be an array initialized with 5 elements
+✕ tellFortune `locations` should be an array initialized with 5 elements
+✕ tellFortune `partnerNames` should be an array initialized with 5 elements
+✕ tellFortune `jobTitles` should be an array initialized with 5 elements
+✕ tellFortune should tell the fortune by randomly selecting array values
+  selectRandomly() is not called the expected number of times
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-09-04 03:09:31 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  36:10  error  'selectRandomly' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-09-04 03:15:00 info: ------------------------------------------------------
+2023-09-04 03:15:00 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-04 03:15:00 info: ------------------------------------------------------
+2023-09-04 03:15:02 info: All unit tests passed.
+2023-09-04 03:15:09 info: All steps were completed successfully
+2023-09-04 03:27:35 info: -------------------------------------------------
+2023-09-04 03:27:35 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-04 03:27:35 info: -------------------------------------------------
+2023-09-04 03:27:37 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week3/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (3 ms)
+    ✓ should not modify the original `fruitBasket` array (1 ms)
+    ✕ should return a new array that does not include the unwanted `lemon` (4 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    TypeError: expect(...).includes is not a function
+
+      28 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      29 |     const sanitizedBasket = sanitizeFruitBasket(fruitBasket, 'lemon');
+    > 30 |     expect(sanitizedBasket).includes('lemon').toBe(false);
+         |                             ^
+      31 |   });
+      32 | });
+      33 |
+
+      at Object.includes (1-JavaScript/Week3/homework/ex3-lemonAllergy.test.js:30:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.537 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-09-04 03:29:09 info: -------------------------------------------------
+2023-09-04 03:29:09 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-04 03:29:09 info: -------------------------------------------------
+2023-09-04 03:29:12 info: All unit tests passed.
+2023-09-04 03:29:16 info: All steps were completed successfully
+2023-09-04 03:49:13 info: ------------------------------------------
+2023-09-04 03:49:13 info: >>> Running Unit Test `ex4-observable` <<<
+2023-09-04 03:49:13 info: ------------------------------------------
+2023-09-04 03:49:16 info: All unit tests passed.
+2023-09-04 03:49:25 info: All steps were completed successfully
+2023-09-04 03:56:29 info: ------------------------------------------
+2023-09-04 03:56:29 info: >>> Running Unit Test `ex4-observable` <<<
+2023-09-04 03:56:29 info: ------------------------------------------
+2023-09-04 03:56:34 info: All unit tests passed.
+2023-09-04 03:56:39 info: All steps were completed successfully
+2023-09-04 04:52:19 info: --------------------------------------
+2023-09-04 04:52:19 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-04 04:52:19 info: --------------------------------------
+2023-09-04 04:52:30 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Debugger attached.
+Debugger attached.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...
+2023-09-04 05:02:38 info: --------------------------------------
+2023-09-04 05:02:38 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-04 05:02:38 info: --------------------------------------
+2023-09-04 05:02:47 error: *** Unit Test Error Report ***
+
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Users/lenindelrio/Desktop/Homework-class45/test-runner/CustomReporter.js"
+Debugger attached.
+Debugger attached.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...
+2023-09-04 05:03:36 info: --------------------------------------
+2023-09-04 05:03:36 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-04 05:03:36 info: --------------------------------------
+2023-09-04 05:03:43 info: All unit tests passed.
+2023-09-04 05:03:52 info: All steps were completed successfully
+2023-09-04 05:04:22 info: -------------------------------------------------
+2023-09-04 05:04:22 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-04 05:04:22 info: -------------------------------------------------
+2023-09-04 05:04:28 info: All unit tests passed.
+2023-09-04 05:04:38 info: All steps were completed successfully
