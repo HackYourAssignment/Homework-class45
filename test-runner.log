@@ -1,0 +1,64 @@
+2023-09-04 10:33:26 info: ------------------------------------------------------
+2023-09-04 10:33:26 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-04 10:33:26 info: ------------------------------------------------------
+2023-09-04 10:33:29 info: All unit tests passed.
+2023-09-04 10:33:34 info: All steps were completed successfully
+2023-09-04 10:47:06 info: -------------------------------------------------
+2023-09-04 10:47:06 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-04 10:47:06 info: -------------------------------------------------
+2023-09-04 10:47:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (2 ms)
+    × should compute the earnings as a formatted Euro amount (5 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      51 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      52 |     const expected = '€187.50';
+    > 53 |     expect(result).toBe(expected);
+         |                    ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBe (1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js:53:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.656 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-09-04 10:50:20 info: Disclaimer turned off
+2023-09-04 10:50:41 info: -------------------------------------------------
+2023-09-04 10:50:41 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-04 10:50:41 info: -------------------------------------------------
+2023-09-04 10:50:44 info: All unit tests passed.
+2023-09-04 10:50:50 info: All steps were completed successfully
+2023-09-04 11:01:45 info: -------------------------------------------------
+2023-09-04 11:01:45 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-04 11:01:45 info: -------------------------------------------------
+2023-09-04 11:01:48 info: All unit tests passed.
+2023-09-04 11:01:53 info: All steps were completed successfully
+2023-09-04 11:07:41 info: --------------------------------------
+2023-09-04 11:07:41 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-04 11:07:41 info: --------------------------------------
+2023-09-04 11:07:45 error: *** Unit Test Error Report ***
+
+✕ wallet q4: What is displayed in the console?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\ISmart\Desktop\Homework-class45\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
