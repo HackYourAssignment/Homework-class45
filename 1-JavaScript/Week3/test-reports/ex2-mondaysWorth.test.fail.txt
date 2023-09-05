@@ -1,0 +1,8 @@
+
+*** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  45:12  warning  'item' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
