@@ -488,3 +488,38 @@ Ran all test suites matching /ex3-lemonAllergy.test.js/i.
 2023-09-04 07:47:04 info: -------------------------------------------------
 2023-09-04 07:47:07 info: All unit tests passed.
 2023-09-04 07:47:15 info: All steps were completed successfully
+2023-09-05 10:52:58 info: ------------------------------------------
+2023-09-05 10:52:58 info: >>> Running Unit Test `ex4-observable` <<<
+2023-09-05 10:52:58 info: ------------------------------------------
+2023-09-05 10:53:04 info: All unit tests passed.
+2023-09-05 10:53:13 info: All steps were completed successfully
+2023-09-05 12:10:05 info: --------------------------------------
+2023-09-05 12:10:06 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-05 12:10:06 info: --------------------------------------
+2023-09-05 12:10:11 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q3: What tooltip appears when hovering over the third debug button?
+✕ wallet q4: What is displayed in the console?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Users/hackyourfuture/Desktop/Homework-class45/test-runner/CustomReporter.js"
+2023-09-05 12:10:15 error: *** ESLint Report ***
+
+ex5-wallet/index.js
+   80:13  error  'b' is not defined  no-undef
+   89:13  error  'c' is not defined  no-undef
+   98:13  error  'a' is not defined  no-undef
+  107:13  error  'a' is not defined  no-undef
+  116:13  error  'c' is not defined  no-undef
+
+✖ 5 problems (5 errors, 0 warnings)
+
+
+2023-09-05 12:11:11 info: --------------------------------------
+2023-09-05 12:11:11 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-05 12:11:11 info: --------------------------------------
+2023-09-05 12:11:13 info: All unit tests passed.
+2023-09-05 12:11:17 info: All steps were completed successfully
