@@ -31,7 +31,23 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
+function computeEarnings(arr, hourRate /* TODO parameter(s) go here */) {
+  const newArr = [...arr];
+  hourRate = hourlyRate;
+  const durArr = newArr.map((item) => {
+    return item.duration;
+  });
+  const abc = durArr.map((item) => {
+    return (item / 60) * hourRate;
+  });
+
+  let sum = 0;
+  for (let item of abc) {
+    sum += item;
+  }
+  const format = `€${sum.toFixed(2)}`;
+  return format;
+
   // TODO complete this function
 }
 
