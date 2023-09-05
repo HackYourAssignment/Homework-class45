@@ -17,10 +17,16 @@ function createObservable() {
   const subscribers = [];
   return {
     subscribe: function (subscriber) {
-      // TODO complete this function
+      if (typeof subscriber === 'function') {
+        subscribers.push(subscriber);
+      } else {
+        Error('Not a function');
+      }
     },
     notify: function (message) {
-      // TODO complete this function
+      subscribers.forEach((subscriber) => {
+        subscriber(message);
+      });
     },
   };
 }
