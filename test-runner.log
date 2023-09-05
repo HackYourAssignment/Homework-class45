@@ -1012,3 +1012,17 @@ Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Library/Repos
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-09-05 01:50:04 info: --------------------------------------
+2023-09-05 01:50:04 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-05 01:50:04 info: --------------------------------------
+2023-09-05 01:50:06 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q4: What is displayed in the console?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Library/Repositories/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
