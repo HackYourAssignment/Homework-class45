@@ -16,7 +16,17 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
+function addToShoppingCart(shopArr, groItem/* TODO parameter(s) go here */) {
+  const arr = [...shopArr];
+  if(!arr.includes(groItem)){
+    arr.push(groItem);
+  }
+  if(arr.length>3){
+    arr.shift();
+  }
+  return arr;
+  
+
   // TODO complete this function
 }
 
@@ -32,7 +42,9 @@ function test2() {
   // identical arguments. It should also have no side effects (not tested here).
   const initialCart = ['bananas', 'milk'];
   const result1 = addToShoppingCart(initialCart, 'chocolate');
+  console.log(result1);
   const result2 = addToShoppingCart(initialCart, 'chocolate');
+  console.log(result2);
   console.assert(JSON.stringify(result1) === JSON.stringify(result2));
   console.assert(
     JSON.stringify(initialCart) === JSON.stringify(['bananas', 'milk'])
@@ -63,3 +75,18 @@ function test() {
 }
 
 test();
+
+
+
+
+
+
+/*if(groItem){
+  shopArr.push(groItem);
+};
+if(shopArr.length>3){
+  shopArr.shift();
+};
+const [one, two, three]= shopArr;
+
+return shopArr;*/
