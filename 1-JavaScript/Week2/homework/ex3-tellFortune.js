@@ -33,35 +33,72 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function selectRandomly(takesArray) {
+  const random = Math.floor(Math.random() * takesArray.length);
+  return takesArray[random];
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+const feMale = prompt(
+  "Partners Guess: \n  👧 enter: 'g'  \n   enter: 'any'   \n enter 'b'  👦. "
+);
+
+function partner(feMale, partnerNames) {
+  if (feMale === 'b' || feMale === 'B') {
+    return selectRandomly(partnerNames.m);
+  } else if (feMale === 'g' || feMale === 'G') {
+    return selectRandomly(partnerNames.f);
+  } else if (feMale === 'any' || feMale === 'Any') {
+    const partnerAny = partnerNames.m.concat(partnerNames.f);
+    return selectRandomly(partnerAny);
+  } else {
+    return '🔣🔣-Partner: \n  Valid-Not 🥜';
+  }
+}
+
+function tellFortune(numKids, partnerNames, locations, jobTitles) {
+  const jobTitle = selectRandomly(jobTitles);
+  const location = selectRandomly(locations);
+  const partnerName = partner(feMale, partnerNames);
+  const numKid = selectRandomly(numKids);
+
+  return `You will be a ${jobTitle} in ${location}, married to ${partnerName} with ${numKid} kids.`;
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = ['only son', 2, 'twins', 3, 4];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
+  const partnerNames = {
+    f: ['Ka', 'Kyra', 'Kim', 'Kaat', 'Salma Hayek'],
+    m: ['Kees', 'Ken', 'Koen', 'Kai', 'Kris'],
+  };
 
-  const locations = [
-    // TODO add elements here
-  ];
+  const locations = ['Amsterdam', 'LA', 'London', 'Tokyo', 'Paris'];
 
   const jobTitles = [
-    // TODO add elements here
+    'web developer',
+    'IT Engineer',
+    'Coder',
+    'Programmer',
+    'Software Developer',
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
 }
+main();
+
+/**
+ * > homework@1.0.0 it
+> node ./test-runner/run-it
+
+? Rerun last test (1-JavaScript, Week2, ex5-shoppingCartPure)? No
+? Which module? 1-JavaScript
+? Which week? Week2
+? Which exercise? ex3-tellFortune
+Running exercise, please wait...
+Something went wrong: prompt is not defined
+ */
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
