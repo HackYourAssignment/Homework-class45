@@ -21,22 +21,70 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  // TODO complete this object
+  beers: 1.75,
+  chips: 0.99,
+  colaJW: 2.79,
+  energyDrink: 1.59,
+  crisps: 1.99,
 };
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
-  // TODO replace this comment with your code
+/* 
+// function calculateTotalPrice(object) {
+//   let amount = 0;
+//   for (const key of object) {
+//     amount += object[key];
+//   }
+//   return `Total: €${amount}`;
+// }
+// console.log(calculateTotalPrice(cartForParty));
+*/
+/*
+// function calculateTotalPrice(object) {
+//   let amount = 0;
+//   object.forEach((key) => {
+//     amount += object[key];
+//   });
+//   return `Total: €${amount}`;
+// }
+// console.log(calculateTotalPrice(cartForParty));
+*/
+
+/* * 
+ * * * Avoid 'for in ' loops. Prefer Object.keys(' instead. eslint (no-restricted-syntax) [Ln 32, Col 3]
+function calculateTotalPrice(object) {
+  let amount = 0;
+  for (const key in object) {
+    amount += object[key];
+  }
+
+  return `Total: €${amount}`;
 }
+
+console.log(calculateTotalPrice(cartForParty));
+ */
+
+function calculateTotalPrice(object) {
+  let amount = 0;
+  const keys = Object.keys(object);
+
+  for (const key of keys) {
+    amount += object[key];
+  }
+
+  return `Total: €${amount.toFixed(2)}`;
+}
+
+console.log(calculateTotalPrice(cartForParty));
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
+  console.assert(calculateTotalPrice.length === 1); // just copy mimicking ex.5_test
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
+  console.assert(calculateTotalPrice(cartForParty) === 'Total: €9.11');
 }
 
 function test() {
