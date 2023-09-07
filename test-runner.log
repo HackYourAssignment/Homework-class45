@@ -1,0 +1,78 @@
+2023-09-05 11:42:35 info: ------------------------------------------------------
+2023-09-05 11:42:35 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-05 11:42:35 info: ------------------------------------------------------
+2023-09-05 11:42:37 info: All unit tests passed.
+2023-09-05 11:42:40 info: All steps were completed successfully
+2023-09-05 12:36:02 info: -------------------------------------------------
+2023-09-05 12:36:02 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-05 12:36:02 info: -------------------------------------------------
+2023-09-05 12:36:04 error: *** Unit Test Error Report ***
+
+console.log
+    €187.5
+
+      at Object.log (1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js:39:9)
+
+
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (3 ms)
+    ✕ should compute the earnings as a formatted Euro amount (5 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      49 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      50 |     const expected = '€187.50';
+    > 51 |     expect(result).toBe(expected);
+         |                    ^
+      52 |   });
+      53 | });
+      54 |
+
+      at Object.toBe (1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js:51:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.563 s, estimated 3 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-09-07 10:53:17 info: -------------------------------------------------
+2023-09-07 10:53:17 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-07 10:53:17 info: -------------------------------------------------
+2023-09-07 10:53:20 info: All unit tests passed.
+2023-09-07 10:53:24 info: All steps were completed successfully
+2023-09-07 10:54:19 info: ------------------------------------------
+2023-09-07 10:54:19 info: >>> Running Unit Test `ex4-observable` <<<
+2023-09-07 10:54:19 info: ------------------------------------------
+2023-09-07 10:54:21 info: All unit tests passed.
+2023-09-07 10:54:25 info: All steps were completed successfully
+2023-09-07 11:08:29 info: --------------------------------------
+2023-09-07 11:08:29 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-07 11:08:29 info: --------------------------------------
+2023-09-07 11:08:30 info: All unit tests passed.
+2023-09-07 11:08:34 info: All steps were completed successfully
+2023-09-07 11:08:52 info: ------------------------------------------------------
+2023-09-07 11:08:52 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 11:08:52 info: ------------------------------------------------------
+2023-09-07 11:08:54 info: All unit tests passed.
+2023-09-07 11:08:57 info: All steps were completed successfully
+2023-09-07 11:09:10 info: -------------------------------------------------
+2023-09-07 11:09:10 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 11:09:10 info: -------------------------------------------------
+2023-09-07 11:09:12 info: All unit tests passed.
+2023-09-07 11:09:15 info: All steps were completed successfully
+2023-09-07 11:09:39 info: ------------------------------------------------------
+2023-09-07 11:09:39 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 11:09:39 info: ------------------------------------------------------
+2023-09-07 11:09:41 info: All unit tests passed.
+2023-09-07 11:09:44 info: All steps were completed successfully
