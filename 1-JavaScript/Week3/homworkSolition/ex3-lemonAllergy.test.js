@@ -10,11 +10,9 @@ const fruitBasket = [
   'lemon',
 ];
 
-function sanitizeFruitBasket(fruitBasket,fruit) {
+function sanitizeFruitBasket(fruitBasket,alergy) {
+  return fruitBasket.filter((fruit) => fruit !== alergy )
 
-  const newFruitBasket = [...fruitBasket]
-  const sanitizedBasket = newFruitBasket.filter((fruit)=>{return fruit !== "lemon" })
-  return sanitizedBasket
 }
 
 describe('sanitizeFruitBasket', () => {

@@ -21,12 +21,8 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 function computeEarnings(mondayTasks,hourlyRate) {
-  const newmondayTasks = [...mondayTasks]
-  const totEarn = newmondayTasks.map((task) => { return task.duration/60 * 25 }).
-  reduce((acc,val) => {return acc + val},0).toFixed(2)
-  const totEarnS = `€${totEarn}`
-  return totEarnS
-
+  return `€${mondayTasks.map((task) =>  task.duration/60 * hourlyRate ).
+  reduce((acc,val) =>  acc + val,0).toFixed(2)}`
 }
 
 describe('computeEarnings', () => {
@@ -41,13 +37,13 @@ describe('computeEarnings', () => {
   });
     
   test("should work for array of objects",()=>{
-    for(let x of mondayTasks){
-      expect(x).toHaveProperty("duration")
+    for(let report of mondayTasks){
+      expect(report).toHaveProperty("duration")
     }
   })
   test("the duration proporty should be type of number",()=>{
-    for(let x of mondayTasks){
-      expect(typeof x.duration).toBe("number")
+    for(let report of mondayTasks){
+      expect(typeof report.duration).toBe("number")
     }
   })
 });
