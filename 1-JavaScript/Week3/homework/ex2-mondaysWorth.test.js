@@ -32,22 +32,14 @@ const mondayTasks = [
 const hourlyRate = 25;
 
 function computeEarnings(tasks, rate) {
-  const totalEarnings = 0;
-
-  const hourRate = tasks.map((elmnt) => {
-    if (elmnt.duration && !isNaN(elmnt.duration)) {
-      return (elmnt.duration / 60) * rate;
-    } else {
-      console.log(`All or one object do not have duration property`);
-    }
-  });
-
-  const total = hourRate.reduce(
-    (total, currentTotal) => total + currentTotal,
-    totalEarnings
-  );
-
-  return `€${total.toFixed(2)}`;
+  return `€${tasks
+    .map((task) =>
+      task.duration && !isNaN(task.duration)
+        ? (task.duration / 60) * rate
+        : null
+    )
+    .reduce((total, currentTotal) => total + currentTotal)
+    .toFixed(2)}`;
 }
 
 // ! Unit tests (using Jest)

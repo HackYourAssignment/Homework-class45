@@ -1634,3 +1634,446 @@ Browserslist: caniuse-lite is outdated. Please run:
 2023-09-04 06:06:12 info: --------------------------------------
 2023-09-04 06:06:13 info: All unit tests passed.
 2023-09-04 06:06:15 info: All steps were completed successfully
+2023-09-07 01:25:59 info: ------------------------------------------------------
+2023-09-07 01:25:59 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:25:59 info: ------------------------------------------------------
+2023-09-07 01:26:00 info: All unit tests passed.
+2023-09-07 01:26:02 info: All steps were completed successfully
+2023-09-07 01:26:46 info: ------------------------------------------------------
+2023-09-07 01:26:46 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:26:46 info: ------------------------------------------------------
+2023-09-07 01:26:48 info: All unit tests passed.
+2023-09-07 01:26:48 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  14:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  18:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2023-09-07 01:27:18 info: ------------------------------------------------------
+2023-09-07 01:27:18 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:27:18 info: ------------------------------------------------------
+2023-09-07 01:27:19 info: All unit tests passed.
+2023-09-07 01:27:20 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  14:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  18:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2023-09-07 01:29:17 info: ------------------------------------------------------
+2023-09-07 01:29:17 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:29:17 info: ------------------------------------------------------
+2023-09-07 01:29:18 info: All unit tests passed.
+2023-09-07 01:29:19 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  14:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  18:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2023-09-07 01:30:10 info: ------------------------------------------------------
+2023-09-07 01:30:10 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:30:10 info: ------------------------------------------------------
+2023-09-07 01:30:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week3/homework/ex1-doubleEvenNumbers.test.js
+  × doubleEvenNumbers should take the even numbers and double them (3 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 2
+
+      Array [
+    +   2,
+        4,
+    +   6,
+        8,
+      ]
+
+      19 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      20 |   const expected = [4, 8];
+    > 21 |   expect(actual).toEqual(expected);
+         |                  ^
+      22 | });
+      23 |
+
+      at Object.toEqual (1-JavaScript/Week3/homework/ex1-doubleEvenNumbers.test.js:21:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.254 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2023-09-07 01:30:19 info: ------------------------------------------------------
+2023-09-07 01:30:19 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:30:19 info: ------------------------------------------------------
+2023-09-07 01:30:20 info: All unit tests passed.
+2023-09-07 01:30:22 info: All steps were completed successfully
+2023-09-07 01:30:48 info: ------------------------------------------------------
+2023-09-07 01:30:48 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:30:48 info: ------------------------------------------------------
+2023-09-07 01:30:50 info: All unit tests passed.
+2023-09-07 01:30:51 info: All steps were completed successfully
+2023-09-07 01:31:26 info: ------------------------------------------------------
+2023-09-07 01:31:26 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 01:31:26 info: ------------------------------------------------------
+2023-09-07 01:31:28 info: All unit tests passed.
+2023-09-07 01:31:29 info: All steps were completed successfully
+2023-09-07 01:34:33 info: -------------------------------------------------
+2023-09-07 01:34:33 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-07 01:34:33 info: -------------------------------------------------
+2023-09-07 01:34:34 info: All unit tests passed.
+2023-09-07 01:34:36 error: *** Spell Checker Report ***
+
+ex3-lemonAllergy.test.js:30:9 - Unknown word (sanatized)
+ex3-lemonAllergy.test.js:37:10 - Unknown word (sanatized)
+
+2023-09-07 01:34:56 info: -------------------------------------------------
+2023-09-07 01:34:56 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-07 01:34:56 info: -------------------------------------------------
+2023-09-07 01:34:57 info: All unit tests passed.
+2023-09-07 01:34:58 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  30:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-09-07 01:34:59 error: *** Spell Checker Report ***
+
+ex3-lemonAllergy.test.js:30:12 - Unknown word (sanatized)
+ex3-lemonAllergy.test.js:37:13 - Unknown word (sanatized)
+
+2023-09-07 01:35:05 info: -------------------------------------------------
+2023-09-07 01:35:05 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-07 01:35:05 info: -------------------------------------------------
+2023-09-07 01:35:07 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week3/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    √ should take two parameters
+    √ should not modify the original `fruitBasket` array
+    × should return a new array that does not include the unwanted `lemon` (2 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 4
+    + Received  + 3
+
+      Array [
+    -   "apple",
+    -   "grapefruit",
+    -   "banana",
+    -   "watermelon",
+    +   "lemon",
+    +   "lemon",
+    +   "lemon",
+      ]
+
+      52 |
+      53 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+    > 54 |     expect(sanitizeFruitBasket(fruitBasket, 'lemon')).toEqual([
+         |                                                       ^
+      55 |       'apple',
+      56 |       'grapefruit',
+      57 |       'banana',
+
+      at Object.toEqual (1-JavaScript/Week3/homework/ex3-lemonAllergy.test.js:54:55)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.258 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-09-07 01:35:07 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  30:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-09-07 01:35:08 error: *** Spell Checker Report ***
+
+ex3-lemonAllergy.test.js:30:12 - Unknown word (sanatized)
+ex3-lemonAllergy.test.js:37:13 - Unknown word (sanatized)
+
+2023-09-07 01:35:19 info: -------------------------------------------------
+2023-09-07 01:35:19 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-07 01:35:19 info: -------------------------------------------------
+2023-09-07 01:35:20 info: All unit tests passed.
+2023-09-07 01:35:21 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  30:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-09-07 01:35:22 error: *** Spell Checker Report ***
+
+ex3-lemonAllergy.test.js:30:12 - Unknown word (sanatized)
+ex3-lemonAllergy.test.js:37:13 - Unknown word (sanatized)
+
+2023-09-07 01:52:10 info: -------------------------------------------------
+2023-09-07 01:52:10 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 01:52:10 info: -------------------------------------------------
+2023-09-07 01:52:11 info: All unit tests passed.
+2023-09-07 01:52:12 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  45:9  error    'total' is assigned a value but never used  no-unused-vars
+  50:3  warning  Remove commented-out code                   hyf/no-commented-out-code
+  59:3  warning  Remove commented-out code                   hyf/no-commented-out-code
+
+✖ 3 problems (1 error, 2 warnings)
+
+
+2023-09-07 01:52:13 error: *** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:37:31 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:9 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:34 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:39:15 - Unknown word (elmnt)
+
+2023-09-07 01:53:07 info: -------------------------------------------------
+2023-09-07 01:53:07 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 01:53:07 info: -------------------------------------------------
+2023-09-07 01:53:08 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (1 ms)
+    × should compute the earnings as a formatted Euro amount
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    ReferenceError: totalEarnings is not defined
+
+      55 |         : null
+      56 |     )
+    > 57 |     .reduce((total, currentTotal) => total + currentTotal, totalEarnings)
+         |                                                            ^
+      58 |     .toFixed(2)}`;
+      59 |   // return `€${total.toFixed(2)}`;
+      60 | }
+
+      at totalEarnings (1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js:57:60)
+      at Object.computeEarnings (1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js:71:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.25 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-09-07 01:53:09 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  35:3   warning  Remove commented-out code       hyf/no-commented-out-code
+  37:3   warning  Remove commented-out code       hyf/no-commented-out-code
+  45:3   warning  Remove commented-out code       hyf/no-commented-out-code
+  50:3   warning  Remove commented-out code       hyf/no-commented-out-code
+  57:60  error    'totalEarnings' is not defined  no-undef
+  59:3   warning  Remove commented-out code       hyf/no-commented-out-code
+
+✖ 6 problems (1 error, 5 warnings)
+
+
+2023-09-07 01:53:10 error: *** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:37:34 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:12 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:37 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:39:18 - Unknown word (elmnt)
+
+2023-09-07 01:53:44 info: -------------------------------------------------
+2023-09-07 01:53:44 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 01:53:44 info: -------------------------------------------------
+2023-09-07 01:53:45 info: All unit tests passed.
+2023-09-07 01:53:46 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  35:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  37:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  45:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  50:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  59:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 5 problems (0 errors, 5 warnings)
+
+
+2023-09-07 01:53:47 error: *** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:37:34 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:12 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:37 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:39:18 - Unknown word (elmnt)
+
+2023-09-07 01:54:22 info: -------------------------------------------------
+2023-09-07 01:54:22 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 01:54:22 info: -------------------------------------------------
+2023-09-07 01:54:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week3/homework/ex2-mondaysWorth.test.js
+  ● Test suite failed to run
+
+    SyntaxError: E:\WebDev\Homework-class45\1-JavaScript\Week3\homework\ex2-mondaysWorth.test.js: Unexpected token, expected ":" (56:4)
+
+      54 |         ? (task.duration / 60) * rate
+      55 |         
+    > 56 |     )
+         |     ^
+      57 |     .reduce((total, currentTotal) => total + currentTotal)
+      58 |     .toFixed(2)}`;
+      59 |   // return `€${total.toFixed(2)}`;
+
+      at Parser._raise (node_modules/@babel/parser/src/parser/error.js:147:45)
+      at Parser._raise [as raiseWithData] (node_modules/@babel/parser/src/parser/error.js:142:17)
+      at Parser.raiseWithData [as raise] (node_modules/@babel/parser/src/parser/error.js:91:17)
+      at Parser.raise [as unexpected] (node_modules/@babel/parser/src/parser/util.js:190:16)
+      at Parser.unexpected [as expect] (node_modules/@babel/parser/src/parser/util.js:150:28)
+      at Parser.expect [as parseConditional] (node_modules/@babel/parser/src/parser/expression.js:360:12)
+      at Parser.parseConditional [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.js:346:17)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.js:301:21)
+      at Parser.parseMaybeAssign [as parseFunctionBody] (node_modules/@babel/parser/src/parser/expression.js:2363:24)
+      at Parser.parseFunctionBody [as parseArrowExpression] (node_modules/@babel/parser/src/parser/expression.js:2325:10)
+      at Parser.parseArrowExpression [as parseParenAndDistinguishExpression] (node_modules/@babel/parser/src/parser/expression.js:1719:12)
+      at Parser.parseParenAndDistinguishExpression [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.js:1113:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.js:668:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.js:648:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.js:619:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.js:372:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.js:382:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.js:340:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.js:301:21)
+      at parseMaybeAssign (node_modules/@babel/parser/src/parser/expression.js:255:12)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.js:2875:12)
+      at Parser.allowInAnd [as parseMaybeAssignAllowIn] (node_modules/@babel/parser/src/parser/expression.js:254:17)
+      at Parser.parseMaybeAssignAllowIn [as parseExprListItem] (node_modules/@babel/parser/src/parser/expression.js:2520:18)
+      at Parser.parseExprListItem [as parseCallExpressionArguments] (node_modules/@babel/parser/src/parser/expression.js:1000:14)
+      at Parser.parseCallExpressionArguments [as parseCoverCallAndAsyncArrowHead] (node_modules/@babel/parser/src/parser/expression.js:852:29)
+      at Parser.parseCoverCallAndAsyncArrowHead [as parseSubscript] (node_modules/@babel/parser/src/parser/expression.js:732:19)
+      at Parser.parseSubscript [as parseSubscripts] (node_modules/@babel/parser/src/parser/expression.js:689:19)
+      at Parser.parseSubscripts [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.js:674:17)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.js:648:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.js:619:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.js:372:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.js:382:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.js:340:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.js:301:21)
+      at Parser.parseMaybeAssign [as parseExpressionBase] (node_modules/@babel/parser/src/parser/expression.js:226:23)
+      at parseExpressionBase (node_modules/@babel/parser/src/parser/expression.js:219:39)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.js:2875:12)
+      at Parser.allowInAnd [as parseExpression] (node_modules/@babel/parser/src/parser/expression.js:219:17)
+      at Parser.parseExpression [as parseTemplateSubstitution] (node_modules/@babel/parser/src/parser/expression.js:1865:17)
+      at Parser.parseTemplateSubstitution [as parseTemplate] (node_modules/@babel/parser/src/parser/expression.js:1855:34)
+      at Parser.parseTemplate (node_modules/@babel/parser/src/parser/expression.js:1165:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.js:668:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.js:648:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.js:619:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.js:372:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.js:382:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.js:340:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.js:301:21)
+      at Parser.parseMaybeAssign [as parseExpressionBase] (node_modules/@babel/parser/src/parser/expression.js:226:23)
+      at parseExpressionBase (node_modules/@babel/parser/src/parser/expression.js:219:39)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.js:2870:16)
+      at Parser.allowInAnd [as parseExpression] (node_modules/@babel/parser/src/parser/expression.js:219:17)
+      at Parser.parseExpression [as parseReturnStatement] (node_modules/@babel/parser/src/parser/statement.js:683:28)
+      at Parser.parseReturnStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.js:289:21)
+      at Parser.parseStatementContent [as parseStatement] (node_modules/@babel/parser/src/parser/statement.js:243:17)
+      at Parser.parseStatement [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.js:979:25)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.js:955:10)
+      at Parser.parseBlockBody [as parseBlock] (node_modules/@babel/parser/src/parser/statement.js:925:10)
+      at Parser.parseBlock [as parseFunctionBody] (node_modules/@babel/parser/src/parser/expression.js:2375:24)
+      at Parser.parseFunctionBody [as parseFunctionBodyAndFinish] (node_modules/@babel/parser/src/parser/expression.js:2348:10)
+      at parseFunctionBodyAndFinish (node_modules/@babel/parser/src/parser/statement.js:1200:12)
+      at Parser.callback [as withSmartMixTopicForbiddingContext] (node_modules/@babel/parser/src/parser/expression.js:2849:14)
+      at Parser.withSmartMixTopicForbiddingContext [as parseFunction] (node_modules/@babel/parser/src/parser/statement.js:1198:10)
+      at Parser.parseFunction [as parseFunctionStatement] (node_modules/@babel/parser/src/parser/statement.js:654:17)
+      at Parser.parseFunctionStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.js:280:21)
+      at Parser.parseStatementContent [as parseStatement] (node_modules/@babel/parser/src/parser/statement.js:243:17)
+      at Parser.parseStatement [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.js:979:25)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.js:955:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.js:130:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.js:115:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.js:41:10)
+      at parse (node_modules/@babel/parser/src/index.js:58:38)
+      at parser (node_modules/@babel/core/lib/parser/index.js:52:34)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/lib/transformation/index.js:29:50)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/lib/transform.js:25:41)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:615:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:757:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:814:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.296 s, estimated 1 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-09-07 01:54:24 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  56:5  error  Parsing error: Unexpected token )
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-09-07 01:54:25 error: *** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:37:34 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:12 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:38:37 - Unknown word (elmnt)
+ex2-mondaysWorth.test.js:39:18 - Unknown word (elmnt)
+
+2023-09-07 01:55:28 info: -------------------------------------------------
+2023-09-07 01:55:28 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 01:55:28 info: -------------------------------------------------
+2023-09-07 01:55:30 info: All unit tests passed.
+2023-09-07 01:55:31 info: All steps were completed successfully
+2023-09-07 02:01:52 info: -------------------------------------------------
+2023-09-07 02:01:52 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 02:01:52 info: -------------------------------------------------
+2023-09-07 02:01:54 info: All unit tests passed.
+2023-09-07 02:01:55 info: All steps were completed successfully
+2023-09-07 02:03:55 info: -------------------------------------------------
+2023-09-07 02:03:55 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 02:03:55 info: -------------------------------------------------
+2023-09-07 02:03:56 info: All unit tests passed.
+2023-09-07 02:03:58 info: All steps were completed successfully

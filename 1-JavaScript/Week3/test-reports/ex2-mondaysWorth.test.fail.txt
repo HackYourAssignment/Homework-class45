@@ -1,7 +1,0 @@
-
-*** Spell Checker Report ***
-
-ex2-mondaysWorth.test.js:37:31 - Unknown word (elmnt)
-ex2-mondaysWorth.test.js:38:9 - Unknown word (elmnt)
-ex2-mondaysWorth.test.js:38:34 - Unknown word (elmnt)
-ex2-mondaysWorth.test.js:39:15 - Unknown word (elmnt)
