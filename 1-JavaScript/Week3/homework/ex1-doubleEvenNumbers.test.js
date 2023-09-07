@@ -19,6 +19,16 @@ function doubleEvenNumbers(numbers) {
     }
   }
   return newNumbers;
+  // ! Function to be tested
+  function doubleEven(numbers) {
+    // Use the `filter` method to select only even numbers
+    // Use the `map` method to double each even number
+    const newNumbers = numbers
+      .filter((number) => number % 2 === 0)
+      .map((number) => number * 2);
+
+    return newNumbers;
+  }
 }
 
 // ! Unit test (using Jest)
