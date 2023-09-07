@@ -46,3 +46,33 @@ Tests:       1 failed, 1 passed, 2 total
 Snapshots:   0 total
 Time:        0.563 s, estimated 3 s
 Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-09-07 10:53:17 info: -------------------------------------------------
+2023-09-07 10:53:17 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-09-07 10:53:17 info: -------------------------------------------------
+2023-09-07 10:53:20 info: All unit tests passed.
+2023-09-07 10:53:24 info: All steps were completed successfully
+2023-09-07 10:54:19 info: ------------------------------------------
+2023-09-07 10:54:19 info: >>> Running Unit Test `ex4-observable` <<<
+2023-09-07 10:54:19 info: ------------------------------------------
+2023-09-07 10:54:21 info: All unit tests passed.
+2023-09-07 10:54:25 info: All steps were completed successfully
+2023-09-07 11:08:29 info: --------------------------------------
+2023-09-07 11:08:29 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-09-07 11:08:29 info: --------------------------------------
+2023-09-07 11:08:30 info: All unit tests passed.
+2023-09-07 11:08:34 info: All steps were completed successfully
+2023-09-07 11:08:52 info: ------------------------------------------------------
+2023-09-07 11:08:52 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 11:08:52 info: ------------------------------------------------------
+2023-09-07 11:08:54 info: All unit tests passed.
+2023-09-07 11:08:57 info: All steps were completed successfully
+2023-09-07 11:09:10 info: -------------------------------------------------
+2023-09-07 11:09:10 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-09-07 11:09:10 info: -------------------------------------------------
+2023-09-07 11:09:12 info: All unit tests passed.
+2023-09-07 11:09:15 info: All steps were completed successfully
+2023-09-07 11:09:39 info: ------------------------------------------------------
+2023-09-07 11:09:39 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-09-07 11:09:39 info: ------------------------------------------------------
+2023-09-07 11:09:41 info: All unit tests passed.
+2023-09-07 11:09:44 info: All steps were completed successfully
