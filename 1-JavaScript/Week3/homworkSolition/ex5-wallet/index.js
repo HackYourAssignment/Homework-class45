@@ -1,28 +1,31 @@
 'use strict';
 
-// Based on an example from: Philipp Beau (@ze_german)
-
 const eurosFormatter = new Intl.NumberFormat('nl-NL', {
   style: 'currency',
   currency: 'EUR',
 });
 
 function createWallet(name, cash = 0) {
+
   function deposit(amount) {
     cash += amount;
+
   }
+
 
   function withdraw(amount) {
     if (cash - amount < 0) {
+      console.log(`Insufficient funds!`);
       return 0;
     }
+
     cash -= amount;
     return amount;
   }
 
   function transferInto(wallet, amount) {
     console.log(
-      `Transferring  ${eurosFormatter.format(amount)} from ${name}  to ${
+      `Transferring ${eurosFormatter.format(amount)} from ${name} to ${
         wallet.name
       }`
     );
@@ -35,6 +38,7 @@ function createWallet(name, cash = 0) {
   }
 
   const getName = () => name;
+
   return {
     deposit,
     withdraw,
@@ -53,18 +57,11 @@ walletJane.transferInto(walletJoe, 25);
 
 walletJane.deposit(20);
 walletJane.transferInto(walletJoe, 25);
-walletJack.reportBalance(); //50
-walletJoe.reportBalance();//85
-walletJane.reportBalance();//15
 
-// * End of exercise code
+walletJack.reportBalance();
+walletJoe.reportBalance();
+walletJane.reportBalance();
 
-/*******************************************************************************
- * TODO: Multiple choice: provide your answers by replacing `undefined` with the
- * TODO: letter corresponding to your choice, e.g.  answer: 'a'
- ******************************************************************************/
-// prettier-ignore
-// eslint-disable-next-line no-unused-vars
 const quiz = {
   q1: {
     question: 'At line 26, which variables are in the scope marked Closure?',
@@ -73,7 +70,7 @@ const quiz = {
       b: 'cash, name', 
       c: 'amount, this, wallet'
     },
-    answer: undefined,
+    answer: "a",
   },
   q2: {
     question: 'What is in the Call Stack, from top to bottom?',
@@ -83,8 +80,12 @@ const quiz = {
       c: 'transferInto, anonymous' 
     },
     answer: undefined,
-
-    
+        //the call stack from top to bottom is
+    // deposit()
+    // withdraw()
+    //the format() object
+    // console.log()
+    // transferInto()
   },
   q3: {
     question: 'What tooltip appears when hovering over the third debug button?',
@@ -102,7 +103,7 @@ const quiz = {
       b: 'Transferring € 50,00 from Jack to undefined', 
       c: 'Transferring € 50,00 from Jack to Jane' 
     },
-    answer: undefined,
+    answer: "b",
   },
   q5: {
     question: 'The owner of the wallet with insufficient funds is:',
@@ -111,6 +112,6 @@ const quiz = {
       b: 'Joe', 
       c: 'Jane' 
     },
-    answer: undefined,//with € 15,00 
+    answer: "c", //€ 15,00
   },
 };
