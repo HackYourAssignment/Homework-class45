@@ -27,7 +27,7 @@ function createWallet(name, cash = 0) {
     console.log(
       `Transferring ${eurosFormatter.format(amount)} from ${name} to ${
         wallet.name
-      } TRANSFER INTO`
+      }`
     );
     const withdrawnAmount = withdraw(amount);
     wallet.deposit(withdrawnAmount);
@@ -80,6 +80,12 @@ const quiz = {
       c: 'transferInto, anonymous' 
     },
     answer: undefined,
+        //the call stack from top to bottom is
+    // deposit()
+    // withdraw()
+    //the format() object
+    // console.log()
+    // transferInto()
   },
   q3: {
     question: 'What tooltip appears when hovering over the third debug button?',
@@ -106,6 +112,6 @@ const quiz = {
       b: 'Joe', 
       c: 'Jane' 
     },
-    answer: undefined,
+    answer: "c", //€ 15,00
   },
 };

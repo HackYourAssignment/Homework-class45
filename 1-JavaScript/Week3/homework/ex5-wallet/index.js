@@ -14,17 +14,15 @@ function createWallet(name, cash = 0) {
 
   function withdraw(amount) {
     if (cash - amount < 0) {
-      console.log(`Insufficient funds!`);
       return 0;
     }
-
     cash -= amount;
     return amount;
   }
 
   function transferInto(wallet, amount) {
     console.log(
-      `Transferring ${eurosFormatter.format(amount)} from ${name} to ${
+      `Transferring  ${eurosFormatter.format(amount)} from ${name}  to ${
         wallet.name
       }`
     );
@@ -37,7 +35,6 @@ function createWallet(name, cash = 0) {
   }
 
   const getName = () => name;
-
   return {
     deposit,
     withdraw,
@@ -56,10 +53,9 @@ walletJane.transferInto(walletJoe, 25);
 
 walletJane.deposit(20);
 walletJane.transferInto(walletJoe, 25);
-
-walletJack.reportBalance();
-walletJoe.reportBalance();
-walletJane.reportBalance();
+walletJack.reportBalance(); //50
+walletJoe.reportBalance();//85
+walletJane.reportBalance();//15
 
 // * End of exercise code
 
@@ -87,6 +83,8 @@ const quiz = {
       c: 'transferInto, anonymous' 
     },
     answer: undefined,
+
+    
   },
   q3: {
     question: 'What tooltip appears when hovering over the third debug button?',
@@ -113,6 +111,6 @@ const quiz = {
       b: 'Joe', 
       c: 'Jane' 
     },
-    answer: undefined,
+    answer: undefined,//with € 15,00 
   },
 };
