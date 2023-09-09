@@ -1,0 +1,17 @@
+*** Unit Test Error Report ***
+
+✕ calculateDogAge should exist and be executable
+✕ calculateDogAge should have all TODO comments removed
+✕ calculateDogAge `calculateDogAge` should not contain unneeded console.log calls
+✕ calculateDogAge should take a single parameter
+✕ calculateDogAge should give 7 dog years for 1 human year
+✕ calculateDogAge should give 14 dog years for 2 human years
+✕ calculateDogAge give 21 dog years for 3 human years
+
+
+Command failed: npx jest ex2-dogYears.test.js --colors --reporters="/Users/kumait/Documents/CODE/Homework-class45/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+*** Spell Checker Report ***
+
