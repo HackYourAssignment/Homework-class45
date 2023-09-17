@@ -28,7 +28,7 @@ function catWalk() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
   setInterval(catWalk, 50);
   catWalk();
 });

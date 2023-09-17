@@ -20,7 +20,7 @@ function addCurrentTime() {
   watchElement.textContent = currentTime;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
   setInterval(addCurrentTime, 1000);
   addCurrentTime();
 });
