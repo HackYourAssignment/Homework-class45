@@ -1,1 +1,4 @@
-/* Write your style here */
+.book-li {
+  display: inline-block;
+  margin: 10px;
+}
