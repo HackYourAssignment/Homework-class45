@@ -17,8 +17,42 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 -----------------------------------------------------------------------------*/
 //cspell: enable
 
+// TODO your code goes in here, return the ul element
+// index.js
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  // Create a new unordered list element
+  const ulElement = document.createElement('ul');
+
+  // Iterate through the array of books
+  for (const book of books) {
+    // Create a new list item element
+    const liElement = document.createElement('li');
+
+    // Create a paragraph element to display book title and author
+    const pElement = document.createElement('p');
+    pElement.textContent = `${book.title} by ${book.author}`;
+
+    // Create an image element for the book cover
+    const imgElement = document.createElement('img');
+    imgElement.src = book.coverUrl;
+    imgElement.alt = `${book.title} Cover`;
+
+    // Add the paragraph and image to the list item
+    liElement.appendChild(pElement);
+    liElement.appendChild(imgElement);
+
+    // Change the style based on whether the book has been read or not
+    if (book.alreadyRead) {
+      liElement.style.color = 'green';
+    } else {
+      liElement.style.color = 'red';
+    }
+
+    // Add the list item to the unordered list
+    ulElement.appendChild(liElement);
+  }
+
+  return ulElement;
 }
 
 function main() {
@@ -26,19 +60,20 @@ function main() {
     {
       title: 'The Design of Everyday Things',
       author: 'Don Norman',
-      isbn: '978-0465050659',
+      coverUrl: './assets/the_design_of_everyday_things.jpg',
       alreadyRead: false,
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
-      isbn: '978-1617933431',
+      coverUrl: './assets/the_most_human_human.jpg',
+
       alreadyRead: true,
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
-      isbn: '978-0201616224',
+      coverUrl: './assets/the_pragmatic_programmer.jpg',
       alreadyRead: true,
     },
   ];
