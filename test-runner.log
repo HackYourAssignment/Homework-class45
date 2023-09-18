@@ -252,3 +252,8 @@ ex6-gameOfLife/index.js
 2023-09-17 11:27:21 info: ------------------------------------------
 2023-09-17 11:27:23 info: All unit tests passed.
 2023-09-17 11:27:25 info: All steps were completed successfully
+2023-09-18 10:14:48 info: ----------------------------------------
+2023-09-18 10:14:48 info: >>> Running Unit Test `ex1-bookList` <<<
+2023-09-18 10:14:48 info: ----------------------------------------
+2023-09-18 10:14:54 info: All unit tests passed.
+2023-09-18 10:14:57 info: All steps were completed successfully

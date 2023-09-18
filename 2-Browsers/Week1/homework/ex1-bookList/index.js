@@ -63,8 +63,7 @@ function main() {
     },
   ];
 
-  const ulElement = createBookList(myBooks);
-  document.querySelector('#bookList').appendChild(ulElement);
+  createBookList(myBooks);
 }
 
 window.addEventListener('load', main);
