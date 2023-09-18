@@ -21,8 +21,50 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
+
 function catWalk() {
-  // TODO complete this function
+  const catImage = document.querySelector('img');
+  let currentPosition = 0;
+  let movingRight = true;
+
+  const danceCatUrl =
+    'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+
+  const moveCat = () => {
+    if (movingRight) {
+      currentPosition += 10;
+      catImage.style.transform = 'scaleX(1)';
+    } else {
+      currentPosition -= 10;
+      catImage.style.transform = 'scaleX(-1)';
+    }
+
+    catImage.style.left = currentPosition + 'px';
+
+    if (currentPosition >= window.innerWidth) {
+      currentPosition = -catImage.width;
+    } else if (currentPosition <= -catImage.width) {
+      currentPosition = window.innerWidth;
+    }
+
+    const middleOfScreen = window.innerWidth / 2;
+    if (
+      currentPosition >= middleOfScreen - 50 &&
+      currentPosition <= middleOfScreen + 50
+    ) {
+      catImage.src = danceCatUrl;
+      setTimeout(() => {
+        catImage.src =
+          'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      }, 5000);
+    }
+  };
+
+  setInterval(moveCat, 50);
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.addEventListener('load', () => {
+  const catImage = document.querySelector('img');
+  catImage.style.left = '0px';
+  catWalk();
+});

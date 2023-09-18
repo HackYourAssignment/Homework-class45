@@ -8,7 +8,12 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  // TODO your code goes in here
+  // Find the Google logo element by its class name
+  const googleLogo = document.getElementsByClassName('lnXdpd')[0];
+
+  // Replace the src and srcset attributes with the HackYourFuture logo URL
+  googleLogo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
+  googleLogo.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
 }
 
 hijackGoogleLogo();
