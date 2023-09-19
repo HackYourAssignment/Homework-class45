@@ -122,3 +122,6 @@ dist
 .recent.json
 .disclaimer
 @homework*
+
+# prep-exercise that is not a part of the homework
+2-Browsers/Week1/homework/ex6-gameOfLife
