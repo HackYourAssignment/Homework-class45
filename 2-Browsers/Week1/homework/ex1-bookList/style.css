@@ -1,1 +1,16 @@
-/* Write your style here */
+#bookList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+#bookList li {
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}  
+
+#bookList img {
+  max-width:100%;
+}
