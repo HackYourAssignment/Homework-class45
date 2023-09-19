@@ -27,8 +27,8 @@ let position = 0;
 const stepLength = 10;
 let stop = false;
 
-function catWalk(startWalkingFrom) {
-  image.style.left = startWalkingFrom + 'px';
+function catWalk() {
+  image.style.left = position + 'px';
   setInterval(moveCat, 50);
 }
 
@@ -57,4 +57,4 @@ function moveCat() {
     }, 5 * 1000);
   }
 }
-window.addEventListener('load', catWalk(0));
+window.addEventListener('load', catWalk);

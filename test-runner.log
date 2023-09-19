@@ -1,0 +1,549 @@
+2023-09-19 09:20:48 info: ----------------------------------------
+2023-09-19 09:20:48 info: >>> Running Unit Test `ex1-bookList` <<<
+2023-09-19 09:20:48 info: ----------------------------------------
+2023-09-19 09:20:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    ✕ HTML should be syntactically valid (105 ms)
+    ✓ should have all TODO comments removed
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    ✓ should contain a <ul> with 3 <li> elements (1 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (1 ms)
+    ✓ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:226  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:497  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:759  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        4.231 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2023-09-19 09:21:37 info: ---------------------------------------
+2023-09-19 09:21:37 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-09-19 09:21:37 info: ---------------------------------------
+2023-09-19 09:21:42 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (105 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ each <li> should have the CSS class `list-item` (2 ms)
+    ✓ each <li> should rendered red (33 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 3 passed, 4 total
+Snapshots:   0 total
+Time:        3.636 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2023-09-19 09:21:45 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:14:52 - Unknown word (Zehra)
+ex2-aboutMe/index.js:15:52 - Unknown word (manti)
+ex2-aboutMe/index.js:16:58 - Unknown word (Tukey)
+
+2023-09-19 09:22:46 info: ---------------------------------------
+2023-09-19 09:22:46 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-09-19 09:22:46 info: ---------------------------------------
+2023-09-19 09:22:50 info: All unit tests passed.
+2023-09-19 09:22:54 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:12:52 - Unknown word (Zehra)
+ex2-aboutMe/index.js:13:52 - Unknown word (manti)
+ex2-aboutMe/index.js:14:58 - Unknown word (Tukey)
+
+2023-09-19 09:23:22 info: ---------------------------------------
+2023-09-19 09:23:22 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-09-19 09:23:22 info: ---------------------------------------
+2023-09-19 09:23:27 info: All unit tests passed.
+2023-09-19 09:23:31 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:12:52 - Unknown word (Zehra)
+ex2-aboutMe/index.js:13:52 - Unknown word (manti)
+
+2023-09-19 09:24:03 info: ------------------------------------------
+2023-09-19 09:24:03 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2023-09-19 09:24:03 info: ------------------------------------------
+2023-09-19 09:24:05 info: All unit tests passed.
+2023-09-19 09:24:09 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:11:57 - Unknown word (Xdpd)
+
+2023-09-19 09:24:50 info: --------------------------------------------
+2023-09-19 09:24:50 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-09-19 09:24:50 info: --------------------------------------------
+2023-09-19 09:24:57 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (5.556 s)
+  whatsTheTime
+    ✓ HTML should be syntactically valid (101 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()`
+    ✓ should not call `setInterval()` more than once (2002 ms)
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● whatsTheTime › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      63 |
+      64 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 65 |     expect(state.onload).toBeDefined();
+         |                          ^
+      66 |   });
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:65:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        5.63 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2023-09-19 09:25:33 info: --------------------------------------------
+2023-09-19 09:25:33 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-09-19 09:25:33 info: --------------------------------------------
+2023-09-19 09:25:40 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (5.513 s)
+  whatsTheTime
+    ✓ HTML should be syntactically valid (110 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()` (1 ms)
+    ✓ should not call `setInterval()` more than once (2002 ms)
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (2 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● whatsTheTime › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      63 |
+      64 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 65 |     expect(state.onload).toBeDefined();
+         |                          ^
+      66 |   });
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:65:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        5.581 s, estimated 6 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2023-09-19 09:26:53 info: --------------------------------------------
+2023-09-19 09:26:53 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-09-19 09:26:53 info: --------------------------------------------
+2023-09-19 09:26:59 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js
+  whatsTheTime
+    ✓ HTML should be syntactically valid (98 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `setInterval()` (1 ms)
+    ✓ should not call `setInterval()` more than once (2002 ms)
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (3 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      63 |
+      64 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 65 |     expect(state.onload).toBeDefined();
+         |                          ^
+      66 |   });
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:65:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        4.222 s, estimated 6 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2023-09-19 09:27:34 info: --------------------------------------------
+2023-09-19 09:27:34 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-09-19 09:27:34 info: --------------------------------------------
+2023-09-19 09:27:41 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (5.267 s)
+  whatsTheTime
+    ✓ HTML should be syntactically valid (96 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()`
+    ✓ should not call `setInterval()` more than once (2001 ms)
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (1 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      63 |
+      64 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 65 |     expect(state.onload).toBeDefined();
+         |                          ^
+      66 |   });
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:65:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        5.36 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2023-09-19 09:28:08 info: --------------------------------------------
+2023-09-19 09:28:08 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-09-19 09:28:08 info: --------------------------------------------
+2023-09-19 09:28:13 info: All unit tests passed.
+2023-09-19 09:28:17 info: All steps were completed successfully
+2023-09-19 09:39:05 info: ----------------------------------------
+2023-09-19 09:39:05 info: >>> Running Unit Test `ex1-bookList` <<<
+2023-09-19 09:39:05 info: ----------------------------------------
+2023-09-19 09:39:11 info: All unit tests passed.
+2023-09-19 09:39:14 info: All steps were completed successfully
+2023-09-19 03:03:36 info: ---------------------------------------
+2023-09-19 03:03:36 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:03:36 info: ---------------------------------------
+2023-09-19 03:03:41 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  ● catWalk › HTML should be syntactically valid
+
+    ENOENT: no such file or directory, open '/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.html'
+
+
+
+  ● catWalk › should have all TODO comments removed
+
+    ENOENT: no such file or directory, open '/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.html'
+
+
+
+  ● catWalk › should use `setInterval()` and/or `setTimeout()`
+
+    ENOENT: no such file or directory, open '/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.html'
+
+
+
+  ● catWalk › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    ENOENT: no such file or directory, open '/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.html'
+
+
+
+  ● catWalk › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    ENOENT: no such file or directory, open '/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.html'
+
+
+
+
+  ● Test suite failed to run
+
+    TypeError: Cannot read properties of undefined (reading 'close')
+
+      37 |
+      38 |   afterAll(() => {
+    > 39 |     window.close();
+         |            ^
+      40 |   });
+      41 |
+      42 |   test('HTML should be syntactically valid', () =>
+
+      at Object.close (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:39:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 5 total
+Snapshots:   0 total
+Time:        2.684 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-09-19 03:03:43 error: *** Spell Checker Report ***
+
+
+2023-09-19 03:07:31 info: ---------------------------------------
+2023-09-19 03:07:31 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:07:31 info: ---------------------------------------
+2023-09-19 03:07:37 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (117 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✕ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● catWalk › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 56 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      57 |   });
+      58 | });
+      59 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:56:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.622 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-09-19 03:07:40 error: *** Spell Checker Report ***
+
+/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.js:30:23 - Unknown word (Walkinig)
+/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.js:60:46 - Unknown word (Walkinig)
+
+2023-09-19 03:09:26 info: ---------------------------------------
+2023-09-19 03:09:26 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:09:26 info: ---------------------------------------
+2023-09-19 03:09:31 info: All unit tests passed.
+2023-09-19 03:09:34 error: *** Spell Checker Report ***
+
+/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.js:30:23 - Unknown word (Walkinig)
+/Library/Repositories/Homework-class45/2-Browsers/Week1/run/ex5-catWalk/index.js:60:46 - Unknown word (Walkinig)
+
+2023-09-19 03:13:00 info: --------------------------------------------
+2023-09-19 03:13:00 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-09-19 03:13:00 info: --------------------------------------------
+2023-09-19 03:13:07 info: All unit tests passed.
+2023-09-19 03:13:11 info: All steps were completed successfully
+2023-09-19 03:15:05 info: ---------------------------------------
+2023-09-19 03:15:05 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:15:05 info: ---------------------------------------
+2023-09-19 03:15:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (114 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✕ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● catWalk › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 56 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      57 |   });
+      58 | });
+      59 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:56:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.479 s, estimated 4 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-09-19 03:15:55 info: ---------------------------------------
+2023-09-19 03:15:55 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:15:55 info: ---------------------------------------
+2023-09-19 03:16:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (92 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `setInterval()` and/or `setTimeout()` (1 ms)
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✕ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● catWalk › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 56 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      57 |   });
+      58 | });
+      59 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:56:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.915 s, estimated 4 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-09-19 03:16:48 info: ---------------------------------------
+2023-09-19 03:16:48 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:16:48 info: ---------------------------------------
+2023-09-19 03:16:51 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (91 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (1 ms)
+    ✕ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● catWalk › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 56 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      57 |   });
+      58 | });
+      59 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:56:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.237 s, estimated 3 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
