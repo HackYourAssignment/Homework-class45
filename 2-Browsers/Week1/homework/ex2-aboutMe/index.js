@@ -1,12 +1,28 @@
 'use strict';
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-2-about-me
 
-1. Using JavaScript, replace each of the spans (`nickname`, fav-food`, 
-   `hometown`) with your own information.
-2. In JavaScript, iterate through each `<li>` and change the class to 
-   `list-item`.
-3. Look in the css file!
-------------------------------------------------------------------------------*/
+const InfoUserList = document.getElementById("list-item");
 
-// TODO add your JavaScript code here.
+const newNickName = document.createElement('li');
+newNickName.textContent = 'Delrio';
+
+const newFavoriteFood = document.createElement('li');
+newFavoriteFood.textContent = 'tacos';
+
+const newHomeTown = document.createElement('li');
+newHomeTown.textContent = 'Managua';
+
+while (InfoUserList.firstChild) {
+  InfoUserList.removeChild(InfoUserList.firstChild);
+} 
+
+InfoUserList.appendChild(newNickName);
+InfoUserList.appendChild(newFavoriteFood);
+InfoUserList.appendChild(newHomeTown);
+
+const infoUserLi = InfoUserList.getElementsByTagName('li');
+
+const newId = 'list-item';
+
+for (let i = 0; i < infoUserLi.length; i++) {
+  infoUserLi[i].className = newId;
+}
