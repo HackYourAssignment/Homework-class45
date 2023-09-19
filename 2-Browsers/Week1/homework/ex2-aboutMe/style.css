@@ -1,1 +1,19 @@
-/* 3. Add a css rule for .list-item to make the color red. */
+body {
+    font-family: 'Alice', serif;
+    font-size: 24px;
+    margin: 10%;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+.list-item {
+    color: red;
+}
