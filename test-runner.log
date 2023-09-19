@@ -547,3 +547,108 @@ Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
 Time:        2.237 s, estimated 3 s
 Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-09-19 03:20:08 info: ---------------------------------------
+2023-09-19 03:20:08 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:20:08 info: ---------------------------------------
+2023-09-19 03:20:14 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (95 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✕ `window.onload` or `window.addEventListener` should not call its event handler function (2 ms)
+
+  ● catWalk › `window.onload` or `window.addEventListener` should not call its event handler function
+
+    expect(received).not.toBeDefined()
+
+    Received: true
+
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+    > 56 |     expect(state.callError).not.toBeDefined();
+         |                                 ^
+      57 |   });
+      58 | });
+      59 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:56:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.432 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-09-19 03:29:08 info: ---------------------------------------
+2023-09-19 03:29:08 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:29:08 info: ---------------------------------------
+2023-09-19 03:29:14 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (117 ms)
+    ✓ should have all TODO comments removed
+    ✕ should use `setInterval()` and/or `setTimeout()` (2 ms)
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● catWalk › should use `setInterval()` and/or `setTimeout()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      46 |
+      47 |   test('should use `setInterval()` and/or `setTimeout()`', () => {
+    > 48 |     expect(state.timer).toBeDefined();
+         |                         ^
+      49 |   });
+      50 |
+      51 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:48:25)
+
+  ● catWalk › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      50 |
+      51 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 52 |     expect(state.onload).toBeDefined();
+         |                          ^
+      53 |   });
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:52:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        3.684 s, estimated 4 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-09-19 03:29:15 error: *** ESLint Report ***
+
+ex5-catWalk/index.js
+  30:18  error  Parsing error: Unexpected token {
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-09-19 03:29:33 info: ---------------------------------------
+2023-09-19 03:29:33 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-19 03:29:33 info: ---------------------------------------
+2023-09-19 03:29:37 info: All unit tests passed.
+2023-09-19 03:29:41 info: All steps were completed successfully
