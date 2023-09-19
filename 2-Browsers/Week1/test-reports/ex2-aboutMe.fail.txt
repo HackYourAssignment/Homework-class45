@@ -1,0 +1,44 @@
+*** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✕ should be syntactically valid (1 ms)
+    ✕ should have all TODO comments removed
+    ✕ each <li> should have the CSS class `list-item`
+    ✕ each <li> should rendered red
+
+  ● Generated HTML › should be syntactically valid
+
+    ENOENT: no such file or directory, open '/Users/kumait/Documents/CODE/Homework-class45/2-Browsers/Week1/#/ex2-aboutMe/index.html'
+
+
+
+  ● Generated HTML › should have all TODO comments removed
+
+    ENOENT: no such file or directory, open '/Users/kumait/Documents/CODE/Homework-class45/2-Browsers/Week1/#/ex2-aboutMe/index.html'
+
+
+
+  ● Generated HTML › each <li> should have the CSS class `list-item`
+
+    ENOENT: no such file or directory, open '/Users/kumait/Documents/CODE/Homework-class45/2-Browsers/Week1/#/ex2-aboutMe/index.html'
+
+
+
+  ● Generated HTML › each <li> should rendered red
+
+    ENOENT: no such file or directory, open '/Users/kumait/Documents/CODE/Homework-class45/2-Browsers/Week1/#/ex2-aboutMe/index.html'
+
+
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 total
+Snapshots:   0 total
+Time:        1.265 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+*** Spell Checker Report ***
+

@@ -20,9 +20,51 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    Dancing cat URL:
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
+
+ 
+ Moving objects from left to right in a web page Basic example:
+
+  ```
+  let object = document.getElementById('theObject'); // Replace 'yourObject' with the ID of your HTML element
+  let leftPosition = 0; // Initial left position
+
+    function moveObject() {
+     leftPosition += 1; // Adjust this value to control the speed
+    object.style.left = leftPosition + 'px';
+
+      if (leftPosition >= window.innerWidth) {
+       clearInterval(interval); // Stop when it reaches the right edge
+      }
+    }
+
+   const interval = setInterval(moveObject, 10); //  every 10 milliseconds update
+ ```
 -----------------------------------------------------------------------------*/
+
+const imgCatWalk = document.querySelector('img');
+let leftPosition = 0;
+
 function catWalk() {
-  // TODO complete this function
+  leftPosition += 10;
+  imgCatWalk.style.left = leftPosition + 'px';
+
+  if (leftPosition >= window.innerWidth) {
+    /// clearInterval((imgCatWalk.style.left = 0)); this one stop the cat
+    leftPosition = 0; // Restart at the left-side
+  }
+  if (leftPosition === window.innerWidth / 2) {
+    const dancingCatURL =
+      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+    imgCatWalk.src = dancingCatURL;
+    setTimeout(() => {
+      imgCatWalk.src =
+        'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      leftPosition = 0; // fix to img alt together when switching
+    }, 5000); // Keep dancing for 5 seconds
+  }
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.onload = () => {
+  catWalk();
+  setInterval(catWalk, 50);
+};
