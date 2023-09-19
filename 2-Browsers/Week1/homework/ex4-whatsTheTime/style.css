@@ -1,0 +1,15 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    width: fit-content;
+    font-size: 18px;
+    margin: 35vh auto;
+}
+
+p {
+    margin: 0;
+    font-size: 7rem;
+}

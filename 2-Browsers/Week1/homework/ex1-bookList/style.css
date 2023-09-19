@@ -1,1 +1,49 @@
-/* Write your style here */
+body {
+    font-family: 'Quattrocento', serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+ul {
+    font-family: 'Quattrocento Sans', sans-serif;
+    list-style-type: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+}
+
+.read {
+    background-color: rgb(152, 221, 78);
+}
+
+.unread {
+    background-color: rgb(250, 89, 105);
+}
