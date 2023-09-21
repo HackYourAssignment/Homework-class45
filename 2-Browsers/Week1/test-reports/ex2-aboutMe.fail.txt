@@ -1,0 +1,6 @@
+
+*** Spell Checker Report ***
+
+ex2-aboutMe/index.js:5:21 - Unknown word (Habtor)
+ex2-aboutMe/index.js:5:31 - Unknown word (Mandi)
+ex2-aboutMe/index.js:5:40 - Unknown word (Azzan)

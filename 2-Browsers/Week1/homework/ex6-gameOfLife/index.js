@@ -15,10 +15,18 @@ const NUM_ROWS = 40;
 // life or death
 function createCell(x, y) {
   const alive = Math.random() > 0.5;
+  let lifeTime;
+  if (alive) {
+    lifeTime = 1;
+  } else {
+    lifeTime = 0;
+  }
+
   return {
     x,
     y,
     alive,
+    lifeTime,
   };
 }
 
