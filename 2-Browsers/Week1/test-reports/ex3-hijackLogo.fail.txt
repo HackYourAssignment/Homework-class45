@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+ex3-hijackLogo.js:11:40 - Unknown word (lnxdpd)

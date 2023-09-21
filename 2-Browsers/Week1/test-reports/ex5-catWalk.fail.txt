@@ -1,0 +1,7 @@
+
+*** Spell Checker Report ***
+
+ex5-catWalk/index.js:28:5 - Unknown word (danc)
+ex5-catWalk/index.js:32:7 - Unknown word (danc)
+ex5-catWalk/index.js:44:7 - Unknown word (danc)
+ex5-catWalk/index.js:47:9 - Unknown word (danc)
