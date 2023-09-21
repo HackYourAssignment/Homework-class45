@@ -15,8 +15,6 @@ function addCurrentTime() {
 
   const currentTime = `${hours}:${minutes}:${seconds}`;
 
-  console.log(currentTime);
-
   watchElement.textContent = currentTime;
 }
 

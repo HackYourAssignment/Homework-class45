@@ -6,7 +6,6 @@ listItems.forEach((element) => {
   element.className = 'list-item';
 });
 
-console.log(document.querySelectorAll('ul li').className);
 spans.forEach((item) => {
   if (item.id === 'nickname') {
     item.textContent = 'Kadir';
