@@ -1,12 +1,17 @@
 'use strict';
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-2-about-me
+const listItems = document.querySelectorAll('ul li');
+const spans = document.querySelectorAll('ul li span');
 
-1. Using JavaScript, replace each of the spans (`nickname`, fav-food`, 
-   `hometown`) with your own information.
-2. In JavaScript, iterate through each `<li>` and change the class to 
-   `list-item`.
-3. Look in the css file!
-------------------------------------------------------------------------------*/
+listItems.forEach((element) => {
+  element.className = 'list-item';
+});
 
-// TODO add your JavaScript code here.
+spans.forEach((item) => {
+  if (item.id === 'nickname') {
+    item.textContent = 'Kadir';
+  } else if (item.id === 'fav-food') {
+    item.textContent = 'Kebap';
+  } else if (item.id === 'hometown') {
+    item.textContent = 'İzmir';
+  }
+});
