@@ -24,54 +24,74 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
 // TODO complete this function
 
-'use strict';
+// Define the URL of the dancing cat image.
+const DANCING_CAT_URL =
+  'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
 
-// Variable to store a reference to the <img> element
-const catImage = document.getElementById('cat');
+// Set the number of pixels the cat moves in each animation step.
+const STEP_SIZE_PX = 10;
 
-// Initial position of the cat
-let catLeftPosition = 0;
+// Set the time interval (in milliseconds) for updating the cat's position.
+const STEP_TIME_MS = 50;
 
-// Flag to track whether the cat is dancing
-let isDancing = false;
+// Set the duration (in milliseconds) for the cat's dancing animation.
+const DANCE_TIME_MS = 5000;
 
-// Function to move the cat to the right
+// Define a function named catWalk.
 function catWalk() {
-  if (!isDancing) {
-    // Move the cat 10 pixels to the right
-    catLeftPosition += 10;
+  // Select the <img> element on the web page and store it in a variable called image.
+  const image = document.getElementById('cat');
 
-    // Check if the cat has reached the middle of the screen
-    if (catLeftPosition >= window.innerWidth / 2) {
-      // Replace the image with a dancing cat
-      catImage.src =
-        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-      isDancing = true;
+  // Calculate the horizontal midpoint of the screen.
+  const midPoint = window.innerWidth / 2;
 
-      // After 5 seconds, reset to the original image and continue walking
-      setTimeout(() => {
-        catImage.src =
-          'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-        isDancing = false;
-      }, 5000);
+  // Initialize a variable called position to a negative value to start the cat off the left side of the screen.
+  let position = -image.width;
+
+  // Start an interval and store its ID in a variable called intervalId.
+  const intervalId = setInterval(function () {
+    // Update the cat's position by changing the left CSS property of the image.
+    image.style.left = position + 'px';
+
+    // Increment the position variable by STEP_SIZE_PX pixels.
+    position += STEP_SIZE_PX;
+
+    // Check if the cat has reached or passed the midPoint.
+    if (position >= midPoint) {
+      // If yes, clear the current interval.
+      clearInterval(intervalId);
+
+      // Save the original image source in a variable called savedSrc.
+      const savedSrc = image.src;
+
+      // Replace the image source with the dancing cat URL to make the cat dance.
+      image.src = DANCING_CAT_URL;
+
+      // After a delay of DANCE_TIME_MS milliseconds:
+      setTimeout(function () {
+        // Restore the original image source.
+        image.src = savedSrc;
+
+        // Create a new interval to continue the cat's walk from where it left off.
+        const continueIntervalId = setInterval(function () {
+          // Update the cat's position by changing the left CSS property of the image.
+          image.style.left = position + 'px';
+
+          // Increment the position variable by STEP_SIZE_PX pixels.
+          position += STEP_SIZE_PX;
+
+          // Check if the cat has moved past the right edge of the screen.
+          if (position >= window.innerWidth) {
+            // If yes, clear the current interval and call the catWalk function to restart the animation.
+            clearInterval(continueIntervalId);
+            catWalk();
+          }
+        }, STEP_TIME_MS);
+      }, DANCE_TIME_MS);
     }
-
-    // Check if the cat has reached the right-hand side
-    if (catLeftPosition >= window.innerWidth) {
-      // Reset the cat to the left-hand side
-      catLeftPosition = 0;
-    }
-
-    // Update the cat's left style property
-    catImage.style.left = catLeftPosition + 'px';
-  }
+  }, STEP_TIME_MS);
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
-window.addEventListener('load', () => {
-  // Set the initial position of the cat
-  catImage.style.left = '0px';
-
-  // Call `catWalk` every 50 milliseconds
-  setInterval(catWalk, 50);
-});
+// Attach an event listener to the 'load' event of the window.
+// When the window has fully loaded, call the catWalk function to start the animation.
+window.addEventListener('load', catWalk);
