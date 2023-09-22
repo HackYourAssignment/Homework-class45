@@ -10,7 +10,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
 // TODO your code goes in here
 function hijackGoogleLogo() {
-  const googleLogo = document.querySelector('#hplogo'); // Assuming the logo has an id of 'hplogo'
+  const googleLogo = document.getElementsByClassName('.lnXdpd');
 
   // Replace the Google logo with the HackYourFuture logo
   googleLogo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
