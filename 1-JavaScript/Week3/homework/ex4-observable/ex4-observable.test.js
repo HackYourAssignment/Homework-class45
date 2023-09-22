@@ -19,7 +19,7 @@ describe('createObservable', () => {
     const listener1 = jest.fn();
     const listener2 = jest.fn();
 
-    // Subscribe both function to the observable
+    // Subscribe both functions to the observable
     observable.subscribe(listener1);
     observable.subscribe(listener2);
 
