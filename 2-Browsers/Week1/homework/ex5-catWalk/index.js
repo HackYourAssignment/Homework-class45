@@ -44,8 +44,11 @@ function moveCat() {
     position = 0;
   }
 
-  const catWidth = Math.round(image.width / 2 / 10) * 10;
-  const isCatInTheMiddle = position === window.screen.width / 2 - catWidth;
+  const catWidth = image.width;
+  const windowMiddle = window.innerWidth / 2;
+  const catMiddle = position + catWidth / 2;
+  const isCatInTheMiddle = Math.abs(catMiddle - windowMiddle) <= stepLength;
+
   if (isCatInTheMiddle) {
     stop = true;
     image.src =

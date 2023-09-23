@@ -652,3 +652,17 @@ ex5-catWalk/index.js
 2023-09-19 03:29:33 info: ---------------------------------------
 2023-09-19 03:29:37 info: All unit tests passed.
 2023-09-19 03:29:41 info: All steps were completed successfully
+2023-09-23 10:14:45 info: ---------------------------------------
+2023-09-23 10:14:45 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-23 10:14:45 info: ---------------------------------------
+2023-09-23 10:14:51 info: All unit tests passed.
+2023-09-23 10:14:55 info: All steps were completed successfully
+2023-09-23 10:19:17 info: ---------------------------------------
+2023-09-23 10:19:17 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-09-23 10:19:17 info: ---------------------------------------
+2023-09-23 10:19:23 info: All unit tests passed.
+2023-09-23 10:19:26 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:12:52 - Unknown word (Zehra)
+ex2-aboutMe/index.js:13:52 - Unknown word (manti)
+

@@ -13,8 +13,8 @@ document.getElementById('nickname').textContent = 'Zehra';
 document.getElementById('fav-food').textContent = 'manti';
 document.getElementById('hometown').textContent = 'Izmir/Turkey';
 
-const lists = document.getElementsByTagName('ul')[0].children;
+const listItem = document.querySelectorAll('li');
 
-Array.from(lists).forEach((element) => {
-  element.className = 'list-item';
+listItem.forEach((item) => {
+  item.classList.add('list-item');
 });
