@@ -32,6 +32,7 @@ function createBookList(books) {
 
     const bookCover = document.createElement('img');
     bookCover.src = book.imgUrl;
+    bookCover.alt = `${book.title} Book Cover`;
 
     const liDisplay = document.createElement('li');
     liDisplay.appendChild(pairTitleAuthor);

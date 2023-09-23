@@ -12,9 +12,10 @@ function addCurrentTime() {
   htmlLess.textContent = currentTime;
   ///  Unnecessary: return currentTime;
 }
+const htmlLess = document.createElement('div');
+
 setInterval(addCurrentTime, 1000);
 // when these were inside above function addCurrentTime() time was to be typed constantly nonstop with each single update
-const htmlLess = document.createElement('div');
 document.body.appendChild(htmlLess);
 
 window.onload = () => {
