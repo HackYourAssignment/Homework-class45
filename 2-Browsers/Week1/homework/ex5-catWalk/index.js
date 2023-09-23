@@ -42,7 +42,7 @@ function catWalk() {
     imgCat.style.left = goPositionLeft + 'px';
   }
   // fixed: use == instead of >= or ===
-  if (goPositionLeft === halfWay) {
+  if (goPositionLeft == halfWay) {
     clearInterval(interval);
 
     imgCat.src =
