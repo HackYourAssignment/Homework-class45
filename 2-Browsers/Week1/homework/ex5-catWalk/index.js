@@ -26,35 +26,37 @@ function catWalk() {
   imgElement.style.left = '0px';
 
   let isDancing = false;
+  let hasDanced = false;
   let middlePosition;
 
   function moveImage() {
     const currentPosition = parseInt(imgElement.style.left);
 
+    if (isDancing) return;
+
     if (currentPosition >= window.innerWidth - imgElement.width) {
       imgElement.style.left = '0px';
-      isDancing = false;
+      hasDanced = false;
       imgElement.src =
         'http://www.anniemation.com/clip_art/images/cat-walk.gif';
     } else {
       imgElement.style.left = currentPosition + 10 + 'px';
       middlePosition = (window.innerWidth - imgElement.width) / 2;
-      if (currentPosition >= middlePosition && !isDancing) {
+      if (currentPosition >= middlePosition && !hasDanced) {
         isDancing = true;
         imgElement.src =
           'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-        imgElement.style.position = 'static';
-        imgElement.style.transform = 'translateX(120%)';
+
+        setTimeout(() => {
+          isDancing = false;
+          hasDanced = true;
+          imgElement.src =
+            'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+          moveImage();
+        }, 5000);
       }
     }
   }
-
-  setTimeout(() => {
-    isDancing = false;
-    imgElement.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-    imgElement.style.position = 'absolute';
-    moveImage();
-  }, 5000);
 
   setInterval(moveImage, 50);
 }

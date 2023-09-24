@@ -10,15 +10,13 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 
 const nickname = document.getElementById('nickname');
-nickname.parentElement.textContent += ' shorty';
-nickname.remove();
+nickname.textContent = ' shorty';
 
 const food = document.getElementById('fav-food');
-food.parentElement.textContent += ' lazanya';
-nickname.remove();
+food.textContent = ' lazanya';
 
 const hometown = document.getElementById('hometown');
-hometown.parentElement.textContent += ' dnipro';
+hometown.textContent = ' dnipro';
 
 const liElements = document.querySelectorAll('li');
 

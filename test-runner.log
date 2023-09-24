@@ -1,0 +1,420 @@
+2023-09-20 05:31:43 info: ----------------------------------------
+2023-09-20 05:31:43 info: >>> Running Unit Test `ex1-bookList` <<<
+2023-09-20 05:31:43 info: ----------------------------------------
+2023-09-20 05:31:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    × HTML should be syntactically valid (119 ms)
+    √ should have all TODO comments removed
+    √ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    √ should contain a <ul> with 3 <li> elements (1 ms)
+    √ should contain an <li> with title and author for each book of the `myBooks` array (1 ms)
+    √ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:114  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:262  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:418  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        3.742 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2023-09-20 05:41:20 info: ----------------------------------------
+2023-09-20 05:41:20 info: >>> Running Unit Test `ex1-bookList` <<<
+2023-09-20 05:41:20 info: ----------------------------------------
+2023-09-20 05:41:25 info: All unit tests passed.
+2023-09-20 05:41:30 info: All steps were completed successfully
+2023-09-20 05:49:04 info: ---------------------------------------
+2023-09-20 05:49:04 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-09-20 05:49:04 info: ---------------------------------------
+2023-09-20 05:49:10 info: All unit tests passed.
+2023-09-20 05:49:14 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:16:22 - Unknown word (lazanya)
+ex2-aboutMe/index.js:19:26 - Unknown word (dnipro)
+
+2023-09-20 05:52:17 info: ---------------------------------------
+2023-09-20 05:52:17 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-09-20 05:52:17 info: ---------------------------------------
+2023-09-20 05:52:23 info: All unit tests passed.
+2023-09-20 05:52:25 error: *** ESLint Report ***
+
+ex2-aboutMe/index.js
+  16:1  error  Definition for rule 'spellcheck/spell-checker' was not found  spellcheck/spell-checker
+  20:1  error  Definition for rule 'spellcheck/spell-checker' was not found  spellcheck/spell-checker
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2023-09-20 05:52:27 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:17:22 - Unknown word (lazanya)
+ex2-aboutMe/index.js:21:26 - Unknown word (dnipro)
+
+2023-09-20 05:54:32 info: ---------------------------------------
+2023-09-20 05:54:32 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-09-20 05:54:32 info: ---------------------------------------
+2023-09-20 05:54:38 info: All unit tests passed.
+2023-09-20 05:54:43 info: All steps were completed successfully
+2023-09-20 05:57:29 info: ------------------------------------------
+2023-09-20 05:57:29 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2023-09-20 05:57:29 info: ------------------------------------------
+2023-09-20 05:57:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (1 ms)
+    × should set the `src` property (1 ms)
+    × should set the `srcset` property
+
+  ● hijackLogo › should set the `src` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      29 |
+      30 |   test('should set the `src` property', () => {
+    > 31 |     expect(state.src).toBeDefined();
+         |                       ^
+      32 |   });
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:31:23)
+
+  ● hijackLogo › should set the `srcset` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+    > 35 |     expect(state.srcset).toBeDefined();
+         |                          ^
+      36 |   });
+      37 | });
+      38 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:35:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.676 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2023-09-20 06:09:39 info: ------------------------------------------
+2023-09-20 06:09:39 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2023-09-20 06:09:39 info: ------------------------------------------
+2023-09-20 06:09:42 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (2 ms)
+    × should set the `src` property (1 ms)
+    × should set the `srcset` property
+
+  ● hijackLogo › should set the `src` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      29 |
+      30 |   test('should set the `src` property', () => {
+    > 31 |     expect(state.src).toBeDefined();
+         |                       ^
+      32 |   });
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:31:23)
+
+  ● hijackLogo › should set the `srcset` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+    > 35 |     expect(state.srcset).toBeDefined();
+         |                          ^
+      36 |   });
+      37 | });
+      38 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:35:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.563 s, estimated 1 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2023-09-20 06:09:44 error: *** ESLint Report ***
+
+ex3-hijackLogo.js
+  24:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-09-20 06:12:38 info: ------------------------------------------
+2023-09-20 06:12:38 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2023-09-20 06:12:38 info: ------------------------------------------
+2023-09-20 06:12:41 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    √ should have all TODO comments removed (2 ms)
+    × should set the `src` property (1 ms)
+    × should set the `srcset` property (1 ms)
+
+  ● hijackLogo › should set the `src` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      29 |
+      30 |   test('should set the `src` property', () => {
+    > 31 |     expect(state.src).toBeDefined();
+         |                       ^
+      32 |   });
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:31:23)
+
+  ● hijackLogo › should set the `srcset` property
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      33 |
+      34 |   test('should set the `srcset` property', () => {
+    > 35 |     expect(state.srcset).toBeDefined();
+         |                          ^
+      36 |   });
+      37 | });
+      38 |
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js:35:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.582 s, estimated 1 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2023-09-20 06:26:04 info: --------------------------------------------
+2023-09-20 06:26:04 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-09-20 06:26:04 info: --------------------------------------------
+2023-09-20 06:26:11 info: All unit tests passed.
+2023-09-20 06:26:16 info: All steps were completed successfully
+2023-09-20 06:26:50 info: ------------------------------------------
+2023-09-20 06:26:50 info: >>> Running Unit Test `ex6-gameOfLife` <<<
+2023-09-20 06:26:50 info: ------------------------------------------
+2023-09-20 06:26:53 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex6-gameOfLife.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js
+  Game Of Life:
+    √ should exist and be executable (1 ms)
+    √ a living cell with zero living neighbors should die and have its life time reset to zero (2 ms)
+    √ a living cell with one living neighbor should die and have its life time reset to zero (1 ms)
+    √ a living cell with two living neighbors should survive and have its life time incremented by one
+    × a living cell with three living neighbors should survive and have its life time incremented by one (3 ms)
+    √ a living cell with four living neighbors should die and have its life time reset to zero
+    √ a dead cell with zero living neighbors should remain dead and have a life time of zero (1 ms)
+    √ a dead cell with one living neighbor should remain dead and have a life time of zero
+    × a dead cell with two living neighbors should remain dead and have a life time of zero
+    √ a dead cell with three living neighbors should come alive and have its lifeTime reset to one (1 ms)
+    √ a dead cell with four living neighbors should remain dead and have a life time of zero
+
+  ● Game Of Life: › a living cell with three living neighbors should survive and have its life time incremented by one
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+      115 |
+      116 |     expect(midCell.alive).toBe(true);
+    > 117 |     expect(midCell.lifeTime).toBe(2);
+          |                              ^
+      118 |   });
+      119 |
+      120 |   test('a living cell with four living neighbors should die and have its life time reset to zero', () => {
+
+      at Object.toBe (2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js:117:30)
+
+  ● Game Of Life: › a dead cell with two living neighbors should remain dead and have a life time of zero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+      202 |
+      203 |     expect(midCell.alive).toBe(false);
+    > 204 |     expect(midCell.lifeTime).toBe(0);
+          |                              ^
+      205 |   });
+      206 |
+      207 |   test('a dead cell with three living neighbors should come alive and have its lifeTime reset to one', () => {
+
+      at Object.toBe (2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js:204:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 9 passed, 11 total
+Snapshots:   0 total
+Time:        0.818 s
+Ran all test suites matching /ex6-gameOfLife.test.js/i.
+2023-09-21 12:18:12 info: ------------------------------------------
+2023-09-21 12:18:12 info: >>> Running Unit Test `ex6-gameOfLife` <<<
+2023-09-21 12:18:12 info: ------------------------------------------
+2023-09-21 12:18:15 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex6-gameOfLife.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js
+  Game Of Life:
+    √ should exist and be executable (2 ms)
+    √ a living cell with zero living neighbors should die and have its life time reset to zero (1 ms)
+    √ a living cell with one living neighbor should die and have its life time reset to zero
+    √ a living cell with two living neighbors should survive and have its life time incremented by one (1 ms)
+    √ a living cell with three living neighbors should survive and have its life time incremented by one
+    √ a living cell with four living neighbors should die and have its life time reset to zero
+    √ a dead cell with zero living neighbors should remain dead and have a life time of zero (1 ms)
+    √ a dead cell with one living neighbor should remain dead and have a life time of zero
+    × a dead cell with two living neighbors should remain dead and have a life time of zero (2 ms)
+    √ a dead cell with three living neighbors should come alive and have its lifeTime reset to one
+    √ a dead cell with four living neighbors should remain dead and have a life time of zero
+
+  ● Game Of Life: › a dead cell with two living neighbors should remain dead and have a life time of zero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+      202 |
+      203 |     expect(midCell.alive).toBe(false);
+    > 204 |     expect(midCell.lifeTime).toBe(0);
+          |                              ^
+      205 |   });
+      206 |
+      207 |   test('a dead cell with three living neighbors should come alive and have its lifeTime reset to one', () => {
+
+      at Object.toBe (2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js:204:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 passed, 11 total
+Snapshots:   0 total
+Time:        0.86 s, estimated 1 s
+Ran all test suites matching /ex6-gameOfLife.test.js/i.
+2023-09-21 12:24:14 info: ------------------------------------------
+2023-09-21 12:24:14 info: >>> Running Unit Test `ex6-gameOfLife` <<<
+2023-09-21 12:24:14 info: ------------------------------------------
+2023-09-21 12:24:17 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex6-gameOfLife.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js
+  Game Of Life:
+    √ should exist and be executable (2 ms)
+    √ a living cell with zero living neighbors should die and have its life time reset to zero (2 ms)
+    √ a living cell with one living neighbor should die and have its life time reset to zero (1 ms)
+    × a living cell with two living neighbors should survive and have its life time incremented by one (2 ms)
+    √ a living cell with three living neighbors should survive and have its life time incremented by one (1 ms)
+    √ a living cell with four living neighbors should die and have its life time reset to zero (1 ms)
+    √ a dead cell with zero living neighbors should remain dead and have a life time of zero (1 ms)
+    √ a dead cell with one living neighbor should remain dead and have a life time of zero
+    √ a dead cell with two living neighbors should remain dead and have a life time of zero
+    √ a dead cell with three living neighbors should come alive and have its lifeTime reset to one (1 ms)
+    √ a dead cell with four living neighbors should remain dead and have a life time of zero (1 ms)
+
+  ● Game Of Life: › a living cell with two living neighbors should survive and have its life time incremented by one
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+      92 |
+      93 |     expect(midCell.alive).toBe(true);
+    > 94 |     expect(midCell.lifeTime).toBe(2);
+         |                              ^
+      95 |   });
+      96 |
+      97 |   test('a living cell with three living neighbors should survive and have its life time incremented by one', () => {
+
+      at Object.toBe (2-Browsers/Week1/unit-tests/ex6-gameOfLife.test.js:94:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 passed, 11 total
+Snapshots:   0 total
+Time:        0.747 s, estimated 1 s
+Ran all test suites matching /ex6-gameOfLife.test.js/i.
+2023-09-21 12:41:57 info: ------------------------------------------
+2023-09-21 12:41:57 info: >>> Running Unit Test `ex6-gameOfLife` <<<
+2023-09-21 12:41:57 info: ------------------------------------------
+2023-09-21 12:42:00 info: All unit tests passed.
+2023-09-21 12:42:05 info: All steps were completed successfully
+2023-09-21 02:46:47 info: ---------------------------------------
+2023-09-21 02:46:47 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-21 02:46:47 info: ---------------------------------------
+2023-09-21 02:46:56 info: All unit tests passed.
+2023-09-21 02:47:07 info: All steps were completed successfully
+2023-09-24 11:56:50 info: ---------------------------------------
+2023-09-24 11:56:50 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-09-24 11:56:50 info: ---------------------------------------
+2023-09-24 11:56:57 info: All unit tests passed.
+2023-09-24 11:57:02 info: All steps were completed successfully
