@@ -1,24 +1,23 @@
-//cspell: disable
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-1-the-book-list
-
-I'd like to display my three favorite books inside a nice webpage!
-
-1. Iterate through the array of books.
-2. For each book, create a `<p>`
-element with the book title and author.
-3. Use a `<ul>`  and `<li>` to display the books.
-4. Add an `<img>` to each book that links to a URL of the book cover.
-5. Change the style of the book depending on whether you have read it(green) or not(red).
-
-The end result should look something like this:
-https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
-
------------------------------------------------------------------------------*/
-//cspell: enable
-
 function createBookList(books) {
   // TODO your code goes in here, return the ul element
+  const ulTag = document.createElement('ul');
+  books.forEach((book) => {
+    const newPTag = document.createElement('p');
+    const liTag = document.createElement('li');
+    newPTag.text = `${book.title} BY ${book.author} `;
+    liTag.appendChild(newPTag);
+    const imgTag = document.createElement('img');
+    imgTag.src = `${book.img}`;
+    imgTag.alt = `${book.title}`;
+    liTag.appendChild(imgTag);
+    if (book.alreadyRead) {
+      liTag.style.background = 'green';
+    } else {
+      liTag.style.background = 'red';
+    }
+    ulTag.appendChild(liTag);
+  });
+  return ulTag;
 }
 
 function main() {
@@ -27,18 +26,21 @@ function main() {
       title: 'The Design of Everyday Things',
       author: 'Don Norman',
       isbn: '978-0465050659',
+      img: './assets/the_design_of_everyday_things.jpg',
       alreadyRead: false,
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
+      img: './assets/the_most_human_human.jpg',
       alreadyRead: true,
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
+      img: './assets/the_pragmatic_programmer.jpg',
       alreadyRead: true,
     },
   ];
