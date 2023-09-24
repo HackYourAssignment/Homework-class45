@@ -22,7 +22,43 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
 function catWalk() {
-  // TODO complete this function
+  const imgElement = document.querySelector('img');
+  imgElement.style.left = '0px';
+
+  let isDancing = false;
+  let hasDanced = false;
+  let middlePosition;
+
+  function moveImage() {
+    const currentPosition = parseInt(imgElement.style.left);
+
+    if (isDancing) return;
+
+    if (currentPosition >= window.innerWidth - imgElement.width) {
+      imgElement.style.left = '0px';
+      hasDanced = false;
+      imgElement.src =
+        'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+    } else {
+      imgElement.style.left = currentPosition + 10 + 'px';
+      middlePosition = (window.innerWidth - imgElement.width) / 2;
+      if (currentPosition >= middlePosition && !hasDanced) {
+        isDancing = true;
+        imgElement.src =
+          'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+
+        setTimeout(() => {
+          isDancing = false;
+          hasDanced = true;
+          imgElement.src =
+            'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+          moveImage();
+        }, 5000);
+      }
+    }
+  }
+
+  setInterval(moveImage, 50);
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.addEventListener('load', catWalk);
