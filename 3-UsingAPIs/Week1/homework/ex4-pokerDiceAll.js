@@ -27,9 +27,11 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const diceArr = dice.map((num) => {
+    return rollDie(num);
+  });
+  return Promise.all(diceArr);
 }
 
 function main() {
@@ -43,3 +45,7 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/*The code will enter rejection line and will continue to roll the dice 
+until the catch line reached. This rejection line does not cancel any
+ongoing asynchronous operations in the Promise chain.*/
