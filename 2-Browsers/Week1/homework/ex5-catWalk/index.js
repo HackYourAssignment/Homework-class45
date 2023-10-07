@@ -22,40 +22,48 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 
 -----------------------------------------------------------------------------*/
-const imgCat = document.querySelector('img');
-
-const entireWidth = window.innerWidth;
-const imgCatWidth = imgCat.offsetWidth;
-const totalWidth = entireWidth - imgCatWidth;
-const halfWay = totalWidth / 2;
-
-imgCat.style.left = 0;
-
-let goPositionLeft = 0; // + 'px' // needs convert string to int
+let goAhead = 0;
+let interval;
 
 function catWalk() {
-  goPositionLeft += 10;
-  imgCat.style.left = `${goPositionLeft}px`;
+  startInterval();
+  const imgCat = document.querySelector('img');
+  const entireWidth = window.innerWidth;
+  const imgCatWidth = imgCat.offsetWidth;
+  const totalWidth = entireWidth - imgCatWidth;
+  const halfWay = Math.floor(totalWidth / 2);
 
-  if (goPositionLeft >= totalWidth) {
-    goPositionLeft = 0;
-    imgCat.style.left = goPositionLeft + 'px';
-  }
-  // fixed: use == instead of >= or ===
-  if (goPositionLeft == halfWay) {
-    clearInterval(interval);
+  goAhead += 10;
+  imgCat.style.left = `${goAhead}px`;
 
+  reappear(totalWidth);
+
+  if (Math.abs(goAhead - halfWay) <= 10 / 2) {
+    stopInterval();
     imgCat.src =
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
 
     setTimeout(() => {
       imgCat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-      interval = setInterval(catWalk, 50);
+      startInterval();
     }, 5000);
   }
 }
-let interval = setInterval(catWalk, 50);
 
-window.onload = () => {
-  interval;
+const startInterval = () => {
+  if (!interval) {
+    interval = setInterval(catWalk, 50);
+  }
 };
+
+const stopInterval = () => {
+  clearInterval(interval);
+  interval = null;
+};
+
+function reappear(totalWidth) {
+  if (goAhead >= totalWidth) {
+    goAhead = 0;
+  }
+}
+window.addEventListener('load', catWalk);
