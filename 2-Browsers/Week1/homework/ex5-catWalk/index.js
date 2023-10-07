@@ -20,9 +20,42 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    Dancing cat URL:
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
------------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
-}
 
-// TODO execute `catWalk` when the browser has completed loading the page
+-----------------------------------------------------------------------------*/
+const imgCat = document.querySelector('img');
+
+const entireWidth = window.innerWidth;
+const imgCatWidth = imgCat.offsetWidth;
+const totalWidth = entireWidth - imgCatWidth;
+const halfWay = totalWidth / 2;
+
+imgCat.style.left = 0;
+
+let goPositionLeft = 0; // + 'px' // needs convert string to int
+
+function catWalk() {
+  goPositionLeft += 10;
+  imgCat.style.left = `${goPositionLeft}px`;
+
+  if (goPositionLeft >= totalWidth) {
+    goPositionLeft = 0;
+    imgCat.style.left = goPositionLeft + 'px';
+  }
+  // fixed: use == instead of >= or ===
+  if (goPositionLeft == halfWay) {
+    clearInterval(interval);
+
+    imgCat.src =
+      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+
+    setTimeout(() => {
+      imgCat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      interval = setInterval(catWalk, 50);
+    }, 5000);
+  }
+}
+let interval = setInterval(catWalk, 50);
+
+window.onload = () => {
+  interval;
+};
