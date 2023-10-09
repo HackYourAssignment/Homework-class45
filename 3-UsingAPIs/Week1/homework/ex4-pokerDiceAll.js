@@ -27,9 +27,13 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+
+  // Map each die number to a promise returned by rollDie
+  const promises = dice.map((dieNumber) => rollDie(dieNumber));
+
+  // Return a promise that resolves when all dice have settled
+  return Promise.all(promises);
 }
 
 function main() {
@@ -37,6 +41,7 @@ function main() {
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
+// The asynchronous behavior can be observed in the rollDie function. When a die is rolled, it uses setTimeout to simulate the rolling process asynchronously. The setTimeout function schedules the next roll, and it continues independently, even if one die rolls off the table (rejected promise)
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
