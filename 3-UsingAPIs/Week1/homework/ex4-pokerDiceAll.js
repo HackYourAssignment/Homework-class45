@@ -46,6 +46,6 @@ if (process.env.NODE_ENV !== 'test') {
 }
 module.exports = rollDice;
 
-// I have notice that only when all dies have 6 or less the resolve will occure, and the opposite is true
+// I have notice that only when all dies have 6 or less the resolve will occur, and the opposite is true
 
 // The reason is that the "reject" was consumed by the first die that rolled out the table

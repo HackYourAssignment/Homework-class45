@@ -1502,3 +1502,16 @@ ex3-rollDie.js:72:14 - Unknown word (statments)
 2023-10-11 10:24:17 info: ---------------------------------------
 2023-10-11 10:24:19 info: All unit tests passed.
 2023-10-11 10:24:20 info: All steps were completed successfully
+2023-10-11 10:27:37 info: --------------------------------------------
+2023-10-11 10:27:37 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-10-11 10:27:37 info: --------------------------------------------
+2023-10-11 10:27:39 info: All unit tests passed.
+2023-10-11 10:27:41 error: *** Spell Checker Report ***
+
+ex4-pokerDiceAll.js:49:74 - Unknown word (occure)
+
+2023-10-11 10:28:59 info: --------------------------------------------
+2023-10-11 10:28:59 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-10-11 10:28:59 info: --------------------------------------------
+2023-10-11 10:29:00 info: All unit tests passed.
+2023-10-11 10:29:02 info: All steps were completed successfully
