@@ -29,21 +29,9 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
 
-  // const dice = [rollDie(1), rollDie(2), rollDie(3), rollDie(4), rollDie(5)];
-
   const dicePromises = dice.map((diceNumber) => rollDie(diceNumber));
 
-  // const dicePromises = dice.map(() => {
-  //   const rand = Math.floor(Math.random() * 6);
-  //   console.log(rand);
-  //   return new Promise((resolve) => {
-  //     resolve(rollDice());
-  //   });
-  // });
-  // console.log(rand);
-
   return Promise.all(dicePromises);
-  // return rollDie();
 }
 
 function main() {

@@ -1,9 +1,4 @@
 'use strict';
-
-const { reject } = require('lodash');
-const { resolveConfig } = require('prettier');
-const { error } = require('winston');
-
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-UsingAPIs/Week1#exercise-3-roll-a-die
 
@@ -64,7 +59,7 @@ if (process.env.NODE_ENV !== 'test') {
 }
 module.exports = rollDie;
 
-// the problem solved where we only get the successus OR fail messages but not both
+// the problem solved where we only get the success OR fail messages but not both
 //
 // Why?
 //
@@ -73,5 +68,5 @@ module.exports = rollDie;
 //
 // But
 //
-// when using "callback", the function will be called if the condetions are met
-// in the if statments no matter what
+// when using "callback", the function will be called if the conditions are met
+// in the if statements no matter what

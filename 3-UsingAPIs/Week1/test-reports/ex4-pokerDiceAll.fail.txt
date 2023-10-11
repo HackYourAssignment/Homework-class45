@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+ex4-pokerDiceAll.js:49:74 - Unknown word (occure)
