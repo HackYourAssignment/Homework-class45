@@ -14,7 +14,7 @@ const getAnonName = (firstName) => {
     const fullName = `${firstName} Doe`;
     setTimeout(() => {
       if (firstName) {
-        resolve(fullName);
+        resolve(console.log(fullName));
       } else {
         reject(new Error("You didn't pass in a first name!"));
       }
