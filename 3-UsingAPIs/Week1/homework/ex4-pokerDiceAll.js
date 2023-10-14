@@ -27,9 +27,11 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+
+  const dicePromises = dice.map((diceNumber) => rollDie(diceNumber));
+
+  return Promise.all(dicePromises);
 }
 
 function main() {
@@ -43,3 +45,7 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+// I have notice that only when all dies have 6 or less the resolve will occur, and the opposite is true
+
+// The reason is that the "reject" was consumed by the first die that rolled out the table
