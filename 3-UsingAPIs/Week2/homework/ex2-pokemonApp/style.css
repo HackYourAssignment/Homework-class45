@@ -1,1 +1,28 @@
-/* add your styling here */
+* {
+  margin: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 130px;
+  height: 30px;
+  background-color: lawngreen;
+  border-color: whitesmoke;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+select {
+  background-color: lightgreen;
+  width: 25px;
+  max-width: 100px;
+}
+
+img {
+  width: 10%;
+  height: 10%;
+}

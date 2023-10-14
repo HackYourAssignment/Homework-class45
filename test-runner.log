@@ -1,0 +1,464 @@
+2023-10-13 01:40:14 info: ---------------------------------------------
+2023-10-13 01:40:14 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-10-13 01:40:14 info: ---------------------------------------------
+2023-10-13 01:40:21 info: All unit tests passed.
+2023-10-13 01:40:26 info: All steps were completed successfully
+2023-10-13 08:47:40 info: ------------------------------------------
+2023-10-13 08:47:40 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-13 08:47:40 info: ------------------------------------------
+2023-10-13 08:47:46 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    × HTML should be syntactically valid (117 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()` (1 ms)
+    √ should use `await fetch()`
+    √ should use try/catch (1 ms)
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:2  error  <button> is missing required \"type\" attribute  element-required-attributes·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.301 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-10-13 08:51:27 info: ------------------------------------------
+2023-10-13 08:51:27 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-13 08:51:27 info: ------------------------------------------
+2023-10-13 08:51:33 info: All unit tests passed.
+2023-10-13 08:51:38 info: All steps were completed successfully
+2023-10-13 08:53:15 info: ------------------------------------------
+2023-10-13 08:53:15 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-13 08:53:15 info: ------------------------------------------
+2023-10-13 08:53:20 info: All unit tests passed.
+2023-10-13 08:53:25 info: All steps were completed successfully
+2023-10-14 10:55:59 info: -----------------------------------------
+2023-10-14 10:55:59 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 10:55:59 info: -----------------------------------------
+2023-10-14 10:56:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls
+    √ should not include a recursive call
+    √ should use async/wait (1 ms)
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (260 ms)
+    √ should reject with an Error when a die rolls off the table (112 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.195 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-10-14 10:59:19 info: -----------------------------------------
+2023-10-14 10:59:19 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 10:59:19 info: -----------------------------------------
+2023-10-14 11:00:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+
+<--- Last few GCs --->
+
+[15872:0000022A7B92B280]    43032 ms: Mark-sweep 4056.0 (4133.2) -> 4048.6 (4142.2) MB, 3997.7 / 0.0 ms  (average mu = 0.490, current mu = 0.035) allocation failure; scavenge might not succeed
+[15872:0000022A7B92B280]    49630 ms: Mark-sweep 4065.8 (4143.2) -> 4057.2 (4150.4) MB, 6578.8 / 0.0 ms  (average mu = 0.226, current mu = 0.003) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 00007FF622F507BF node_api_throw_syntax_error+175823
+ 2: 00007FF622ED5796 DSA_meth_get_flags+59654
+ 3: 00007FF622ED7480 DSA_meth_get_flags+67056
+ 4: 00007FF62397E944 v8::Isolate::ReportExternalAllocationLimitReached+116
+ 5: 00007FF623969CD2 v8::Isolate::Exit+674
+ 6: 00007FF6237EBB8C v8::internal::EmbedderStackStateScope::ExplicitScopeForTesting+124
+ 7: 00007FF6237E8DAB v8::internal::Heap::CollectGarbage+3963
+ 8: 00007FF6237FEFE3 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath+2099
+ 9: 00007FF6237FF88D v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath+93
+10: 00007FF62380F050 v8::internal::Factory::NewFillerObject+816
+11: 00007FF6234FFF95 v8::internal::DateCache::Weekday+1349
+12: 00007FF623A1BE71 v8::internal::SetupIsolateDelegate::SetupHeap+558193
+13: 00007FF623A1CF3D v8::internal::SetupIsolateDelegate::SetupHeap+562493
+14: 00007FF5A3D3A159
+2023-10-14 11:00:46 info: -----------------------------------------
+2023-10-14 11:00:46 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:00:46 info: -----------------------------------------
+2023-10-14 11:00:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls
+    √ should not include a recursive call
+    √ should use async/wait (1 ms)
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (243 ms)
+    √ should reject with an Error when a die rolls off the table (113 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.979 s, estimated 2 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-10-14 11:10:10 info: -----------------------------------------
+2023-10-14 11:10:10 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:10:10 info: -----------------------------------------
+2023-10-14 11:10:14 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (2 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    √ should not include a recursive call
+    √ should use async/wait (1 ms)
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (249 ms)
+    √ should reject with an Error when a die rolls off the table (123 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.083 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-10-14 11:12:58 info: -----------------------------------------
+2023-10-14 11:12:58 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:12:58 info: -----------------------------------------
+2023-10-14 11:13:02 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (2 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    √ should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a die settles on an ACE (291 ms)
+    √ should reject with an Error when a die rolls off the table (126 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.133 s, estimated 2 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-10-14 11:14:22 info: -----------------------------------------
+2023-10-14 11:14:22 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:14:22 info: -----------------------------------------
+2023-10-14 11:14:25 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls (3 ms)
+    √ should not include a recursive call (1 ms)
+    √ should use async/wait
+    √ should use try/catch (1 ms)
+    × should resolve as soon as a die settles on an ACE (291 ms)
+    √ should reject with an Error when a die rolls off the table (114 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.113 s, estimated 2 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-10-14 11:19:35 info: -----------------------------------------
+2023-10-14 11:19:35 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:19:35 info: -----------------------------------------
+2023-10-14 11:19:39 info: All unit tests passed.
+2023-10-14 11:19:41 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  18:10  error  Unexpected constant condition  no-constant-condition
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-10-14 11:24:03 info: -----------------------------------------
+2023-10-14 11:24:03 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:24:03 info: -----------------------------------------
+2023-10-14 11:24:07 info: All unit tests passed.
+2023-10-14 11:24:11 info: All steps were completed successfully
+2023-10-14 11:27:12 info: -----------------------------------------
+2023-10-14 11:27:12 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:27:12 info: -----------------------------------------
+2023-10-14 11:27:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls
+    √ should not include a recursive call
+    √ should use async/wait
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (346 ms)
+    √ should reject with an Error when a die rolls off the table (97 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+    > 68 |     expect.assertions(3);
+         |            ^
+      69 |
+      70 |     expect(exported).toBeDefined();
+      71 |
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:68:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.156 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-10-14 11:27:48 info: -----------------------------------------
+2023-10-14 11:27:48 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-14 11:27:48 info: -----------------------------------------
+2023-10-14 11:27:51 info: All unit tests passed.
+2023-10-14 11:27:56 info: All steps were completed successfully
+2023-10-14 11:51:38 info: ----------------------------------------
+2023-10-14 11:51:38 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-10-14 11:51:38 info: ----------------------------------------
+2023-10-14 11:51:41 info: All unit tests passed.
+2023-10-14 11:51:45 info: All steps were completed successfully
+2023-10-14 01:18:49 info: ----------------------------------------
+2023-10-14 01:18:49 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-10-14 01:18:49 info: ----------------------------------------
+2023-10-14 01:18:49 warn: A unit test file was not provided.
+2023-10-14 01:18:58 info: All steps were completed successfully
+2023-10-14 01:19:56 info: ----------------------------------------
+2023-10-14 01:19:56 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-10-14 01:19:56 info: ----------------------------------------
+2023-10-14 01:19:56 warn: A unit test file was not provided.
+2023-10-14 01:20:00 info: All steps were completed successfully
+2023-10-14 04:36:07 info: --------------------------------------------
+2023-10-14 04:36:07 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2023-10-14 04:36:07 info: --------------------------------------------
+2023-10-14 04:36:07 warn: A unit test file was not provided.
+2023-10-14 04:36:12 info: All steps were completed successfully
