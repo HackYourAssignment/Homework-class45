@@ -19,7 +19,7 @@ async function renderLaureate({ knownName, birth, death }) {
       console.log(`Death: ${death.date}, ${death.place.locationString.en}`);
     }
   } catch (error) {
-    throw error;
+    throw error.message;
   }
 }
 
