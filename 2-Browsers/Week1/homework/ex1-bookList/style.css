@@ -1,1 +1,25 @@
-/* Write your style here */
+body {
+  font-family: Arial, sans-serif;
+}
+
+#bookList {
+  margin: 20px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  width: 25vw;
+}
+
+li img {
+  margin-bottom: 10px;
+  max-width: 100%;
+}

@@ -9,4 +9,19 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+// Getting the span Elements by ID and modifying their content:
+const nickName = document.getElementById('nickname');
+nickName.textContent = 'Mo';
+
+const favoriteFood = document.getElementById('fav-food');
+favoriteFood.textContent = 'Ramen';
+
+const homeTown = document.getElementById('hometown');
+homeTown.textContent = 'Syria';
+
+// Giving a class name to the list:
+const li = document.querySelectorAll('li');
+
+li.forEach((element) => {
+  element.className = 'list-item';
+});
