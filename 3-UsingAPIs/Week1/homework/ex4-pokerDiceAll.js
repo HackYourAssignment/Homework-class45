@@ -20,3 +20,7 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/* When a promise is rejected, it doesn't stop the execution of other promises in a Promise.all.
+ Even if it is rejected, still each promise's result is determined independently, and other promises continue to execute.
+This allows to handle the rejects without stop the execution of the others*/

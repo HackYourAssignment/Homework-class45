@@ -38,3 +38,9 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+/*
+The first version of the code using callbacks to achieve the task. But callbacks doesn't have the reject like promises. Even if it works as expected
+it is not as effective as the promises. Because we need to use another function to track the negative scenario. When we use promises we can easily track
+it by using catch. It is much more structured and readable.
+*/
