@@ -22,18 +22,59 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
+function fetchData(url) {
   // TODO complete this function
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP Error: ${response.status}`);
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error(error);
+      throw error;
+    });
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
+async function fetchAndPopulatePokemons(url) {
   // TODO complete this function
+  try {
+    const data = await fetchData(url);
+    const selectElement = document.getElementById('pokemon-selector');
+    selectElement.innerHTML = '';
+    data.results.forEach((pokemon) => {
+      const option = document.createElement('option');
+      option.value = pokemon.name;
+      option.text = pokemon.name;
+      selectElement.appendChild(option);
+    });
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
+async function fetchImage(url) {
   // TODO complete this function
+  try {
+    const data = await fetchData(url);
+    const imageElement = document.getElementById('pokemon-image');
+    imageElement.src = data.sprites.front_default;
+    imageElement.alt = data.name;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function main() {
   // TODO complete this function
+  const apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
+  const selectElement = document.getElementById('pokemon-selector');
+
+  selectElement.addEventListener('change', (event) => {
+    fetchImage(`https://pokeapi.co/api/v2/pokemon/${event.target.value}`);
+  });
+
+  fetchAndPopulatePokemons(apiURL);
 }
+window.addEventListener('load', main);
