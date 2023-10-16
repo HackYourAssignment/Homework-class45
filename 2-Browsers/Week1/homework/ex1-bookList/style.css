@@ -4,10 +4,10 @@ body {
 
 #bookList {
   margin: 20px;
-  display: flex;
 }
 
 ul {
+  display: flex;
   list-style-type: none;
   padding: 0;
 }
@@ -16,19 +16,10 @@ li {
   padding: 10px;
   margin-right: 10px;
   border: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 25vw;
 }
 
 li img {
   margin-bottom: 10px;
-}
-
-li.green {
-  background-color: #d9ffd7; /* Light green */
-}
-
-li.red {
-  background-color: #ffd8d8; /* Light red */
+  max-width: 100%;
 }

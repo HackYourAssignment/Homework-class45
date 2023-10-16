@@ -27,15 +27,16 @@ function createBookList(books) {
 
     const img = document.createElement('img');
     img.src = book.img;
+    img.alt = `${book.title} cover`; // Set alt attribute with the book title
 
     li.appendChild(p);
     li.appendChild(img);
     ul.appendChild(li);
 
     if (book.alreadyRead) {
-      li.style.color = 'green';
+      li.style.backgroundColor = 'green';
     } else {
-      li.style.color = 'red';
+      li.style.backgroundColor = 'red';
     }
   });
 
