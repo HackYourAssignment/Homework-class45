@@ -61,3 +61,6 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+// The problem described in the exercise no longer occurs after refactoring to use Promises.
+// Promises make the code more predictable and manageable.
