@@ -15,14 +15,21 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+
+  const dicePromises = dice.map((diceNumber) => rollDie(diceNumber));
+
+  return Promise.race(dicePromises);
 }
 
 // Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const roll = await rollDice();
+    console.log(`Resolved! ${roll}`);
+  } catch (error) {
+    throw new Error('Dice error');
+  }
+
 }
 
 // ! Do not change or remove the code below
@@ -30,3 +37,8 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+
+// It has to do with the way "Promise.race" work. it give the result of the settled 
+// promises as fast as possible but does not stop the other promises 
+// even if the results were rejection
