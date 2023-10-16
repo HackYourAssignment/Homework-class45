@@ -10,7 +10,6 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-Usin
 - Does the problem described above still occur? If not, what would be your
   explanation? Add your answer as a comment to be bottom of the file.
 ------------------------------------------------------------------------------*/
-
 function rollDie() {
   // Compute a random number of rolls (3-10) that the die MUST complete
   return new Promise((resolve, reject) => {
@@ -18,34 +17,33 @@ function rollDie() {
     console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
 
     const rollOnce = (roll) => {
-      // Compute a random die value for the current roll
       const value = Math.floor(Math.random() * 6) + 1;
       console.log(`Die value is now: ${value}`);
+      // Tim's feedback: needn't return after reject and resolve.
       if (roll > 6) {
         reject(new Error('Oops... Die rolled off the table.'));
-        return;
       }
 
       if (roll === randomRollsToDo) {
         resolve(value);
-        return;
       }
 
-      setTimeout(() => rollOnce(roll + 1), 500);
+      if (roll < randomRollsToDo) {
+        setTimeout(() => rollOnce(roll + 1), 500);
+      }
     };
     // Start the initial roll
     rollOnce(1);
   });
 }
-
-function main() {
-  rollDie()
-    .then((value) => {
-      console.log(`Success! Die settled on ${value}.`);
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
+async function main() {
+  try {
+    const value = await rollDie();
+    console.log(`Success! Die settled on ${value}.`);
+  } catch (error) {
+    console.log(error.message);
+  }
+  // only one messages shows up whether error or success.
 }
 
 // ! Do not change or remove the code below

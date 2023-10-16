@@ -43,6 +43,34 @@ function main() {
   rollDice()
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
+  /** avoid callback hell; `async/await` :
+  
+async function rollAndAdd(dieNumber, results) {
+  const value = await rollDie(dieNumber);
+  results.push(value);
+}
+
+async function rollDice() {
+  const results = [];
+
+  await rollAndAdd(1, results);
+  await rollAndAdd(2, results);
+  await rollAndAdd(3, results);
+  await rollAndAdd(4, results);
+  await rollAndAdd(5, results);
+
+  return results;
+}
+
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
+}
+*/
 }
 
 // ! Do not change or remove the code below
