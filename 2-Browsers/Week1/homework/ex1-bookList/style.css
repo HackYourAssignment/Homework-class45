@@ -1,1 +1,43 @@
-/* Write your style here */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  display: inline-block;
+  width: 400px;
+  margin: 8px;
+  padding: 8px;
+}
+
+
+
+/* ul {
+    list-style-type: none;
+    padding: 9;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  li {
+    margin-bottom: 29px;
+    margin-right: 29px;
+    padding: 19px;
+    border-radius: 9px;
+    box-shadow: rgba(114, 106, 138, 0.1);
+    
+  }
+
+p {
+    font-size: 21px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  img {
+    margin-top: 9px;
+    max-width: 100%;
+    border-radius: 5px;
+  
+  } */
+  

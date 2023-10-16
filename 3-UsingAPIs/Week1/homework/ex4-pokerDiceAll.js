@@ -27,15 +27,21 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const promises = dice.map((die) => rollDie(die));
+
+  return Promise.all(promises);
 }
 
 function main() {
   rollDice()
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
+  /**
+  When one die rolls off the table, Promise.all() immediately rejects,
+but it doesn't stop the other die-roll promises that are already running.
+ Those will continue to resolve or reject on their own.
+ */
 }
 
 // ! Do not change or remove the code below
