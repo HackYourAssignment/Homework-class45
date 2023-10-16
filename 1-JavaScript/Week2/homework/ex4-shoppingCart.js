@@ -24,7 +24,10 @@ const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
 function addToShoppingCart(newItem) {
-  shoppingCart.push(newItem);
+  // check if newItem is null(undefined) or not
+  if (newItem) {
+    shoppingCart.push(newItem);
+  }
 
   if (shoppingCart.length > 3) {
     shoppingCart.shift();

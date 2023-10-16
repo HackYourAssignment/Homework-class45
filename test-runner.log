@@ -116,3 +116,17 @@ Browserslist: caniuse-lite is outdated. Please run:
 2023-08-28 05:27:34 error: *** Spell Checker Report ***
 
 
+2023-10-16 08:56:40 info: -------------------------------------------
+2023-10-16 08:56:40 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-10-16 08:56:40 info: -------------------------------------------
+2023-10-16 08:56:43 info: All unit tests passed.
+2023-10-16 08:56:45 error: *** Spell Checker Report ***
+
+
+2023-10-16 09:05:01 info: --------------------------------------------
+2023-10-16 09:05:01 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-10-16 09:05:01 info: --------------------------------------------
+2023-10-16 09:05:01 warn: A unit test file was not provided.
+2023-10-16 09:05:03 error: *** Spell Checker Report ***
+
+
