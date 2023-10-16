@@ -1,12 +1,5 @@
 'use strict';
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-6-conways-game-of-life
 
-THIS IS A PREP EXERCISE FOR THE Q&A SESSION, IT SHOULD NOT BE PART OF THE HOMEWORK
-
-Adapted from: https://spicyyoghurt.com/tutorials/javascript/conways-game-of-life-canvas
-Refactored from ES6 Class syntax to regular functions
-------------------------------------------------------------------------------*/
 const CELL_SIZE = 10;
 const NUM_COLUMNS = 75;
 const NUM_ROWS = 40;
@@ -19,6 +12,7 @@ function createCell(x, y) {
     x,
     y,
     alive,
+    lifeTime: alive ? 1 : 0,
   };
 }
 
@@ -58,7 +52,16 @@ function createGame(context, numRows, numColumns) {
 
     if (cell.alive) {
       // Draw living cell inside background
-      context.fillStyle = `rgb(24, 215, 236)`;
+      const lifeTime = cell.lifeTime;
+      const opacity =
+        lifeTime === 1
+          ? 0.25
+          : lifeTime === 2
+          ? 0.5
+          : lifeTime === 3
+          ? 0.75
+          : 1;
+      context.fillStyle = `rgba(24, 215, 236,${opacity})`;
       context.fillRect(
         cell.x * CELL_SIZE + 1,
         cell.y * CELL_SIZE + 1,
@@ -115,6 +118,13 @@ function createGame(context, numRows, numColumns) {
 
     // Apply the newly computed state to the cells
     forEachCell((cell) => {
+      if (cell.alive && cell.nextAlive) {
+        cell.lifeTime += 1;
+      } else if (cell.alive && !cell.nextAlive) {
+        cell.lifeTime = 0;
+      } else if (!cell.alive && cell.nextAlive) {
+        cell.lifeTime = 1;
+      }
       cell.alive = cell.nextAlive;
     });
   }
