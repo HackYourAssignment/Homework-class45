@@ -1,1 +1,26 @@
-/* add your styling here */
+.get-btn {
+  text-align: center;
+  margin-top: 50px;
+}
+.get-btn button {
+  padding: 20px 45px;
+  background-color: rgb(101 140 223);
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
+.select-div {
+  text-align: center;
+  margin-top: 20px;
+}
+.select-div select {
+  padding: 8px 15px;
+  border: none;
+  background-color: rgb(101 140 223);
+  color: white;
+  border-radius: 5px;
+}
+#pokemon {
+  text-align: center;
+  margin-top: 20px;
+}

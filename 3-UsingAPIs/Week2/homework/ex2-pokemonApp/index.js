@@ -22,18 +22,78 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+const body = document.querySelector('body');
+const selectBtn = document.createElement('select');
+
+async function fetchData(url) {
+  const resp = await fetch(url);
+  if (resp.ok) {
+    const data = await resp.json();
+    return data;
+  }
+  throw new Error('something wrong!');
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons() {
+  const data = await fetchData(url);
+  const selectDiv = document.createElement('div');
+  selectDiv.classList.add('select-div');
+  selectDiv.appendChild(selectBtn);
+
+  for (let i = 0; i < data.results.length; i++) {
+    const option = document.createElement('option');
+    option.text = data.results[i].name;
+    selectBtn.add(option);
+  }
+  body.appendChild(selectDiv);
+
+  selectBtn.addEventListener('change', fetchImage);
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage() {
+  const pokemon = document.getElementById('pokemon');
+
+  if (pokemon) {
+    pokemon.parentNode.removeChild(pokemon);
+  }
+
+  const data = await fetchData(url);
+  const selectedValue = selectBtn.options[selectBtn.selectedIndex].value;
+  const avatarContainer = document.createElement('div');
+  const div = document.createElement('div');
+  div.id = 'pokemon';
+  const avatar = document.createElement('img');
+
+  const selectedPokemonUrl = data.results.find(
+    (pokemon) => pokemon.name === selectedValue
+  ).url;
+
+  const pokemonData = await fetchData(selectedPokemonUrl);
+
+  avatar.src =
+    pokemonData.sprites.front_shiny ?? pokemonData.sprites.front_default;
+  avatar.alt = pokemonData.name;
+
+  div.appendChild(avatar);
+  avatarContainer.appendChild(div);
+  body.appendChild(avatarContainer);
 }
 
 function main() {
-  // TODO complete this function
+  const div = document.createElement('div');
+  div.classList.add('get-btn');
+  const btn = document.createElement('button');
+  btn.textContent = 'Get Pokemon';
+  btn.type = '';
+  div.appendChild(btn);
+  body.appendChild(div);
+
+  try {
+    btn.addEventListener('click', fetchAndPopulatePokemons);
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+window.addEventListener('load', main);
