@@ -1,0 +1,286 @@
+2023-10-17 07:56:47 info: ---------------------------------------
+2023-10-17 07:56:47 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-10-17 07:56:47 info: ---------------------------------------
+2023-10-17 07:56:47 info: Exercise has not yet been modified
+2023-10-17 07:56:56 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (6 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✕ should call `new Promise()` (1 ms)
+    ✕ `resolve()` should be called with a one argument (2 ms)
+    ✕ `reject()` should be called with a one argument (1 ms)
+    ✕ should resolve when the die settles successfully (4 ms)
+    ✕ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● rollDie › should call `new Promise()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      38 |
+      39 |   test('should call `new Promise()`', () => {
+    > 40 |     expect(state.newPromise).toBeDefined();
+         |                              ^
+      41 |   });
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.toBeDefined (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:40:30)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+  ● rollDie › `reject()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+    > 48 |     expect(state.reject).toBe(1);
+         |                          ^
+      49 |   });
+      50 |
+      51 |   test('should resolve when the die settles successfully', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:48:26)
+
+  ● rollDie › should resolve when the die settles successfully
+
+    TypeError: callback is not a function
+
+      32 |     if (roll === randomRollsToDo) {
+      33 |       // TODO replace "success" callback
+    > 34 |       callback(null, value);
+         |       ^
+      35 |     }
+      36 |
+      37 |     // Schedule the next roll todo until no more rolls to do
+
+      at callback (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:24)
+      at cb (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:59:35)
+      at setTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:24)
+      at cb (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:59:35)
+      at setTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:44:3)
+      at Object.rollDie (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:61:21)
+
+  ● rollDie › should resolve when the die settles successfully
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received one assertion call.
+
+      50 |
+      51 |   test('should resolve when the die settles successfully', () => {
+    > 52 |     expect.assertions(3);
+         |            ^
+      53 |     expect(exported).toBeDefined();
+      54 |
+      55 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:52:12)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      73 |
+      74 |   test('should reject with an Error when the die rolls off the table', async () => {
+    > 75 |     expect.assertions(3);
+         |            ^
+      76 |     expect(exported).toBeDefined();
+      77 |
+      78 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:75:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 1 passed, 7 total
+Snapshots:   0 total
+Time:        1.789 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-10-17 07:58:18 info: ---------------------------------------------
+2023-10-17 07:58:18 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-10-17 07:58:18 info: ---------------------------------------------
+2023-10-17 07:58:31 info: All unit tests passed.
+2023-10-17 07:58:41 info: All steps were completed successfully
+2023-10-17 07:59:20 info: ---------------------------------------------
+2023-10-17 07:59:20 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-10-17 07:59:20 info: ---------------------------------------------
+2023-10-17 07:59:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js (6.715 s)
+  programmerFun
+    ✕ HTML should be syntactically valid (262 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()` (1 ms)
+    ✓ should use async/wait
+    ✓ should use try/catch
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        6.977 s, estimated 8 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2023-10-17 08:01:36 info: ---------------------------------------------
+2023-10-17 08:01:36 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-10-17 08:01:36 info: ---------------------------------------------
+2023-10-17 08:01:46 info: All unit tests passed.
+2023-10-17 08:01:54 info: All steps were completed successfully
+2023-10-17 08:03:26 info: ---------------------------------------------
+2023-10-17 08:03:26 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-10-17 08:03:26 info: ---------------------------------------------
+2023-10-17 08:03:36 info: All unit tests passed.
+2023-10-17 08:03:45 info: All steps were completed successfully
+2023-10-17 11:08:07 info: ------------------------------------------
+2023-10-17 11:08:07 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-17 11:08:07 info: ------------------------------------------
+2023-10-17 11:08:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (7.01 s)
+  pokemonApp
+    ✕ HTML should be syntactically valid (213 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()` (1 ms)
+    ✓ should use `await fetch()` (1 ms)
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:3738  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        7.282 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-10-17 11:10:55 info: ------------------------------------------
+2023-10-17 11:10:55 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-17 11:10:55 info: ------------------------------------------
+2023-10-17 11:11:09 info: All unit tests passed.
+2023-10-17 11:11:20 info: All steps were completed successfully
+2023-10-17 11:15:14 info: -----------------------------------------
+2023-10-17 11:15:14 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-17 11:15:14 info: -----------------------------------------
+2023-10-17 11:15:21 info: All unit tests passed.
+2023-10-17 11:15:27 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  16:10  error  Unexpected constant condition  no-constant-condition
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-10-17 11:17:44 info: -----------------------------------------
+2023-10-17 11:17:44 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-17 11:17:44 info: -----------------------------------------
+2023-10-17 11:17:52 info: All unit tests passed.
+2023-10-17 11:18:04 info: All steps were completed successfully
+2023-10-17 11:24:56 info: -----------------------------------------
+2023-10-17 11:24:56 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-17 11:24:56 info: -----------------------------------------
+2023-10-17 11:25:05 info: All unit tests passed.
+2023-10-17 11:25:18 info: All steps were completed successfully
+2023-10-17 11:29:08 info: -----------------------------------------
+2023-10-17 11:29:08 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-17 11:29:08 info: -----------------------------------------
+2023-10-17 11:29:19 info: All unit tests passed.
+2023-10-17 11:29:35 info: All steps were completed successfully
+2023-10-17 11:31:53 info: ----------------------------------------
+2023-10-17 11:31:53 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-10-17 11:31:53 info: ----------------------------------------
+2023-10-17 11:32:02 info: All unit tests passed.
+2023-10-17 11:32:12 info: All steps were completed successfully
+2023-10-17 11:40:38 info: ----------------------------------------
+2023-10-17 11:40:38 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-10-17 11:40:38 info: ----------------------------------------
+2023-10-17 11:40:38 warn: A unit test file was not provided.
+2023-10-17 11:40:49 info: All steps were completed successfully
+2023-10-18 12:01:02 info: --------------------------------------------
+2023-10-18 12:01:02 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2023-10-18 12:01:02 info: --------------------------------------------
+2023-10-18 12:01:02 warn: A unit test file was not provided.
+2023-10-18 12:01:14 info: All steps were completed successfully
