@@ -13,17 +13,25 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 // ! Do not remove this line
 const rollDie = require('../../helpers/pokerDiceRoller');
 
+const rollDie = require('../../helpers/pokerDiceRoller');
+
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+  const promisesArr = dice.map((roll) => rollDie(roll));
+  return Promise.race(promisesArr);
 }
 
-// Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+  try {
+    const results = await rollDice();
+    console.log('Resolved!', results);
+  } catch (error) {
+    console.log('Rejected!', error.message);
+  }
 }
+
+// Even after the first promise resolves, promises that didn't "win" the race continue to be executed in the background even .
+// Since JS does not cancel ongoing promises when one of them resolves if we need to cancel the promise we will need to write more code for that
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
