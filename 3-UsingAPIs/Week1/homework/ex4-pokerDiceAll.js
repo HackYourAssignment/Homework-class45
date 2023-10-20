@@ -46,6 +46,15 @@ if (process.env.NODE_ENV !== 'test') {
 }
 module.exports = rollDice;
 
-/*The code will enter rejection line and will continue to roll the dice 
-until the catch line reached. This rejection line does not cancel any
-ongoing asynchronous operations in the Promise chain.*/
+/*In JavaScript, Promise.all() method does not cancel the execution of the other 
+promises when one of them is rejected.
+
+When you use Promise.all(), you're saying "wait for all these promises to resolve". 
+If one of the dice rolls off the table (i.e. one of the promises is rejected), 
+Promise.all() immediately rejects with the reason of the first promise that rejected. 
+However, this does not stop the execution of the other promises. The other dice 
+will continue to roll until they've completed their rolls, because their promises 
+are already in execution and cannot be cancelled.
+
+Once a promise is in execution, it cannot be stopped. This is why the dice continue 
+to roll even after one of them has rolled off the table.*/

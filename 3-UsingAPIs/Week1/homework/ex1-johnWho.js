@@ -13,7 +13,7 @@ const getAnonName = (firstName) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!firstName) {
-        reject(new Error());
+        reject(new Error("You didn't pass in a first name!"));
       }
       const fullName = `${firstName} Doe`;
       resolve(fullName);
@@ -24,8 +24,8 @@ const getAnonName = (firstName) => {
 function main() {
   getAnonName('John')
     .then(console.log)
-    .catch(() => {
-      console.log("You didn't pass in a first name!");
+    .catch((error) => {
+      console.log(error.message);
     });
 }
 
