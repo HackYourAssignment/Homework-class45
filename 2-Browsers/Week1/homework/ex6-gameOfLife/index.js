@@ -12,6 +12,7 @@ const NUM_COLUMNS = 75;
 const NUM_ROWS = 40;
 
 // Create a cell with the given coordinates and randomly assign its begin state:
+
 // life or death
 function createCell(x, y) {
   const alive = Math.random() > 0.5;
@@ -69,6 +70,7 @@ function createGame(context, numRows, numColumns) {
   }
 
   // Check the state of the cell at the given coordinates
+
   function isAlive(x, y) {
     // Out-of-border cells are presumed dead
     if (x < 0 || x >= numColumns || y < 0 || y >= numRows) {
@@ -93,7 +95,7 @@ function createGame(context, numRows, numColumns) {
     );
   }
 
-  // Update the state of the cells in the grid by applying the Game Of Life
+  // Update the state of the cells in the grid by applying the Game Of Life..
   // rules on each cell.
   function updateGrid() {
     // Loop over all cells to determine their next state.
