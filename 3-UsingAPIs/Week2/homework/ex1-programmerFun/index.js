@@ -23,27 +23,28 @@ function requestData(url) {
       if (response.ok) {
         return response.json();
       } else {
-        throw new Error('Oops...HTTP or network error');
+        throw new Error(`Oops...${response.status}. ${response.statusText}`);
       }
     })
-    .then((jsonData) => {
-      return jsonData;
+    .catch((error) => {
+      throw new Error(
+        `Network or response error: ${error.status}, ${error.message}`
+      );
     });
 }
 
 function renderImage(data) {
   const imageElement = document.createElement('img');
-  document.body.appendChild(imageElement);
   const imageData = data.img;
   imageElement.setAttribute('src', imageData);
-  console.log(data);
+  imageElement.setAttribute('alt', 'black holes vs regular holes');
+  document.body.appendChild(imageElement);
 }
 
 function renderError(error) {
   const errorElement = document.createElement('h1');
+  errorElement.textContent = `Error: ${error.message}`;
   document.body.appendChild(errorElement);
-  errorElement.textContent = error.message;
-  console.log(error);
 }
 
 async function main() {

@@ -462,3 +462,31 @@ Ran all test suites matching /ex3-rollAnAce.test.js/i.
 2023-10-14 04:36:07 info: --------------------------------------------
 2023-10-14 04:36:07 warn: A unit test file was not provided.
 2023-10-14 04:36:12 info: All steps were completed successfully
+2023-10-22 05:13:51 info: ---------------------------------------------
+2023-10-22 05:13:51 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-10-22 05:13:51 info: ---------------------------------------------
+2023-10-22 05:14:01 info: All unit tests passed.
+2023-10-22 05:14:09 info: All steps were completed successfully
+2023-10-22 07:08:24 info: ------------------------------------------
+2023-10-22 07:08:24 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-22 07:08:24 info: ------------------------------------------
+2023-10-22 07:08:33 info: All unit tests passed.
+2023-10-22 07:08:36 error: *** ESLint Report ***
+
+ex2-pokemonApp/index.js
+  73:7  warning  'displayedImage' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  73:7  error    'displayedImage' is assigned a value but never used        no-unused-vars
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2023-10-22 07:09:33 info: ------------------------------------------
+2023-10-22 07:09:33 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-22 07:09:33 info: ------------------------------------------
+2023-10-22 07:09:41 info: All unit tests passed.
+2023-10-22 07:09:50 info: All steps were completed successfully
+2023-10-22 07:12:46 info: ------------------------------------------
+2023-10-22 07:12:46 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-22 07:12:46 info: ------------------------------------------
+2023-10-22 07:12:54 info: All unit tests passed.
+2023-10-22 07:13:01 info: All steps were completed successfully
