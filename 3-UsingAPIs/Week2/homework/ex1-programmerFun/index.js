@@ -7,7 +7,7 @@ async function requestData(url) {
     throw new Error(`Error: ${response.status} - ${response.statusText}`);
   }
 
-  return response.json();
+  return await response.json();
 }
 
 function renderImage(data) {

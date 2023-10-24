@@ -4,7 +4,7 @@ async function fetchData(url) {
   if (!response.ok) {
     throw new Error(`${response.status}:${response.statusText}`);
   }
-  return response.json();
+  return await response.json();
 }
 
 function fetchAndPopulatePokemons(data) {
@@ -14,10 +14,6 @@ function fetchAndPopulatePokemons(data) {
     option.textContent = element.name;
     document.querySelector('select').appendChild(option);
   });
-
-  const imgElement = document.createElement('img');
-
-  document.body.appendChild(imgElement);
 }
 
 async function fetchImage(data) {
@@ -34,6 +30,7 @@ async function fetchImage(data) {
   const selectedPokemonResponse = await fetchData(selectedPokemon.url);
   imgElement.src = selectedPokemonResponse.sprites.front_default;
   imgElement.alt = selectedElementValue;
+  document.body.appendChild(imgElement);
 }
 
 function initializePage() {
