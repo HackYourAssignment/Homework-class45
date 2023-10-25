@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-1-programmer-fun
 
@@ -17,29 +18,35 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    url with `.shx`. There is no server at the modified url, therefore this 
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
-function requestData(url) {
-  // TODO return a promise using `fetch()`
+async function requestData(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('HTTP error');
+  }
+  const jsonData = await response.json();
+  return jsonData;
 }
 
 function renderImage(data) {
-  // TODO render the image to the DOM
-  console.log(data);
+  const image = document.createElement('img');
+  image.src = data.img;
+  image.alt = data.alt;
+  document.body.appendChild(image);
 }
 
 function renderError(error) {
-  // TODO render the error to the DOM
-  console.log(error);
+  const errorParagraph = document.createElement('p');
+  errorParagraph.textContent = error.message;
+  document.body.appendChild(errorParagraph);
 }
 
-// TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
-    .then((data) => {
-      renderImage(data);
-    })
-    .catch((error) => {
-      renderError(error);
-    });
+async function main() {
+  try {
+    const data = await requestData('https://xkcd.now.sh/?comic=latest');
+    renderImage(data);
+  } catch (error) {
+    renderError(error);
+  }
 }
 
 window.addEventListener('load', main);
