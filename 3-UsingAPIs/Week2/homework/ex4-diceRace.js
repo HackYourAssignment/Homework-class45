@@ -15,10 +15,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-
-  const dicePromises = dice.map((diceNumber) => rollDie(diceNumber));
-
-  return Promise.race(dicePromises);
+  return Promise.race(dice.map(rollDie));
 }
 
 // Refactor this function to use async/await and try/catch
@@ -27,9 +24,8 @@ async function main() {
     const roll = await rollDice();
     console.log(`Resolved! ${roll}`);
   } catch (error) {
-    throw new Error('Dice error');
+    console.log('Dice error');
   }
-
 }
 
 // ! Do not change or remove the code below
@@ -38,7 +34,6 @@ if (process.env.NODE_ENV !== 'test') {
 }
 module.exports = rollDice;
 
-
-// It has to do with the way "Promise.race" work. it give the result of the settled 
-// promises as fast as possible but does not stop the other promises 
+// It has to do with the way "Promise.race" work. it give the result of the settled
+// promises as fast as possible but does not stop the other promises
 // even if the results were rejection

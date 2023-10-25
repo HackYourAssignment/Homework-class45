@@ -20,7 +20,7 @@ async function rollDieUntil(wantedValue) {
     }
     return roll;
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error(error);
   }
 }
 
@@ -29,7 +29,7 @@ async function main() {
     const rollUntil = await rollDieUntil('ACE');
     console.log(`Resolved! ${rollUntil}`);
   } catch (error) {
-    throw new Error(error.message);
+    console.log(error)
   }
 }
 

@@ -19,28 +19,24 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 async function requestData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('HTTP error');
-    }
-    const jsonData = await response.json();
-    return jsonData;
-  } catch (error) {
-    throw error.message;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('HTTP error');
   }
+  const jsonData = await response.json();
+  return jsonData;
 }
 
 function renderImage(data) {
   const image = document.createElement('img');
   image.src = data.img;
-  image.alt = 'image';
+  image.alt = data.alt;
   document.body.appendChild(image);
 }
 
 function renderError(error) {
   const errorParagraph = document.createElement('p');
-  errorParagraph.textContent = error;
+  errorParagraph.textContent = error.message;
   document.body.appendChild(errorParagraph);
 }
 

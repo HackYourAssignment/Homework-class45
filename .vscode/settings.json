@@ -6,7 +6,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "prettier.trailingComma": "es5",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
@@ -16,5 +16,6 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.guides.highlightActiveIndentation": true,
-  "editor.guides.bracketPairsHorizontal": "active"
+  "editor.guides.bracketPairsHorizontal": "active",
+  "liveServer.settings.port": 5501
 }
