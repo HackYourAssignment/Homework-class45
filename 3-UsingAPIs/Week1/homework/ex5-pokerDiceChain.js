@@ -2,29 +2,21 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const results = [];
+  let currentDie = 1;
 
+  const pushThenRoll = (dice) => (value) => {
+    results.push(value);
+    currentDie = i;
+
+    if (currentDie <= 5) {
+      return rollDie(currentDie).then(pushThenRoll(currentDie));
+    } else {
+      return results;
+    }
+};
 
   return rollDie(1)
-    .then((value) => {
-      results.push(value);
-      return rollDie(2);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(3);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(4);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(5);
-    })
-    .then((value) => {
-      results.push(value);
-      return results;
-    });
+    .then(pushThenRoll(1));
 }
 
 function main() {
@@ -32,7 +24,6 @@ function main() {
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
-
 
 if (process.env.NODE_ENV !== 'test') {
   main();

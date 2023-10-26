@@ -1,3 +1,4 @@
+
 'use strict';
 
 function rollDie(callback) {
@@ -11,6 +12,7 @@ function rollDie(callback) {
 
       if (roll > 6) {
         reject(new Error(`Oops... Die Rolled off the table.`));
+        return;
       }
 
       if (roll === randomRollsToDo) {
@@ -44,9 +46,3 @@ if (process.env.NODE_ENV !== 'test') {
 }
 module.exports = rollDie;
 
-
-//ANSWER:
-
-//Now, the issue of predictability in the callback version no longer persists.
-// Since all promises are launched simultaneously, they can finish at different times, 
-//making the behavior of the die feel more random./
