@@ -1,41 +1,36 @@
 'use strict';
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-UsingAPIs/Week1#exercise-2-is-it-a-double-digit-number
 
-Complete the function called `checkDoubleDigits` such that:
+function checkDoubleDigits(number) {
+  return new Promise((resolve, reject) => {
 
-- It takes one argument: a number
-- It returns a `new Promise`.
-- If the number between 10 and 99 it should resolve to the string
-  "This is a double digit number!".
-- For any other number it should reject with an an Error object containing: 
-  "Expected a double digit number but got `number`", where `number` is the 
-  number that was passed as an argument.
-------------------------------------------------------------------------------*/
-function checkDoubleDigits(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+  if (number >= 10 && number <= 99) {
+    resolve("This is a double digit number!");
+  } else {
+    reject(new Error(`Expected a double digit number but got ${number}`));
+  }
+});
 }
 
 function main() {
-  checkDoubleDigits(9) // should reject
+  checkDoubleDigits(9)
     .then((message) => console.log(message))
     .catch((error) => console.log(error.message));
 
-  checkDoubleDigits(10) // should resolve
+  checkDoubleDigits(10) 
     .then((message) => console.log(message))
     .catch((error) => console.log(error.message));
 
-  checkDoubleDigits(99) // should resolve
+  checkDoubleDigits(99) 
     .then((message) => console.log(message))
     .catch((error) => console.log(error.message));
 
-  checkDoubleDigits(100) // should reject
+  checkDoubleDigits(100) 
     .then((message) => console.log(message))
     .catch((error) => console.log(error.message));
 }
 
-// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
+
 module.exports = checkDoubleDigits;
