@@ -1,4 +1,7 @@
-'use strict';
+// 'use strict';
+
+// const { log } = require('winston');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-2-about-me
 
@@ -10,3 +13,17 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 
 // TODO add your JavaScript code here.
+
+const nickName = 'abc';
+const favFood = 'abcd';
+const hometown = 'abcde';
+
+const ulItems = document.querySelectorAll('li');
+
+ulItems[0].textContent = nickName;
+ulItems[1].textContent = favFood;
+ulItems[2].textContent = hometown;
+
+ulItems.forEach((item) => {
+  item.classList.add('list-item');
+});
