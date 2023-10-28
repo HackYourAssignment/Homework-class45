@@ -1,27 +1,21 @@
 'use strict';
 const body = document.querySelector('body');
 async function requestData(url) {
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      return data;
-    } else {
-      throw new Error();
-    }
-  } catch (error) {
-    throw error;
+  const response = await fetch(url);
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  } else {
+    throw new Error(`HTTP Error ${response.status}: ${response.statusText}`);
   }
 }
 function renderImage(data) {
-  console.log(data);
   const img = document.createElement('img');
   img.src = data.img;
   img.setAttribute('alt', 'abc');
   body.appendChild(img);
 }
 function renderError(error) {
-  console.log(error);
   const errorHeader = document.createElement('h1');
   errorHeader.textContent = error;
   body.appendChild(errorHeader);

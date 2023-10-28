@@ -1,4 +1,0 @@
-
-*** Spell Checker Report ***
-
-ex4-diceRace.js:24:22 - Unknown word (dont)

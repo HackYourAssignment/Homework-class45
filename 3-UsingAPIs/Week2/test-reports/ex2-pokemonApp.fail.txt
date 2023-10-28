@@ -1,8 +1,0 @@
-
-*** ESLint Report ***
-
-ex2-pokemonApp/index.js
-  7:3  error  Unnecessary try/catch wrapper  no-useless-catch
-
-✖ 1 problem (1 error, 0 warnings)
-

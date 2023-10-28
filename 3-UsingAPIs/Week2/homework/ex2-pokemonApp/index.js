@@ -4,16 +4,12 @@ const pokemonSelect = document.getElementById('pokemon');
 const submitButton = document.getElementById('button');
 
 async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      return data;
-    } else {
-      throw new Error();
-    }
-  } catch (error) {
-    throw error;
+  const response = await fetch(url);
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  } else {
+    throw new Error(`HTTP Error ${response.status}: ${response.statusText}`);
   }
 }
 

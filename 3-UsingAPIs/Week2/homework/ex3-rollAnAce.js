@@ -1,13 +1,13 @@
 'use strict';
 const rollDie = require('../../helpers/pokerDiceRoller');
 async function rollDieUntil(wantedValue) {
-  while (true) {
-    const value = await rollDie();
-    if (value === wantedValue) {
-      return value;
-    }
+  let value;
+  while (value !== wantedValue) {
+    value = await rollDie();
   }
+  return value;
 }
+
 async function main() {
   try {
     const results = await rollDieUntil('ACE');

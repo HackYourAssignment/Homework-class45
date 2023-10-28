@@ -526,3 +526,43 @@ ex4-diceRace.js:24:22 - Unknown word (dont)
 2023-10-17 11:11:15 info: --------------------------------------------
 2023-10-17 11:11:15 warn: A unit test file was not provided.
 2023-10-17 11:11:22 info: All steps were completed successfully
+2023-10-28 11:24:02 info: ---------------------------------------------
+2023-10-28 11:24:02 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-10-28 11:24:02 info: ---------------------------------------------
+2023-10-28 11:24:11 info: All unit tests passed.
+2023-10-28 11:24:18 info: All steps were completed successfully
+2023-10-28 11:25:37 info: ------------------------------------------
+2023-10-28 11:25:37 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-28 11:25:37 info: ------------------------------------------
+2023-10-28 11:25:44 info: All unit tests passed.
+2023-10-28 11:25:47 error: *** ESLint Report ***
+
+ex2-pokemonApp/index.js
+  7:3  error  Unnecessary try/catch wrapper  no-useless-catch
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-10-28 11:30:18 info: ------------------------------------------
+2023-10-28 11:30:18 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-10-28 11:30:18 info: ------------------------------------------
+2023-10-28 11:30:25 info: All unit tests passed.
+2023-10-28 11:30:31 info: All steps were completed successfully
+2023-10-28 11:33:37 info: -----------------------------------------
+2023-10-28 11:33:37 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-10-28 11:33:37 info: -----------------------------------------
+2023-10-28 11:33:42 info: All unit tests passed.
+2023-10-28 11:33:48 info: All steps were completed successfully
+2023-10-28 11:35:31 info: ----------------------------------------
+2023-10-28 11:35:31 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-10-28 11:35:31 info: ----------------------------------------
+2023-10-28 11:35:35 info: All unit tests passed.
+2023-10-28 11:35:41 error: *** Spell Checker Report ***
+
+ex4-diceRace.js:22:22 - Unknown word (dont)
+
+2023-10-28 11:36:08 info: ----------------------------------------
+2023-10-28 11:36:08 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-10-28 11:36:08 info: ----------------------------------------
+2023-10-28 11:36:13 info: All unit tests passed.
+2023-10-28 11:36:18 info: All steps were completed successfully
