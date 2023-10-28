@@ -9,11 +9,8 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 const timeCard = document.createElement('div');
 function addCurrentTime() {
-  const date = new Date();
-  const hour = String(date.getHours()).padStart(2, '0');
-  const min = String(date.getMinutes()).padStart(2, '0');
-  const sec = String(date.getSeconds()).padStart(2, '0');
-  timeCard.innerHTML = `${hour}:${min}:${sec}`;
+  const date = new Date().toLocaleTimeString();
+  timeCard.textContent = date;
 }
 setInterval(addCurrentTime, 1000);
 document.querySelector('body').appendChild(timeCard);

@@ -20,9 +20,9 @@ const hometown = 'abcde';
 
 const ulItems = document.querySelectorAll('li');
 
-ulItems[0].innerText = nickName;
-ulItems[1].innerText = favFood;
-ulItems[2].innerText = hometown;
+ulItems[0].textContent = nickName;
+ulItems[1].textContent = favFood;
+ulItems[2].textContent = hometown;
 
 ulItems.forEach((item) => {
   item.classList.add('list-item');
