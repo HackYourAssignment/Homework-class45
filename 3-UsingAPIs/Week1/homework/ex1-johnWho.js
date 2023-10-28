@@ -12,12 +12,12 @@ const getAnonName = (firstName) => {
 };
 
 function main() {
-  getAnonName('John')
+  getAnonName()
     .then((result) => {
       console.log(result);
     })
     .catch((error) => {
-      console.log(error.massage);
+      console.log(error.message);
     });
 }
 

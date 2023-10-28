@@ -2,28 +2,20 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const results = [];
+  let dieNumber = 1;
 
-  return rollDie(1)
-    .then((value) => {
-      results.push(value);
-      return rollDie(2);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(3);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(4);
-    })
-    .then((value) => {
-      results.push(value);
-      return rollDie(5);
-    })
-    .then((value) => {
-      results.push(value);
-      return results;
-    });
+  function rollNextDie() {
+    if (dieNumber <= 5) {
+      return rollDie(dieNumber).then((value) => {
+        results.push(value);
+        dieNumber++;
+        return rollNextDie();
+      });
+    } else {
+      return Promise.resolve(results);
+    }
+  }
+  return rollNextDie();
 }
 
 function main() {

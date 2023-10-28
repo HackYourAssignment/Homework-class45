@@ -33,3 +33,9 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+// The first version of the code uses callbacks to get the job done,
+// but callbacks don't have a way to handle errors like promises do.
+// Even though it works as expected, it's not as efficient as promises. With promises,
+// you can easily deal with errors using 'catch,' making your code more organized and
+// easier to read.
