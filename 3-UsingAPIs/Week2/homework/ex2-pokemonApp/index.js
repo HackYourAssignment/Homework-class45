@@ -1,39 +1,52 @@
 'use strict';
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-2-gotta-catch-em-all
+const body = document.querySelector('body');
+const pokemonSelect = document.getElementById('pokemon');
+const submitButton = document.getElementById('button');
 
-Complete the four functions provided in the starter `index.js` file:
-
-`fetchData`: In the `fetchData` function, make use of `fetch` and its Promise 
-  syntax in order to get the data from the public API. Errors (HTTP or network 
-  errors) should be logged to the console.
-
-`fetchAndPopulatePokemons`: Use `fetchData()` to load the pokemon data from the 
-  public API and populate the `<select>` element in the DOM.
-  
-`fetchImage`: Use `fetchData()` to fetch the selected image and update the 
-  `<img>` element in the DOM.
-
-`main`: The `main` function orchestrates the other functions. The `main` 
-  function should be executed when the window has finished loading.
-
-Use async/await and try/catch to handle promises.
-
-Try and avoid using global variables. As much as possible, try and use function 
-parameters and return values to pass data back and forth.
-------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  const response = await fetch(url);
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  } else {
+    throw new Error(`HTTP Error ${response.status}: ${response.statusText}`);
+  }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchAndPopulatePokemons(data) {
+  for (let i = 0; i < data.results.length; i++) {
+    const optionElement = document.createElement('option');
+    optionElement.setAttribute('value', data.results[i].url);
+    optionElement.textContent = data.results[i].name;
+    pokemonSelect.appendChild(optionElement);
+  }
+  submitButton.addEventListener('click', function () {
+    const selectedValue = pokemonSelect.value;
+    if (selectedValue) {
+      fetchImage(selectedValue);
+    }
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(url) {
+  try {
+    const response = await fetchData(url);
+    const imageUrl = response.sprites.front_default;
+    const existingImage = document.querySelector('body img');
+    if (existingImage) {
+      existingImage.remove();
+    }
+    const imgElement = document.createElement('img');
+    imgElement.setAttribute('src', imageUrl);
+    body.appendChild(imgElement);
+  } catch (error) {
+    console.error('Error fetching image:', error);
+  }
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
+  fetchAndPopulatePokemons(data);
 }
+
+main();
