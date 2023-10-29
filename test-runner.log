@@ -2063,3 +2063,13 @@ ex5-pokerDiceChain.js
 2023-10-10 12:33:29 info: ----------------------------------------------
 2023-10-10 12:33:32 info: All unit tests passed.
 2023-10-10 12:33:35 info: All steps were completed successfully
+2023-10-29 11:03:14 info: ---------------------------------------
+2023-10-29 11:03:14 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-10-29 11:03:14 info: ---------------------------------------
+2023-10-29 11:03:17 info: All unit tests passed.
+2023-10-29 11:03:21 info: All steps were completed successfully
+2023-10-29 11:03:52 info: ---------------------------------------
+2023-10-29 11:03:52 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-10-29 11:03:52 info: ---------------------------------------
+2023-10-29 11:03:54 info: All unit tests passed.
+2023-10-29 11:03:57 info: All steps were completed successfully
