@@ -37,7 +37,13 @@ function renderLaureate(ul, { knownName, birth, death }) {
     'Birth',
     `${birth.date}, ${birth.place.locationString.en}`
   );
-  addTableRow(table, 'Death', `${death.date}, ${death.place.locationString}`);
+  if (death) {
+    addTableRow(
+      table,
+      'Death',
+      `${death.date}, ${death.place.locationString.en}`
+    );
+  }
 }
 
 function renderLaureates(laureates) {

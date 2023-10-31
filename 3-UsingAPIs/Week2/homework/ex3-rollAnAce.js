@@ -13,13 +13,12 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 async function rollDieUntil(wantedValue) {
-  //"while(true)" wasn't working. I had to use for loop. I know it's weird that "while" doesn't work but I don't know why.
-  for (;;) {
-    const value = await rollDie();
-    if (value === wantedValue) {
-      return value;
-    }
+  let value = await rollDie();
+
+  while (value !== wantedValue) {
+    value = await rollDie();
   }
+  return value;
 }
 
 async function main() {
