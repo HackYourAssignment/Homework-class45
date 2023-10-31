@@ -22,18 +22,95 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+const pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+const body = document.body;
+
+async function fetchData(url) {
+  const resp = await fetch(url);
+  if (resp.ok) {
+    return await resp.json();
+  }
+  throw new Error(
+    `Something went wrong while fetching data! status code : ${resp.status} - status text : ${resp.statusText}`
+  );
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons(selectBtn) {
+  const pokemons = await fetchPokemons();
+
+  for (let i = 0; i < pokemons.results.length; i++) {
+    const option = document.createElement('option');
+    option.text = pokemons.results[i].name;
+    selectBtn.add(option);
+  }
+
+  const selectDiv = document.createElement('div');
+  selectDiv.classList.add('select-div');
+
+  selectDiv.appendChild(selectBtn);
+  body.appendChild(selectDiv);
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(selectBtn, pokemons) {
+  const pokemon = document.getElementById('pokemon');
+  if (pokemon) {
+    pokemon.parentNode.removeChild(pokemon);
+  }
+
+  const selectedValue = selectBtn.options[selectBtn.selectedIndex].value;
+  const selectedPokemonUrl = pokemons.results.find(
+    (pokemon) => pokemon.name === selectedValue
+  ).url;
+
+  const pokemonData = await fetchData(selectedPokemonUrl);
+
+  const avatar = document.createElement('img');
+  avatar.src =
+    pokemonData.sprites.front_shiny ?? pokemonData.sprites.front_default;
+  avatar.alt = pokemonData.name;
+
+  const div = document.createElement('div');
+  div.id = 'pokemon';
+  div.appendChild(avatar);
+
+  const avatarContainer = document.createElement('div');
+  avatarContainer.appendChild(div);
+  body.appendChild(avatarContainer);
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  const pokemons = await fetchPokemons();
+
+  const div = document.createElement('div');
+  div.classList.add('get-btn');
+  const btn = document.createElement('button');
+  btn.textContent = 'Get Pokemon';
+  btn.type = '';
+  div.appendChild(btn);
+  body.appendChild(div);
+
+  const selectBtn = document.createElement('select');
+
+  selectBtn.addEventListener('change', () => {
+    fetchImage(selectBtn, pokemons);
+  });
+
+  btn.addEventListener('click', async () => {
+    await fetchAndPopulatePokemons(selectBtn);
+  });
+}
+
+window.addEventListener('load', main);
+
+let pokemonsData;
+async function fetchPokemons() {
+  if (pokemonsData) {
+    return pokemonsData;
+  }
+  try {
+    pokemonsData = await fetchData(pokemonsUrl);
+    return pokemonsData;
+  } catch (error) {
+    console.log(error.message);
+  }
 }
