@@ -1,63 +1,69 @@
 'use strict';
 const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
-function fetchData(url) {
-  return fetch(url)
-  .then((res)=> {
-    if(!res.ok){
-      throw new Error(`error ${res.status}`)
+
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}`);
     }
-    return res.json();
-  })
-  .catch(err => {
-    console.log('error' + err);
-    throw err;
-  })
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log('Error: ' + error);
+    throw error;
+  }
 }
 
-function fetchAndPopulatePokemons(url) {
-  return fetchData(url)
-    .then((data) => {
-      const selectElement = document.createElement('select');
-      document.body.appendChild(selectElement);
-      data.results.forEach((pokemon) => {
-        const option = document.createElement('option');
-        option.value = pokemon.name;
-        option.textContent = pokemon.name;
-         option.setAttribute('data-url', pokemon.url);
-        selectElement.appendChild(option);
-      });
-          return selectElement;
+async function fetchAndPopulatePokemons(url) {
+  try {
+    const data = await fetchData(url);
 
-    })
-    .catch(error=>
-      console.error('Error fetching and populating Pokemons:', error)
-    );
+    const selectElement = document.createElement('select');
+    document.body.appendChild(selectElement);
 
+    data.results.forEach((pokemon) => {
+      const option = document.createElement('option');
+      option.value = pokemon.name;
+      option.textContent = pokemon.name;
+      option.setAttribute('data-url', pokemon.url);
+      selectElement.appendChild(option);
+    });
+
+    return selectElement;
+  } catch (error) {
+    console.error('Error fetching and populating Pokemons:', error);
+  }
 }
 
-function fetchImage(url) {
-  return fetchData(url)
-  .then(data =>{
-    const imgElement = document.createElement('img');
+async function fetchImage(url, imgElement) {
+  try {
+    const data = await fetchData(url);
+
+    if (!imgElement) {
+      imgElement = document.createElement('img');
+      document.body.appendChild(imgElement);
+    }
+
     imgElement.src = data.sprites['front_default'];
-    document.body.appendChild(imgElement);
-  })
-  .catch(error =>{
-    console.log('error fetching and displaying image' + error);
-  })
+  } catch (error) {
+    console.log('Error fetching and displaying image: ' + error);
+  }
 }
 
 async function main() {
-  try{
+  try {
     const selectElement = await fetchAndPopulatePokemons(apiUrl);
+    let imgElement;
+
     selectElement.addEventListener('change', async () => {
-  const selectedOption = selectElement.options[selectElement.selectedIndex];
-  const pokemonUrl = selectedOption.getAttribute('data-url');
-    await fetchImage(pokemonUrl);
-  })
-}
-  catch(error){
+      const selectedOption = selectElement.options[selectElement.selectedIndex];
+      const pokemonUrl = selectedOption.getAttribute('data-url');
+      await fetchImage(pokemonUrl, imgElement);
+    });
+  } catch (error) {
     console.error(error);
   }
 }
+
 window.addEventListener('load', main);

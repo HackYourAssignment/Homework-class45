@@ -31,9 +31,16 @@ function addTableRow(table, label, value) {
 function renderLaureate(ul, { knownName, birth, death }) {
   const li = createAndAppend('li', ul);
   const table = createAndAppend('table', li);
+  if(knownName){
   addTableRow(table, 'Name', knownName.en);
+
+  }
+  if(birth){
   addTableRow(table, 'Birth', `${birth.date}, ${birth.place.locationString}`);
-  addTableRow(table, 'Death', `${death.date}, ${death.place.locationString}`);
+  }
+  if(death){
+      addTableRow(table,'Death',`${death.date}, ${death.place.locationString}`);
+  }
 }
 
 function renderLaureates(laureates) {

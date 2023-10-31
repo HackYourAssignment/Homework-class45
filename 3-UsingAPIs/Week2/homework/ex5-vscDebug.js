@@ -12,10 +12,17 @@ async function getData(url) {
 }
 
 function renderLaureate({ knownName, birth, death }) {
+  if(knownName){
   console.log(`\nName: ${knownName.en}`);
+  }
+  if(birth){
   console.log(`Birth: ${birth.date}, ${birth.place.locationString}`);
+  }
+  if(death){
   console.log(`Death: ${death.date}, ${death.place.locationString}`);
+  }
 }
+
 
 function renderLaureates(laureates) {
   if (Array.isArray(laureates.laureates)) {

@@ -1,13 +1,18 @@
 'use strict';
 
- function requestData(url) {
- return fetch(url).then((res) => {
-   if (res.ok) {
-     return res.json();
-   } else {
-     throw new Error(`Error! ${res.status}`);
-   }
- });
+ async function requestData(url) {
+try {
+  const res = await fetch(url);
+if(!res.ok){
+  throw new Error(`Error! ${res.status}`);
+}
+  const data = await Response.json();
+  return data;
+
+} catch(error){
+console.log(error);
+}
+
 
 }
 
