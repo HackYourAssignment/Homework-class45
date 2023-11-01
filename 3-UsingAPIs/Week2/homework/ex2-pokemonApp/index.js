@@ -1,86 +1,71 @@
 'use strict';
 
 async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(
-        `HTTP error ocurred. Status: ${response.status} ${response.statusText}`
-      );
-    }
-    const fetchedData = await response.json();
-    return fetchedData;
-  } catch (error) {
-    if (error.message.includes('HTTP error')) {
-      console.log(error);
-      throw error;
-    } else {
-      console.log(error);
-      throw new Error(
-        `Network error ocurred: ${error.name} - ${error.message}.`
-      );
-    }
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Request failed: HTTP status ${response.status}`);
   }
+  const fetchedData = await response.json();
+  return fetchedData;
 }
 
 async function fetchAndPopulatePokemons(url) {
-  try {
-    const divElement = document.createElement('div');
-    divElement.id = 'pokemonsList';
-    document.body.appendChild(divElement);
+  const selectElement = document.getElementById('pokemonOptions');
 
-    const selectElement = document.createElement('select');
-    selectElement.id = 'pokemonOptions';
-    divElement.appendChild(selectElement);
+  const data = await fetchData(url);
+  const pokemons = data.results;
 
-    const data = await fetchData(url);
-    const pokemons = data.results;
+  pokemons.forEach((pokemon) => {
+    const optionElement = document.createElement('option');
+    optionElement.textContent = pokemon.name;
+    selectElement.appendChild(optionElement);
+  });
 
-    pokemons.forEach((pokemon) => {
-      const optionElement = document.createElement('option');
-      optionElement.textContent = pokemon.name;
-      selectElement.appendChild(optionElement);
-    });
-
-    selectElement.addEventListener('change', fetchImage);
-  } catch (error) {
-    console.log(error);
-    throw error;
-  }
+  selectElement.addEventListener('change', fetchImage);
 }
 
 async function fetchImage() {
-  try {
-    const selectedPokemonName = document.getElementById('pokemonOptions').value;
+  const selectedPokemonName = document.getElementById('pokemonOptions').value;
 
-    const detailsUrl = `https://pokeapi.co/api/v2/pokemon/${selectedPokemonName}/`;
+  const pokemonImg = document.getElementById('pokemonImage');
 
-    const data = await fetchData(detailsUrl);
+  const detailsUrl = `https://pokeapi.co/api/v2/pokemon/${selectedPokemonName}/`;
 
-    const imageUrl = data.sprites.front_default;
+  const data = await fetchData(detailsUrl);
 
-    const existingImage = document.getElementById('pokemonImage');
-    if (existingImage) {
-      existingImage.remove();
-    }
+  const imageUrl = data.sprites.front_default;
 
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
-    imgElement.alt = selectedPokemonName;
-    imgElement.id = 'pokemonImage';
-
-    document.body.appendChild(imgElement);
-  } catch (error) {
-    console.log(error);
-    throw error;
-  }
+  pokemonImg.src = imageUrl;
+  pokemonImg.alt = selectedPokemonName;
 }
 
 async function main() {
   const publicAPI = 'https://pokeapi.co/api/v2/pokemon?limit=151';
-  await fetchData(publicAPI);
-  await fetchAndPopulatePokemons(publicAPI);
-  await fetchImage();
+
+  // Create pokemons list
+  const divElement = document.createElement('div');
+  divElement.id = 'pokemonsList';
+  document.body.appendChild(divElement);
+
+  // Append select element for pokemon options
+  const selectElement = document.createElement('select');
+  selectElement.id = 'pokemonOptions';
+  divElement.appendChild(selectElement);
+
+  // Create image element to display the selected pokemon image
+  const imgElement = document.createElement('img');
+  imgElement.id = 'pokemonImage';
+  imgElement.src = '';
+  imgElement.alt = '';
+  document.body.appendChild(imgElement);
+
+  // Fetch required data
+  try {
+    await fetchAndPopulatePokemons(publicAPI);
+    await fetchImage();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 window.onload = main;

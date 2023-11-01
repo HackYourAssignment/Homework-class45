@@ -5,15 +5,15 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  const promises = dice.map(() => rollDie());
+  const dicePromises = dice.map((die) => rollDie(die));
 
-  return Promise.race(promises);
+  return Promise.race(dicePromises);
 }
 
 async function main() {
   try {
-    const result = await rollDice();
-    console.log('Resolved!', result);
+    const results = await rollDice();
+    console.log('Resolved!', results);
   } catch (error) {
     console.log('Rejected!', error.message);
   }

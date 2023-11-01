@@ -1,24 +1,15 @@
 'use strict';
 
-function requestData(url) {
-  return fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(
-          `HTTP error ocurred. Status: ${response.status} ${response.statusText}`
-        );
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      if (error.message.includes('HTTP error')) {
-        throw error;
-      } else {
-        throw new Error(
-          `Network error ocurred: ${error.name} - ${error.message}.`
-        );
-      }
-    });
+async function requestData(url) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Request failed: HTTP status ${response.status}`);
+  }
+
+  const data = await response.json();
+
+  return data;
 }
 
 function renderImage(data) {
