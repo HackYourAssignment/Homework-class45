@@ -1,39 +1,71 @@
 'use strict';
-/*------------------------------------------------------------------------------
-Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-2-gotta-catch-em-all
 
-Complete the four functions provided in the starter `index.js` file:
-
-`fetchData`: In the `fetchData` function, make use of `fetch` and its Promise 
-  syntax in order to get the data from the public API. Errors (HTTP or network 
-  errors) should be logged to the console.
-
-`fetchAndPopulatePokemons`: Use `fetchData()` to load the pokemon data from the 
-  public API and populate the `<select>` element in the DOM.
-  
-`fetchImage`: Use `fetchData()` to fetch the selected image and update the 
-  `<img>` element in the DOM.
-
-`main`: The `main` function orchestrates the other functions. The `main` 
-  function should be executed when the window has finished loading.
-
-Use async/await and try/catch to handle promises.
-
-Try and avoid using global variables. As much as possible, try and use function 
-parameters and return values to pass data back and forth.
-------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Request failed: HTTP status ${response.status}`);
+  }
+  const fetchedData = await response.json();
+  return fetchedData;
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons(url) {
+  const selectElement = document.getElementById('pokemonOptions');
+
+  const data = await fetchData(url);
+  const pokemons = data.results;
+
+  pokemons.forEach((pokemon) => {
+    const optionElement = document.createElement('option');
+    optionElement.textContent = pokemon.name;
+    selectElement.appendChild(optionElement);
+  });
+
+  selectElement.addEventListener('change', fetchImage);
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage() {
+  const selectedPokemonName = document.getElementById('pokemonOptions').value;
+
+  const pokemonImg = document.getElementById('pokemonImage');
+
+  const detailsUrl = `https://pokeapi.co/api/v2/pokemon/${selectedPokemonName}/`;
+
+  const data = await fetchData(detailsUrl);
+
+  const imageUrl = data.sprites.front_default;
+
+  pokemonImg.src = imageUrl;
+  pokemonImg.alt = selectedPokemonName;
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  const publicAPI = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+
+  // Create pokemons list
+  const divElement = document.createElement('div');
+  divElement.id = 'pokemonsList';
+  document.body.appendChild(divElement);
+
+  // Append select element for pokemon options
+  const selectElement = document.createElement('select');
+  selectElement.id = 'pokemonOptions';
+  divElement.appendChild(selectElement);
+
+  // Create image element to display the selected pokemon image
+  const imgElement = document.createElement('img');
+  imgElement.id = 'pokemonImage';
+  imgElement.src = '';
+  imgElement.alt = '';
+  document.body.appendChild(imgElement);
+
+  // Fetch required data
+  try {
+    await fetchAndPopulatePokemons(publicAPI);
+    await fetchImage();
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+window.onload = main;
