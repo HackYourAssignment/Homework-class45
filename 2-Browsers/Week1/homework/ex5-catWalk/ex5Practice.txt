@@ -1,0 +1,171 @@
+
+
+// let goPositionLeft = 0;
+// let interval;
+
+// function catWalk() {
+//   const imgCat = document.querySelector("img");
+//   const entireWidth = window.innerWidth;
+//   const imgCatWidth = imgCat.offsetWidth;
+//   const totalWidth = entireWidth - imgCatWidth;
+//   const halfWay = Math.floor(totalWidth / 2);
+
+//   goPositionLeft += 10;
+//   imgCat.style.left = `${goPositionLeft}px`;
+
+//   reappear(totalWidth);
+
+//   if (Math.abs(goPositionLeft - halfWay) <= 10 / 2) {
+//     stopInterval(); // Stop the walking
+//     imgCat.src =
+//       "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+
+//     setTimeout(() => {
+//       imgCat.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
+//       startInterval();
+//     }, 5000);
+//   }
+//   startInterval();
+// }
+
+// const startInterval = () => {
+//   if (!interval) {
+//     interval = setInterval(walk, 50);
+//   }
+// };
+
+// const stopInterval = () => {
+//   clearInterval(interval);
+//   interval = null;
+// };
+
+// function reappear(totalWidth) {
+//   if (goPositionLeft >= totalWidth) {
+//     goPositionLeft = 0;
+//   }
+// }
+
+// window.addEventListener("load", catWalk);
+
+// let goPositionLeft = 0;
+
+// function catWalk() {
+//   const imgCat = document.querySelector("img");
+//   const entireWidth = window.innerWidth;
+//   const imgCatWidth = imgCat.offsetWidth;
+//   const totalWidth = entireWidth - imgCatWidth;
+//   const halfWay = Math.floor(totalWidth / 2);
+
+//   goPositionLeft += 10;
+//   imgCat.style.left = `${goPositionLeft}px`;
+//   reappear(totalWidth);
+
+//   if (Math.abs(goPositionLeft - halfWay) <= 10 / 2) {
+//     clearInterval(interval);
+//     imgCat.src =
+//       "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+
+//     setTimeout(() => {
+//       imgCat.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
+//       interval = setInterval(catWalk, 50);
+//     }, 5000);
+//   }
+// }
+
+// function reappear(totalWidth) {
+//   if (goPositionLeft >= totalWidth) {
+//     goPositionLeft = 0;
+//   }
+// }
+// let interval = setInterval(catWalk, 50);
+
+// // window.addEventListener("load", catWalk);
+
+// let goPositionLeft = 0; // Initial position of the cat
+
+// function catWalk() {
+//   const imgCat = document.querySelector('img');  // Step 1
+//   const entireWidth = window.innerWidth;
+//   const imgCatWidth = imgCat.offsetWidth;
+//   const totalWidth = entireWidth - imgCatWidth;
+//   const halfWay = totalWidth / 2;
+
+//   imgCat.style.left = `${goPositionLeft}px`;  // Step 2 and Step 3
+
+//   goPositionLeft += 10;  // Move the cat 10 pixels to the right
+
+//   // Step 5: If the cat reaches the right-hand of the screen, start from left.
+//   if (goPositionLeft >= totalWidth) {
+//     goPositionLeft = 0;
+//     imgCat.style.left = goPositionLeft + 'px';
+//   }
+
+//   // Step 6: Cat dancing in the middle of the screen
+//   if (goPositionLeft >= halfWay && goPositionLeft < halfWay + 10) { // Added a range to trigger the dance only once
+//     clearInterval(interval);
+
+//     imgCat.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'; // Dancing cat
+
+//     setTimeout(() => {
+//       imgCat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';  // Back to walking cat
+//       interval = setInterval(catWalk, 50);  // Restart the walking
+//     }, 5000);
+//   }
+// }
+
+// let interval = setInterval(catWalk, 50);  // Step 4: Call catWalk every 50 milliseconds
+
+// let goPositionLeft = 0;
+
+// function catWalk() {
+//   let interval;
+
+//   const startInterval = () => {
+//     if (!interval) {
+//       interval = setInterval(walk, 50);
+//     }
+//   };
+
+//   const stopInterval = () => {
+//     clearInterval(interval);
+//     interval = null;
+//   };
+
+//   const reappear = (totalWidth) => {
+//     if (goPositionLeft >= totalWidth) {
+//       goPositionLeft = 0;
+//     }
+//   };
+
+//   const walk = () => {
+//     const imgCat = document.querySelector("img");
+//     const entireWidth = window.innerWidth;
+//     const imgCatWidth = imgCat.offsetWidth;
+//     const totalWidth = entireWidth - imgCatWidth;
+//     const halfWay = Math.floor(totalWidth / 2);
+
+//     goPositionLeft += 10;
+//     imgCat.style.left = `${goPositionLeft}px`;
+
+//     // Check if the cat needs to reappear on the other side
+//     reappear(totalWidth);
+
+//     // Check if the cat is halfway across the screen
+//     if (Math.abs(goPositionLeft - halfWay) <= 10 / 2) {
+//       stopInterval(); // Stop the walking
+//       imgCat.src =
+//         "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+
+//       setTimeout(() => {
+//         imgCat.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
+//         startInterval();
+//       }, 5000);
+//     }
+//   };
+
+//   // Start the walking when the function is called
+//   startInterval();
+// }
+
+// // Run the catWalk function when the window loads
+// window.addEventListener("load", catWalk);

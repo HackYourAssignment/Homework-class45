@@ -9,4 +9,13 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+document.getElementById('nickname').textContent = 'Com8.';
+document.getElementById('fav-food').textContent = 'Sushi "Among-Others".';
+document.getElementById('hometown').textContent = 'Damascus.';
+
+const listItems = document.querySelectorAll('li');
+listItems.forEach((listItem) => {
+  // not when we add `.` but when we call the class eg.('.list-item')
+  listItem.classList.add('list-item');
+  listItem.style.color = 'red';
+});

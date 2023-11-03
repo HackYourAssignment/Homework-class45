@@ -8,7 +8,17 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
-  // TODO complete this function
+  const currentTime = new Date().toLocaleTimeString();
+  htmlLess.textContent = currentTime;
+  ///  Unnecessary: return currentTime;
 }
+const htmlLess = document.createElement('div');
 
-// TODO execute `addCurrentTime` when the browser has completed loading the page
+setInterval(addCurrentTime, 1000);
+// when these were inside above function addCurrentTime() time was to be typed constantly nonstop with each single update
+document.body.appendChild(htmlLess);
+
+window.onload = () => {
+  addCurrentTime();
+  setInterval(addCurrentTime, 1000);
+};
