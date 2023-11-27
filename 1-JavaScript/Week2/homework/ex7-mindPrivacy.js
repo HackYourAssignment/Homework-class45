@@ -1,4 +1,7 @@
 'use strict';
+
+const { concat } = require('lodash');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-7-mind-the-privacy
 
@@ -30,9 +33,16 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function filterPrivateData(recordsEmployee) {
+  const publicData = recordsEmployee.map((recordEmployee) => ({
+    name: recordEmployee.name,
+    occupation: recordEmployee.occupation,
+    email: recordEmployee.email,
+  }));
+
+  return publicData;
 }
+console.log(filterPrivateData(employeeRecords));
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
